@@ -1,0 +1,7 @@
+<ul class="tags">
+    <?php $tags = explode(',', $this->getPost()->getTags()); ?>
+		<li class="title text-desc"><?php echo $this->__('Tags'); ?>:</li>
+    <?php foreach ($tags as $tag): ?>
+        <li><a class="a-tags" href="<?php echo Mage::getUrl(Mage::helper('blog')->getRoute() . '/tag/' . urlencode($tag)) ?>"><?php echo $tag ?></a></li>
+    <?php endforeach; ?>
+</ul>

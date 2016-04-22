@@ -1,0 +1,16 @@
+<?php
+/* * ****************************************************
+ * Package   : ProductQuestions
+ * Author    : http://www.arrowhitech.com
+ * Copyright : (c) 2013 - ArrowHiTech.Com
+ * ***************************************************** */
+?>
+<form id="search-form" method="get" action="<?php echo Mage::helper('productquestions')->faqsPageUrl() ?>" method="get">
+	<div class="form-search-faq">
+		<input name="query" placeholder="<?php echo Mage::helper('productquestions')->__('Search question') ?>" id="query" title="<?php echo Mage::helper('productquestions')->__('Keyword') ?>" <?php if ($this->getRequest()->getParam('query')): ?>value="<?php echo $this->getRequest()->getParam('query'); ?>"<?php endif; ?> class="input-text required-entry" type="text" />
+		<button type="submit" title="<?php echo Mage::helper('productquestions')->__('Search') ?>" class="btn btn-primary btn-lg"><span><span><?php echo Mage::helper('productquestions')->__('Search') ?></span></span></button>       
+	</div>      
+</form>
+<script type="text/javascript">
+    var searchForm = new VarienForm('search-form');
+</script>

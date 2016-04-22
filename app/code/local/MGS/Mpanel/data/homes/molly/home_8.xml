@@ -1,0 +1,587 @@
+<layout>
+    <name>1_column_full</name>
+	<header>header4</header>
+	<footer>footer3</footer>
+	<sticky_menu>1</sticky_menu>
+	<popup_newsletter>1</popup_newsletter>	
+	<!-- Theme Color -->
+	<!-- Theme Color -->
+ <theme_color_header>
+	<use_custom>1</use_custom>
+	<top_background><![CDATA[transparent]]></top_background>
+	<top_text_color><![CDATA[#ffffff]]></top_text_color>
+	<top_link_color><![CDATA[#999999]]></top_link_color>
+	<top_border_color><![CDATA[#DDDDDD]]></top_border_color>
+	<top_link_hover_color><![CDATA[]]></top_link_hover_color>
+	<top_dropdown_background><![CDATA[]]></top_dropdown_background>
+	<top_dropdown_link><![CDATA[]]></top_dropdown_link>
+	<top_dropdown_link_hover><![CDATA[]]></top_dropdown_link_hover>
+	<top_dropdown_border><![CDATA[]]></top_dropdown_border>
+	
+	<middle_background><![CDATA[]]></middle_background>
+	
+	<search_background><![CDATA[]]></search_background>
+	<search_text_color><![CDATA[]]></search_text_color>
+	<search_link_color><![CDATA[]]></search_link_color>
+	<search_link_hover_color><![CDATA[]]></search_link_hover_color>
+	<search_input_color><![CDATA[]]></search_input_color>
+	<search_icon_color><![CDATA[#ffffff]]></search_icon_color>
+	<search_dropdown_background><![CDATA[]]></search_dropdown_background>
+	<search_dropdown_hover_background><![CDATA[]]></search_dropdown_hover_background>
+	<search_dropdown_text_color><![CDATA[]]></search_dropdown_text_color>
+	<search_dropdown_text_hover_color><![CDATA[]]></search_dropdown_text_hover_color>
+	
+	<cart_text_color><![CDATA[]]></cart_text_color>
+	<cart_price_color><![CDATA[]]></cart_price_color>
+	<cart_icon_background><![CDATA[#ffffff]]></cart_icon_background>
+	<cart_dropdown_background><![CDATA[]]></cart_dropdown_background>
+	<cart_number_background><![CDATA[]]></cart_number_background>
+	<cart_number_text><![CDATA[]]></cart_number_text>
+	
+	<menu_background><![CDATA[]]></menu_background>
+	<menu_link_color><![CDATA[#ffffff]]></menu_link_color>
+	<menu_link_hover_color><![CDATA[]]></menu_link_hover_color>
+	<menu_dropdown_background><![CDATA[]]></menu_dropdown_background>
+	<menu_dropdown_link_color><![CDATA[]]></menu_dropdown_link_color>
+	<menu_dropdown_link_hover_color><![CDATA[]]></menu_dropdown_link_hover_color>
+	<menu_border_color><![CDATA[transparent]]></menu_border_color>
+	
+	<sticky_menu_background><![CDATA[]]></sticky_menu_background>
+	<sticky_menu_link_color><![CDATA[]]></sticky_menu_link_color>
+	<sticky_menu_link_hover_color><![CDATA[]]></sticky_menu_link_hover_color>
+	<sticky_menu_border_color><![CDATA[]]></sticky_menu_border_color>
+ </theme_color_header>
+ <theme_color_main>
+  <use_custom>0</use_custom>
+ </theme_color_main>
+ <theme_color_footer>
+  <use_custom>0</use_custom>
+ </theme_color_footer>
+
+<custom_style>
+	<style><![CDATA[.container-bg > .container > .row  {
+    background-color: #f4f4f4;
+    margin: 0;
+}
+.cms-our-services .breadcrumbs {
+	background-image: url('http://mgs.arrowhitech.net/molly/media/wysiwyg/bg_bredcrumb_4.jpg');
+}
+.profiles-index-index .breadcrumbs {
+	background-image: url('http://mgs.arrowhitech.net/molly/media/wysiwyg/bg_bredcrumb_3.jpg');
+}
+.portfolio-category-list .breadcrumbs,.portfolio-view-index .breadcrumbs {
+	background-image: url('http://mgs.arrowhitech.net/molly/media/wysiwyg/bg_bredcrumb_1.jpg');
+}
+.blog-index-list  .breadcrumbs,.blog-post-view .breadcrumbs {
+	background-image: url('http://mgs.arrowhitech.net/molly/media/wysiwyg/bg_bredcrumb_5.jpg');
+}
+.logo-container .title-logo {
+     color: #fff;
+}
+.header-v4.position-relative,
+.header-v4.header-builder{background-color: #676665;}
+@media(max-width: 767px){
+.header-v4{background-color: #676665;}
+}
+.header-v4 .top-bar-left,
+.header-v4 .topSearch{border-color: #686a6c;}
+.header-v4 .btn-responsive-nav{color: #fff !important;}
+.sticky-element.block-cart-header .fa-shopping-cart{color: #222 !important;}]]></style>
+</custom_style>
+
+    <!--  Blocks  -->
+    <block>
+        <name>block75</name>
+        <block_cols><![CDATA[12]]></block_cols>
+        <block_class><![CDATA[]]></block_class>
+        <custom_class><![CDATA[]]></custom_class>
+        <background><![CDATA[]]></background>
+        <background_image><![CDATA[]]></background_image>
+        <background_repeat>0</background_repeat>
+        <background_cover>0</background_cover>
+        <parallax>0</parallax>
+        <fullwidth>0</fullwidth>
+        <padding_top><![CDATA[]]></padding_top>
+        <padding_bottom><![CDATA[]]></padding_bottom>
+        <block_position>1</block_position>
+    </block>
+    <block>
+        <name>block76</name>
+        <block_cols><![CDATA[12]]></block_cols>
+        <block_class><![CDATA[]]></block_class>
+        <custom_class><![CDATA[padding-5]]></custom_class>
+        <background><![CDATA[]]></background>
+        <background_image><![CDATA[]]></background_image>
+        <background_repeat>0</background_repeat>
+        <background_cover>0</background_cover>
+        <parallax>0</parallax>
+        <fullwidth>0</fullwidth>
+        <padding_top><![CDATA[61]]></padding_top>
+        <padding_bottom><![CDATA[]]></padding_bottom>
+        <block_position>2</block_position>
+    </block>
+    <block>
+        <name>block77</name>
+        <block_cols><![CDATA[3,3,3,3]]></block_cols>
+        <block_class><![CDATA[["col-sm-6 col-xs-12","col-sm-6 col-xs-12","col-sm-6 col-xs-12","col-sm-6 col-xs-12"]]]></block_class>
+        <custom_class><![CDATA[]]></custom_class>
+        <background><![CDATA[]]></background>
+        <background_image><![CDATA[]]></background_image>
+        <background_repeat>0</background_repeat>
+        <background_cover>0</background_cover>
+        <parallax>0</parallax>
+        <fullwidth>0</fullwidth>
+        <padding_top><![CDATA[61]]></padding_top>
+        <padding_bottom><![CDATA[]]></padding_bottom>
+        <block_position>3</block_position>
+    </block>
+    <block>
+        <name>block78</name>
+        <block_cols><![CDATA[12]]></block_cols>
+        <block_class><![CDATA[]]></block_class>
+        <custom_class><![CDATA[]]></custom_class>
+        <background><![CDATA[]]></background>
+        <background_image><![CDATA[]]></background_image>
+        <background_repeat>0</background_repeat>
+        <background_cover>0</background_cover>
+        <parallax>0</parallax>
+        <fullwidth>0</fullwidth>
+        <padding_top><![CDATA[67]]></padding_top>
+        <padding_bottom><![CDATA[60]]></padding_bottom>
+        <block_position>4</block_position>
+    </block>
+    <block>
+        <name>block79</name>
+        <block_cols><![CDATA[12]]></block_cols>
+        <block_class><![CDATA[]]></block_class>
+        <custom_class><![CDATA[bg-center]]></custom_class>
+        <background><![CDATA[]]></background>
+        <background_image><![CDATA[bg_testimonial_home1.jpg]]></background_image>
+        <background_repeat>0</background_repeat>
+        <background_cover>1</background_cover>
+        <parallax>0</parallax>
+        <fullwidth>0</fullwidth>
+        <padding_top><![CDATA[100]]></padding_top>
+        <padding_bottom><![CDATA[100]]></padding_bottom>
+        <block_position>5</block_position>
+    </block>
+    <block>
+        <name>block80</name>
+        <block_cols><![CDATA[12]]></block_cols>
+        <block_class><![CDATA[]]></block_class>
+        <custom_class><![CDATA[]]></custom_class>
+        <background><![CDATA[]]></background>
+        <background_image><![CDATA[]]></background_image>
+        <background_repeat>0</background_repeat>
+        <background_cover>0</background_cover>
+        <parallax>0</parallax>
+        <fullwidth>0</fullwidth>
+        <padding_top><![CDATA[61]]></padding_top>
+        <padding_bottom><![CDATA[44]]></padding_bottom>
+        <block_position>6</block_position>
+    </block>
+    <block>
+        <name>block81</name>
+        <block_cols><![CDATA[6,6]]></block_cols>
+        <block_class><![CDATA[["no-padding col-sm-12 col-xs-12","no-padding col-sm-12 col-xs-12"]]]></block_class>
+        <custom_class><![CDATA[]]></custom_class>
+        <background><![CDATA[#f4f4f4]]></background>
+        <background_image><![CDATA[]]></background_image>
+        <background_repeat>0</background_repeat>
+        <background_cover>0</background_cover>
+        <parallax>0</parallax>
+        <fullwidth>1</fullwidth>
+        <padding_top><![CDATA[]]></padding_top>
+        <padding_bottom><![CDATA[]]></padding_bottom>
+        <block_position>7</block_position>
+    </block>
+    <block>
+        <name>block82</name>
+        <block_cols><![CDATA[6,6]]></block_cols>
+        <block_class><![CDATA[["no-padding col-sm-12 col-xs-12","no-padding col-sm-12 col-xs-12"]]]></block_class>
+        <custom_class><![CDATA[]]></custom_class>
+        <background><![CDATA[#f4f4f4]]></background>
+        <background_image><![CDATA[]]></background_image>
+        <background_repeat>0</background_repeat>
+        <background_cover>0</background_cover>
+        <parallax>0</parallax>
+        <fullwidth>1</fullwidth>
+        <padding_top><![CDATA[]]></padding_top>
+        <padding_bottom><![CDATA[]]></padding_bottom>
+        <block_position>8</block_position>
+    </block>
+    <block>
+        <name>block83</name>
+        <block_cols><![CDATA[3,3,3,3]]></block_cols>
+        <block_class><![CDATA[["col-sm-6 col-xs-12","col-sm-6 col-xs-12","col-sm-6 col-xs-12","col-sm-6 col-xs-12"]]]></block_class>
+        <custom_class><![CDATA[]]></custom_class>
+        <background><![CDATA[#292929]]></background>
+        <background_image><![CDATA[]]></background_image>
+        <background_repeat>0</background_repeat>
+        <background_cover>0</background_cover>
+        <parallax>0</parallax>
+        <fullwidth>0</fullwidth>
+        <padding_top><![CDATA[34]]></padding_top>
+        <padding_bottom><![CDATA[11]]></padding_bottom>
+        <block_position>9</block_position>
+    </block>
+
+    <!--  Childs  -->
+	<!--  Static block  -->
+    <child>
+        <block_name>block76-0</block_name>
+        <block_content><![CDATA[]]></block_content>
+        <static_block_title><![CDATA[Molly Title New Arrival Inline Sample]]></static_block_title>
+        <static_block_identifier><![CDATA[molly_title_new_arrival_inline_sample]]></static_block_identifier>
+        <static_block_content><![CDATA[<div class="title-inline">
+<h3 class="heading"><span>NEW ARRIVALS</span></h3>
+<div class="text-desc"><span>Trending Fashion In This Season</span></div>
+</div>]]></static_block_content>
+        <type>static</type>
+        <position>1</position>
+        <setting><![CDATA[{"custom_class":"","animation":"","animation_delay":""}]]></setting>
+        <col>12</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+    <child>
+        <block_name>block76-0</block_name>
+        <block_content><![CDATA[]]></block_content>
+        <static_block_title><![CDATA[Molly Shop By Category Sample 1]]></static_block_title>
+        <static_block_identifier><![CDATA[molly_shop_by_category_sample_1]]></static_block_identifier>
+        <static_block_content><![CDATA[<div class="row categories-landding">
+<div class="cate-content horizontal col-sm-6 col-xs-12">
+<a href="#"><img class="img-responsive" src="{{media url="wysiwyg/shop_by_cate_home1_1.jpg"}}" alt="" /></a>
+<div class="text"><h2 class="cate-name">Fashion <span class="text-desc">(15 products)</span></h2></div>
+</div>
+<div class="cate-content horizontal col-sm-6 col-xs-12">
+<a href="#"><img class="img-responsive" src="{{media url="wysiwyg/shop_by_cate_home1_2.jpg"}}" alt="" /></a>
+<div class="text"><h2 class="cate-name">Interior <span class="text-desc">(9 products)</span></h2></div>
+</div>
+<div class="cate-content horizontal col-sm-6 col-xs-12">
+<a href="#"><img class="img-responsive" src="{{media url="wysiwyg/shop_by_cate_home1_3.jpg"}}" alt="" /></a>
+<div class="text"><h2 class="cate-name">Office <span class="text-desc">(25 products)</span></h2></div>
+</div>
+<div class="cate-content horizontal col-sm-6 col-xs-12">
+<a href="#"><img class="img-responsive" src="{{media url="wysiwyg/shop_by_cate_home1_4.jpg"}}" alt="" /></a>
+<div class="text"><h2  class="h1 cate-name">Accessories <span class="text-desc">(18 products)</span></h2></div>
+</div>
+</div>]]></static_block_content>
+        <type>static</type>
+        <position>3</position>
+        <setting><![CDATA[{"custom_class":"col-xs-12","animation":"","animation_delay":""}]]></setting>
+        <col>12</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+	<child>
+        <block_name>block77-0</block_name>
+        <block_content><![CDATA[]]></block_content>
+        <static_block_title><![CDATA[Molly Number Load Count 01]]></static_block_title>
+        <static_block_identifier><![CDATA[molly_number_load_conut_01]]></static_block_identifier>
+        <static_block_content><![CDATA[<div class="number-count text-center first">
+<span class="icon pe-7s-smile">&nbsp;</span>
+<p class="text-desc">Happy Customers</p>
+<div class="counter">1503</div>
+</div>]]></static_block_content>
+        <type>static</type>
+        <position>1</position>
+        <setting><![CDATA[{"custom_class":"","animation":"","animation_delay":""}]]></setting>
+        <col>12</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+    <child>
+        <block_name>block77-1</block_name>
+        <block_content><![CDATA[]]></block_content>
+        <static_block_title><![CDATA[Molly Number Load Count 02]]></static_block_title>
+        <static_block_identifier><![CDATA[molly_number_load_conut_02]]></static_block_identifier>
+        <static_block_content><![CDATA[<div class="number-count text-center">
+<span class="icon pe-7s-diamond">&nbsp;</span>
+<p class="text-desc">Shoes Sold</p>
+<div class="counter">1109</div>
+</div>]]></static_block_content>
+        <type>static</type>
+        <position>1</position>
+        <setting><![CDATA[{"custom_class":"","animation":"","animation_delay":""}]]></setting>
+        <col>12</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+    <child>
+        <block_name>block77-2</block_name>
+        <block_content><![CDATA[]]></block_content>
+        <static_block_title><![CDATA[Molly Number Load Count 03]]></static_block_title>
+        <static_block_identifier><![CDATA[molly_number_load_conut_03]]></static_block_identifier>
+        <static_block_content><![CDATA[<div class="number-count text-center">
+<span class="icon pe-7s-coffee">&nbsp;</span>
+<p class="text-desc">Coffee Cups</p>
+<div class="counter">9193</div>
+</div>]]></static_block_content>
+        <type>static</type>
+        <position>1</position>
+        <setting><![CDATA[{"custom_class":"","animation":"","animation_delay":""}]]></setting>
+        <col>12</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+    <child>
+        <block_name>block77-3</block_name>
+        <block_content><![CDATA[]]></block_content>
+        <static_block_title><![CDATA[Molly Number Load Count 04]]></static_block_title>
+        <static_block_identifier><![CDATA[molly_number_load_conut_04]]></static_block_identifier>
+        <static_block_content><![CDATA[<div class="number-count text-center">
+<span class="icon pe-7s-chat">&nbsp;</span>
+<p class="text-desc">Facebook Fans</p>
+<div class="counter">1908</div>
+</div>]]></static_block_content>
+        <type>static</type>
+        <position>1</position>
+        <setting><![CDATA[{"custom_class":"","animation":"","animation_delay":""}]]></setting>
+        <col>12</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+    <child>
+        <block_name>block78-0</block_name>
+        <block_content><![CDATA[]]></block_content>
+        <static_block_title><![CDATA[Molly Title New Arrival Inline Sample]]></static_block_title>
+        <static_block_identifier><![CDATA[molly_title_new_arrival_inline_sample]]></static_block_identifier>
+        <static_block_content><![CDATA[<div class="title-inline">
+<h3 class="heading"><span>NEW ARRIVALS</span></h3>
+<div class="text-desc"><span>Trending Fashion In This Season</span></div>
+</div>]]></static_block_content>
+        <type>static</type>
+        <position>1</position>
+        <setting><![CDATA[{"custom_class":"","animation":"","animation_delay":""}]]></setting>
+        <col>12</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+    <child>
+        <block_name>block80-0</block_name>
+        <block_content><![CDATA[]]></block_content>
+        <static_block_title><![CDATA[Molly Title Blog Inline Sample]]></static_block_title>
+        <static_block_identifier><![CDATA[molly_title_blog_inline_sample]]></static_block_identifier>
+        <static_block_content><![CDATA[<div class="title-inline">
+<h3 class="heading"><span>FROM OUR BLOG</span></h3>
+<div class="text-desc"><span>Lorem ipsum dolor sit amet</span></div>
+</div>]]></static_block_content>
+        <type>static</type>
+        <position>1</position>
+        <setting><![CDATA[{"custom_class":"col-xs-12","animation":"","animation_delay":""}]]></setting>
+        <col>12</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+    <child>
+        <block_name>block82-0</block_name>
+        <block_content><![CDATA[]]></block_content>
+        <static_block_title><![CDATA[Molly Subscribe Sample 1]]></static_block_title>
+        <static_block_identifier><![CDATA[molly_subscribe_sample_1]]></static_block_identifier>
+        <static_block_content><![CDATA[<div class="newletter-box">
+<div class="text">
+<div class="title-inline">
+	<h3 class="heading full"><span>NEWSLETTER</span></h3>
+</div>
+<p>Sign up to receive the coupon 15% off for your first purchase via email and get informations about bicycle.</p>
+<br />
+</div>
+{{block type="newsletter/subscribe" name="home.newsletter" as="home.newsletter" template="newsletter/home_subscribe.phtml"/}}
+<br />
+<p class="text-desc">*Discount applies only to orders over $100</p>
+</div>]]></static_block_content>
+        <type>static</type>
+        <position>1</position>
+        <setting><![CDATA[{"custom_class":"","animation":"","animation_delay":""}]]></setting>
+        <col>12</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+    <child>
+        <block_name>block83-0</block_name>
+        <block_content><![CDATA[]]></block_content>
+        <static_block_title><![CDATA[Molly Service Footer Sample 1]]></static_block_title>
+        <static_block_identifier><![CDATA[moly_service_footer_sample_1]]></static_block_identifier>
+        <static_block_content><![CDATA[<div class="service-inline">
+<span class="icon pe-7s-wallet">&nbsp;</span>
+<h5 class="title">MONEY GUARANTEE</h5>
+<p class="text-desc">30 days money guarantee!</p>
+</div>]]></static_block_content>
+        <type>static</type>
+        <position>1</position>
+        <setting><![CDATA[{"custom_class":"col-xs-12","animation":"","animation_delay":""}]]></setting>
+        <col>12</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+    <child>
+        <block_name>block83-1</block_name>
+        <block_content><![CDATA[]]></block_content>
+        <static_block_title><![CDATA[Molly Service Footer Sample 2]]></static_block_title>
+        <static_block_identifier><![CDATA[moly_service_footer_sample_2]]></static_block_identifier>
+        <static_block_content><![CDATA[<div class="service-inline">
+<span class="icon pe-7s-magic-wand">&nbsp;</span>
+<h5 class="title">ONLINE SUPPORT</h5>
+<p class="text-desc">We support online 24/7</p>
+</div>]]></static_block_content>
+        <type>static</type>
+        <position>1</position>
+        <setting><![CDATA[{"custom_class":"col-xs-12","animation":"","animation_delay":""}]]></setting>
+        <col>12</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+    <child>
+        <block_name>block83-2</block_name>
+        <block_content><![CDATA[]]></block_content>
+        <static_block_title><![CDATA[Molly Service Footer Sample 3]]></static_block_title>
+        <static_block_identifier><![CDATA[moly_service_footer_sample_3]]></static_block_identifier>
+        <static_block_content><![CDATA[<div class="service-inline">
+<span class="icon pe-7s-rocket">&nbsp;</span>
+<h5 class="title">PAYMENT SECURE</h5>
+<p class="text-desc">Secure all your payment</p>
+</div>]]></static_block_content>
+        <type>static</type>
+        <position>1</position>
+        <setting><![CDATA[{"custom_class":"col-xs-12","animation":"","animation_delay":""}]]></setting>
+        <col>12</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+    <child>
+        <block_name>block83-3</block_name>
+        <block_content><![CDATA[]]></block_content>
+        <static_block_title><![CDATA[Molly Service Footer Sample 4]]></static_block_title>
+        <static_block_identifier><![CDATA[moly_service_footer_sample_4]]></static_block_identifier>
+        <static_block_content><![CDATA[<div class="service-inline">
+<span class="icon pe-7s-cloud-download">&nbsp;</span>
+<h5 class="title">UK FREE DELIVERY</h5>
+<p class="text-desc">Free on all orders over £99.99</p>
+</div>]]></static_block_content>
+        <type>static</type>
+        <position>1</position>
+        <setting><![CDATA[{"custom_class":"col-xs-12","animation":"","animation_delay":""}]]></setting>
+        <col>12</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+	<!--  Promo Banner  -->
+	<child>
+        <block_name>block81-0</block_name>
+        <block_content><![CDATA[{{block type="promobanners/promobanners" banner_id="%s" template="mgs/promobanners/banner.phtml"}}]]></block_content>
+        <type>promo_banner</type>
+        <banner_title><![CDATA[Molly Promo Banner Left Deals]]></banner_title>
+        <banner_filename><![CDATA[deals_product_home_3.jpg]]></banner_filename>
+        <banner_url><![CDATA[http://mgs.arrowhitech.net/molly/deals]]></banner_url>
+        <banner_content><![CDATA[]]></banner_content>
+        <banner_button><![CDATA[]]></banner_button>
+        <banner_text_align><![CDATA[left]]></banner_text_align>
+        <position>1</position>
+        <setting><![CDATA[{"custom_class":"","animation":"","animation_delay":"","text_colour":"","link_colour":"","link_hover_colour":"","button_colour":"","button_hover_colour":"","button_text_colour":"","button_text_hover_colour":"","button_border_colour":"","button_border_hover_colour":"","banner_id":"%s"}]]></setting>
+        <col>12</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+	<child>
+        <block_name>block82-1</block_name>
+        <block_content><![CDATA[{{block type="promobanners/promobanners" banner_id="%s" template="mgs/promobanners/banner.phtml"}}]]></block_content>
+        <type>promo_banner</type>
+        <banner_title><![CDATA[Molly Banner Right Newsletter]]></banner_title>
+        <banner_filename><![CDATA[right_newsletter_banner_home_3.jpg]]></banner_filename>
+        <banner_url>#</banner_url>
+        <banner_content><![CDATA[]]></banner_content>
+        <banner_button><![CDATA[]]></banner_button>
+        <banner_text_align><![CDATA[left]]></banner_text_align>
+        <position>1</position>
+        <setting><![CDATA[{"custom_class":"","animation":"","animation_delay":"","text_colour":"","link_colour":"","link_hover_colour":"","button_colour":"","button_hover_colour":"","button_text_colour":"","button_text_hover_colour":"","button_border_colour":"","button_border_hover_colour":"","banner_id":"%s"}]]></setting>
+        <col>12</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+    <child>
+        <block_name>block76-0</block_name>
+        <block_content><![CDATA[]]></block_content>
+        <type>separator</type>
+        <position>2</position>
+        <setting><![CDATA[{"custom_class":"col-xs-12","separator_type":"white-space","border_type":"full","border_style":"style1","border_icon":"","text_content":"","margin_top":"20","margin_bottom":"20"}]]></setting>
+        <col>12</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+    <child>
+        <block_name>block78-0</block_name>
+        <block_content><![CDATA[]]></block_content>
+        <type>separator</type>
+        <position>2</position>
+        <setting><![CDATA[{"custom_class":"col-xs-12","separator_type":"white-space","border_type":"full","border_style":"style1","border_icon":"","text_content":"","margin_top":"19","margin_bottom":"19"}]]></setting>
+        <col>12</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+    <child>
+        <block_name>block80-0</block_name>
+        <block_content><![CDATA[]]></block_content>
+        <type>separator</type>
+        <position>2</position>
+        <setting><![CDATA[{"custom_class":"col-xs-12","separator_type":"white-space","border_type":"full","border_style":"style1","border_icon":"","text_content":"","margin_top":"11","margin_bottom":"11"}]]></setting>
+        <col>12</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+    <child>
+        <block_name>block83-0</block_name>
+        <block_content><![CDATA[]]></block_content>
+        <type>separator</type>
+        <position>2</position>
+        <setting><![CDATA[{"custom_class":"col-xs-12","separator_type":"white-space","border_type":"full","border_style":"style1","border_icon":"","text_content":"","margin_top":"12","margin_bottom":"12"}]]></setting>
+        <col>12</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+    <child>
+        <block_name>block83-1</block_name>
+        <block_content><![CDATA[]]></block_content>
+        <type>separator</type>
+        <position>2</position>
+        <setting><![CDATA[{"custom_class":"col-xs-12","separator_type":"white-space","border_type":"full","border_style":"style1","border_icon":"","text_content":"","margin_top":"12","margin_bottom":"12"}]]></setting>
+        <col>12</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+    <child>
+        <block_name>block83-2</block_name>
+        <block_content><![CDATA[]]></block_content>
+        <type>separator</type>
+        <position>2</position>
+        <setting><![CDATA[{"custom_class":"col-xs-12","separator_type":"white-space","border_type":"full","border_style":"style1","border_icon":"","text_content":"","margin_top":"12","margin_bottom":"12"}]]></setting>
+        <col>12</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+    <child>
+        <block_name>block83-3</block_name>
+        <block_content><![CDATA[]]></block_content>
+        <type>separator</type>
+        <position>2</position>
+        <setting><![CDATA[{"custom_class":"col-xs-12","separator_type":"white-space","border_type":"full","border_style":"style1","border_icon":"","text_content":"","margin_top":"12","margin_bottom":"12"}]]></setting>
+        <col>12</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+	
+    <child>
+        <block_name>block78-0</block_name>
+        <block_content><![CDATA[{{block type="mpanel/product_new" display_type="new_products" products_count="8" slider="1" count_per_row="4" title="" product_ratio="" auto_play="false" stop_hover="false" navigation="true" pagination="false" number_row="1" template="mgs/mpanel/products/new_products.phtml"}}]]></block_content>
+        <type>new_products</type>
+        <position>3</position>
+        <setting><![CDATA[{"title":"","custom_class":"col-xs-12","animation":"","animation_delay":"","product_count":"8","view_mode":"grid","count_per_row":"4","product_ratio":"","slider":{"active":"1","number_row":"1","auto":"false","stop_hover":"false","navigation":"true","pagination":"false"},"load_more":"0","text_colour":"","link_colour":"","link_hover_colour":"","button_colour":"","button_hover_colour":"","button_text_colour":"","button_text_hover_colour":"","button_border_colour":"","button_border_hover_colour":"","price_colour":""}]]></setting>
+        <col>12</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+	<child>
+        <block_name>block79-0</block_name>
+        <block_content><![CDATA[{{block type="testimonial/testimonial" template="mgs/testimonial/view.phtml" view_mode="grid" title="" item_count="3"}}]]></block_content>
+        <type>testimonials</type>
+        <position>1</position>
+        <setting><![CDATA[{"custom_class":"col-xs-12","animation":"","animation_delay":"","title":"","item_count":"3","view_mode":"grid"}]]></setting>
+        <col>12</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+	<child>
+        <block_name>block80-0</block_name>
+        <block_content><![CDATA[{{widget type="blog/last" blog_count="3" categories="1" column="3" view_mode="grid" slider="1" title="" character_count="110" auto_play="false" stop_hover="false" navigation="false" pagination="false"}}]]></block_content>
+        <type>latest_posts</type>
+        <position>3</position>
+        <setting><![CDATA[{"title":"","custom_class":"col-xs-12","animation":"","animation_delay":"","categories":["1"],"product_count":"3","character_count":"110","view_mode":"grid","count_per_row":"3","slider":{"active":"1","auto":"false","stop_hover":"false","navigation":"false","pagination":"false"},"text_colour":"","link_colour":"","link_hover_colour":"","button_colour":"","button_hover_colour":"","button_text_colour":"","button_text_hover_colour":"","button_border_colour":"","button_border_hover_colour":""}]]></setting>
+        <col>12</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>	
+	<child>
+        <block_name>block75-0</block_name>
+        <block_content><![CDATA[{{widget type="revslider/slider_preview" id="6"}}]]></block_content>
+        <type>revolution</type>
+        <position>1</position>
+        <setting><![CDATA[6]]></setting>
+        <col>12</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>	
+</layout>

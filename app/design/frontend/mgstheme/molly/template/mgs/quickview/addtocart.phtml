@@ -1,0 +1,49 @@
+<?php
+/* * ****************************************************
+ * Package   : QuickView
+ * Author    : HIEPNH
+ * Copyright : (c) 2014
+ * ***************************************************** */
+?>
+<?php $_product = $this->getProduct(); ?>
+<?php $buttonTitle = $this->__('Add to Cart'); ?>
+<?php if ($_product->isSaleable()): ?>
+    <div class="add-to-cart box-add-to-cart">
+        <?php if (!$_product->isGrouped()): ?>
+            <div class="shop_meta pull-left">
+				<div class="btn-shop qty-product-buy">
+					<span class="edit-qty minus" onclick="minusQty('qty')"><i class="fa fa-minus"></i></span>
+					<input type="text" class="form-control input-qty-product" title="Qty" value="<?php echo $this->getProductDefaultQty() * 1 ?>" name="qty" id="qty"/>
+					<span class="edit-qty plus" onclick="plusQty('qty')"><i class="fa fa-plus"></i></span>
+				</div>
+			</div>
+        <?php endif; ?>
+		<div class="btn-shop pull-left">
+			<button type="button" title="<?php echo $buttonTitle ?>" class="btn-lg btn btn-primary" onclick="ajaxSubmitForm.submit(this)"><span><span><?php echo $buttonTitle ?></span></span></button>        
+                &nbsp;<span id="ajax_cart_loader" style="display:none; margin-top: 5px;margin-left: 5px;float: right;"><img src="<?php echo $this->getSkinUrl('images/ajax-loader.gif') ?>"/></span>
+		</div>
+        <?php echo $this->getChildHtml('', true, true) ?>
+        <script type="text/javascript">
+            function plusQty(qtyInput){
+                if(jQuery('#'+qtyInput).attr('disabled')!='disabled'){
+                    qty = $(qtyInput).value;
+                    qty = parseInt(qty);
+                    qty++;
+                    $(qtyInput).value = qty;
+                }
+            }
+    		
+            function minusQty(qtyInput){
+                if(jQuery('#'+qtyInput).attr('disabled')!='disabled'){
+                    qty = $(qtyInput).value;
+                    qty = parseInt(qty);
+    				
+                    if(qty>1){
+                        qty--;
+                        $(qtyInput).value = qty;
+                    }
+                }
+            }
+        </script>
+    </div>
+<?php endif; ?>

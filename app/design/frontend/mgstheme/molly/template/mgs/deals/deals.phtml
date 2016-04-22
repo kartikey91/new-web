@@ -1,0 +1,167 @@
+<?php if (Mage::getStoreConfig('deals/general/enabled')): ?>
+<?php $helper = $this->helper('mpanel'); ?>
+<?php $_helper = $this->helper('catalog/output'); ?>
+<?php $size = $helper->convertRatioToSize($this->getProductRatio()) ?>
+    <?php
+    $layout = Mage::getSingleton('core/layout');
+    $productCollection = $this->getProductCollection();
+    $toolbar = $this->getToolbarBlock();
+    $pager = $layout->createBlock('page/html_pager');
+    $toolbar->setChild('product_list_toolbar_pager', $pager);
+    $toolbar->setCollection($productCollection);
+    
+    $toolbar->setMode($this->getMode());
+	$toolbar->setTemplate('mgs/deals/toolbar.phtml');
+    ?> 
+<div class="top-deals-toolbar">
+	<?php  echo $toolbar->toHtml(); ?>
+</div>
+    <?php if (count($productCollection) > 0): ?>
+	<div class="category-products">
+        <?php if ($this->getMode() != 'grid'): ?>
+            <div class="deals-container products-list category-products-list">
+                <?php foreach ($productCollection as $product): ?>
+                    <?php $_product = Mage::getModel('catalog/product')->load($product->getId()) ?>
+                    <div class="item row">
+						<div class="col-md-3 col-sm-6 col-xs-12">
+							<div class="product-images-box">
+								<a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($this->getImageLabel($_product, 'small_image'), null, true) ?>" class="product-image">
+									<img class="img-responsive" src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize($size['width'], $size['height']); ?>" alt="<?php echo $this->htmlEscape($this->getImageLabel($_product, 'small_image'), null, true) ?>" />
+								</a>
+								<?php if ($this->helper('core')->isModuleEnabled('MGS_QuickView') && Mage::getStoreConfig('quickview/general/active')): ?>
+									<div class="action-quickview">
+										<button type="button" title="<?php echo $this->__('Quickview') ?>" class="btn-quickview quick-view btn-full" onclick="quickView('<?php echo $_product->getProductUrl() ?>'); return false;"><em class="fa fa-search"></em><?php echo $this->__('Quickview') ?></button>
+									</div>
+								<?php endif ?>
+							</div>
+						</div>
+						<div class="col-md-9 col-sm-6 col-xs-12">
+							<div class="product-desc">
+								<p class="product-name"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>"><?php echo $_product->getName(); ?></a></p>
+								<?php echo $this->getPriceHtml($_product, true) ?>
+								<div class="clear"></div>
+								<p class="description"><?php echo $_helper->productAttribute($_product, $_product->getShortDescription(), 'short_description') ?></p>
+								<div class="product-timer">
+									<?php echo $this->getLayout()->createBlock('deals/deals')->setTemplate('mgs/deals/list.phtml')->setProductId($_product->getId())->toHtml(); ?>
+								</div>
+								<div class="item-info">
+									<div class="sold">
+										<?php echo $this->__('Sold:') ?> <span><?php echo $this->getSold($_product->getId()) ?></span>
+									</div>
+									<div class="item-left">
+										<?php $itemLeft = $this->getItemLeft($_product->getId()); ?>
+										<?php if ($itemLeft != ''): ?>
+											<?php if ($itemLeft > 1): ?>
+												<?php echo $this->__('Items left:') ?> <span><?php echo $itemLeft ?></span>
+											<?php else: ?>
+												<?php echo $this->__('Item left:') ?> <span><?php echo $itemLeft ?></span>
+											<?php endif ?>
+										<?php else: ?>
+											<?php echo $this->__('Items left:') ?> <span><?php echo $this->__('Unlimited') ?></span>
+										<?php endif ?>
+									</div>
+								</div>
+								<div class="deals-info">
+									<form action="<?php echo $this->getAddToCartUrl($_product) ?>" method="post" id="product_addtocart_form_<?php echo $_product->getId(); ?>">
+										<input name="qty" type="text" class="input-text qty addcart-qty" id="addcartqty" maxlength="12" value="<?php echo $this->getMinimalQty($_product) ?>" />
+										<button class="button-addcart btn btn-primary btn-lg" onclick="productAddToCartForm_<?php echo $_product->getId(); ?>.submit();"><span><?php echo $this->__('Buy Now') ?></span></button>
+									</form>
+									<script type="text/javascript">
+											var productAddToCartForm_<?php echo $_product->getId(); ?> = new VarienForm('product_addtocart_form_<?php echo $_product->getId(); ?>');
+											productAddToCartForm_<?php echo $_product->getId(); ?>.submit = function() {
+												if (this.validator.validate()) {
+													this.form.submit();
+												}
+											}.bind(productAddToCartForm_<?php echo $_product->getId(); ?>);
+									</script>
+								</div>
+							</div>
+						</div>
+                    </div>
+                <?php endforeach ?>
+            </div>
+        <?php else: ?>
+            <?php $_collectionSize = $productCollection->count() ?>
+            <?php $_columnCount = $this->getColumnCount(); ?>
+			<div class="deal-container products-grid deals-widget row">
+            <?php $i = 0; foreach ($productCollection as $product): $i++;  ?>
+            <?php $_product = Mage::getModel('catalog/product')->load($product->getId()); ?>
+			<?php $cats = $_product->getCategoryIds(); ?>
+				<div class="item col-md-4 col-sm-6 col-xs-12<?php if($i % 3 == 1): ?> first-row-item<?php endif ?><?php if($i % 2 == 1): ?> row-2-first<?php endif ?>">
+					<div class="product-content">
+						<div class="product-top">
+							<a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" class="products-image">
+								<img class="img-responsive" src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize($size['width'], $size['height']); ?>" alt="<?php echo $this->htmlEscape($this->getImageLabel($_product, 'small_image'), null, true) ?>" />
+								<?php if(basename($_product->getData('image')) != basename($_product->getData('small_image'))): ?>
+									<img src="<?php echo $this->helper('catalog/image')->init($_product, 'image')->resize($size['width'], $size['height']) ?>" 
+									alt="<?php echo $this->stripTags($_product->getName(), null, true) ?>" class="img-responsive img-two"/>
+								<?php endif ?>
+							</a>
+							
+							<?php if ($this->helper('core')->isModuleEnabled('MGS_QuickView') && Mage::getStoreConfig('quickview/general/active')): ?>
+								<div class="action-quickview">
+									<button type="button" title="<?php echo $this->__('Quickview') ?>" class="btn-quickview quick-view btn-full" onclick="quickView('<?php echo $_product->getProductUrl() ?>'); return false;"><em class="fa fa-search"></em><?php echo $this->__('Quickview') ?></button>
+								</div>
+							<?php endif ?>
+							
+							<?php echo $this->getLayout()->createBlock('deals/deals')->setTemplate('mgs/deals/list.phtml')->setProductId($_product->getId())->toHtml(); ?>
+						</div>
+						<div class="product-desc">
+							<div class="top-desc">
+								<?php if(count($cats) > 0): ?>
+									<?php $j=0; foreach ($cats as $category_id): $j++; ?>
+										<?php if($j ==2 ){ break; } ?>
+										<?php $_cat = Mage::getModel('catalog/category')->setStoreId(Mage::app()->getStore()->getId())->load($category_id); ?>
+										<div class="text-desc cate-name">
+											<div class="text">
+												<span><?php echo $_cat->getName(); ?></span>
+											</div>
+										</div>
+									<?php endforeach; ?>
+								<?php else: ?>
+									<div class="text-desc cate-name">
+										<div class="text">
+											<span><?php echo $this->__('Hot Deals') ?></span>
+										</div>
+									</div>
+								<?php endif ?>
+								<div class="controls">
+									<ul class="icon-links">
+										<?php if ($this->helper('wishlist')->isAllow() && $helper->isShowWishList()) : ?>
+											<li class="wl-item"><button type="button" title="<?php echo $this->__('Add to Wishlist') ?>" onclick="setLocation('<?php echo $this->helper('wishlist')->getAddUrl($_product) ?>')" <?php if (!$helper->checkInWishilist($_product)) : ?>class="no-active"<?php endif ?>><em class="fa <?php if ($helper->checkInWishilist($_product)) : ?>fa-heart<?php else: ?>fa-heart-o<?php endif ?>"></em></button></li>
+										<?php endif; ?>
+										<?php if ($_compareUrl = $this->getAddToCompareUrl($_product) && $helper->isShowCompare()): ?>
+											<li><button class="btn-compare" type="button" title="<?php echo $this->__('Add to Compare') ?>" onclick="setLocation('<?php echo $_compareUrl ?>')"><em class="fa fa-sliders"></em></button></li>
+										<?php endif; ?>
+									</ul>
+								</div>
+							</div>
+						
+							<p class="product-name"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>"><?php echo $_product->getName(); ?></a></p>
+							
+							<?php echo $this->getPriceHtml($_product, true) ?>
+							
+							<?php echo $this->getLayout()->createBlock('review/helper')->getSummaryHtml($_product, 'short');?>
+							
+							<?php if ($_product->isSaleable()): ?>
+								<div class="add-cart-item">
+									<button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>');"><em class="fa fa-shopping-cart"></em><?php echo $this->__('Add to Cart') ?></button>
+								</div>
+							<?php else: ?>
+								<div class="add-cart-item">
+									<span class="text-soul"><?php echo $this->__('Out of Stock'); ?></span>
+								</div>
+							<?php endif; ?>
+							
+						</div>
+					</div>
+				</div>
+            <?php endforeach ?>
+			</div>
+        <?php endif; ?>
+    <?php endif; ?>
+	</div>
+	<div class="bottom-deals-toolbar">
+		<?php echo $toolbar->toHtml();?>
+	</div>
+<?php endif; ?>

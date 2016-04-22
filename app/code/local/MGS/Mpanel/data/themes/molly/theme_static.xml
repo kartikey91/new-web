@@ -1,0 +1,401 @@
+<static_block>
+	<!-- MOBILE THEME -->
+	<item>
+		<title>Molly Mobile Homepage</title>
+		<identifier>molly_mobile_homepage</identifier>
+		<content><![CDATA[<div class="mobile-homepage-content">
+<div class="rev-slider">{{widget type="revslider/slider_preview" id="2"}}</div>
+<div class="featured">{{block type="mpanel/products" products_count="8" title="Featured Products" template="cms/home/featured_products.phtml"}}</div>
+<div class="mobile-v-menu">
+<div class="v-menu-title">
+<h3>Shop By Category</h3>
+</div>
+{{block type="page/html_topmenu" template="page/html/topmenu.phtml"}}</div>
+</div>]]></content>
+	</item>
+	<item>
+		<title>Molly Mobile Main Menu</title>
+		<identifier>molly_mobile_main_menu</identifier>
+		<content><![CDATA[{{block type="megamenu/horizontal" menu_id="2" template="megamenu/horizontal.phtml"}}]]></content>
+	</item>
+	<item>
+		<title>Molly Mobile Socials</title>
+		<identifier>molly_mobile_socilas</identifier>
+		<content><![CDATA[<div class="block-title">
+<h3>Follow Us</h3>
+</div>
+<div class="block-content">
+<ul>
+<li><a href="#"><span class="fa fa-facebook">&nbsp;</span></a></li>
+<li><a href="#"><span class="fa fa-twitter">&nbsp;</span></a></li>
+<li><a href="#"><span class="fa fa-pinterest">&nbsp;</span></a></li>
+<li><a href="#"><span class="fa fa-instagram">&nbsp;</span></a></li>
+<li><a href="#"><span class="fa fa-youtube-play">&nbsp;</span></a></li>
+<li><a href="#"><span class="fa fa-google-plus">&nbsp;</span></a></li>
+</ul>
+</div>]]></content>
+	</item>
+	<item>
+		<title>Main Menu</title>
+		<identifier>molly_mobile_footer_block_1</identifier>
+		<content><![CDATA[<ul>
+<li><a href="{{store url=""}}">Home</a></li>
+<li><a href="{{store url=""}}">About Us</a></li>
+<li><a href="{{store url=""}}brand">Our Brands</a></li>
+<li><a href="{{store url=""}}blog">Blog</a></li>
+<li><a href="{{store url=""}}faqs">FAQs</a></li>
+<li><a href="{{store url=""}}contacts">Contacts</a></li>
+</ul>]]></content>
+	</item>
+	<item>
+		<title>Information</title>
+		<identifier>molly_mobile_footer_block_2</identifier>
+		<content><![CDATA[<p>Suspendisse vel enim ut nisl malesuada tristique ut vel nunc. Integer sed justo ac tortor porta bibendum non vehicula sapien. Cras vel augue nisl. Nulla id aliquam purus.</p>]]></content>
+	</item>
+	<item>
+		<title>Store Info</title>
+		<identifier>molly_mobile_footer_block_3</identifier>
+		<content><![CDATA[<div>
+<div class="store-container">
+<div class="content-store">
+<p><em class="fa fa-home">&nbsp;</em> Address:</p>
+<p>108 Street, AZ District, Green City</p>
+</div>
+</div>
+<div class="store-container">
+<div class="content-store">
+<p><em class="fa fa-phone">&nbsp;</em> Feel Free to Call Us:</p>
+<p>+123 456 7890</p>
+</div>
+</div>
+<div class="store-container">
+<div class="content-store">
+<p><em class="fa fa-envelope">&nbsp;</em> Email: info@magesolution.com</p>
+</div>
+</div>
+</div>]]></content>
+	</item>
+	<item>
+		<title>Molly Mobile Copyright</title>
+		<identifier>molly_mobile_copyright</identifier>
+		<content><![CDATA[Coppyright &copy; 2016 <a href="#">Molly</a>. All Rights Reserved.<br />Powered by <a href="#">ArrowHitech</a>.]]></content>
+	</item>
+	<item>
+		<title>Molly Mobile Payments</title>
+		<identifier>molly_mobile_payments</identifier>
+		<content><![CDATA[<img src="{{media url="wysiwyg/payments.png"}}" alt="" />]]></content>
+	</item>
+	<item>
+		<title>Molly Mobile Newsletter</title>
+		<identifier>molly_mobile_newsletter</identifier>
+		<content><![CDATA[{{block type="newsletter/subscribe" name="footer.newsletter" as="footer.newsletter" template="newsletter/subscribe.phtml"}}]]></content>
+	</item>
+	<!-- FOOTER -->
+	<item>
+		<title>Molly social header</title>
+		<identifier>molly_socialheader</identifier>
+		<content><![CDATA[<ul class="social">
+<li><a href="#"><em class="fa fa-facebook">&nbsp;</em></a></li>
+<li><a href="#"><em class="fa fa-twitter">&nbsp;</em></a></li>
+<li><a href="#"><em class="fa fa-instagram">&nbsp;</em></a></li>
+<li><a href="#"><em class="fa fa-dribbble">&nbsp;</em></a></li>
+<li><a href="#"><em class="fa fa-vimeo">&nbsp;</em></a></li>
+</ul>]]></content>
+	</item>
+	<item>
+		<title>Molly Newsletter Footer</title>
+		<identifier>molly_footer_newsletter</identifier>
+		<content><![CDATA[<div class="newsletter-footer">{{block type="newsletter/subscribe" name="footer.subscribe" template="newsletter/footer-subscribe.phtml"}}</div>]]></content>
+	</item>
+	<item>
+		<title>Molly About footer</title>
+		<identifier>panel_about</identifier>
+		<content><![CDATA[<div class="footer-about">
+<div class="block-title">
+<span class="h4"><span class="title">ABOUT US</span></span>
+</div>
+<div class="block-content">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In fermentum mauris sed sapien tristique suscipit. Nunc mollis tortor velit, at commodo nisi ullamcorper ac. Quisque id mi semper ipsum.</p>
+</div>
+</div>]]></content>
+	</item>
+	<item>
+		<title>Molly Contacts footer</title>
+		<identifier>panel_contact</identifier>
+		<content><![CDATA[<div class="footer-contacts">
+<div class="block-title">
+<span class="h4"><span class="title">KEEP IN TOUCH</span></span>
+</div>
+<div class="block-content">
+<ul>
+<li><em class="fa fa-map-marker">&nbsp;</em> <span class="text">PO Box 16122 Collins Street West <br /> Victoria 8007 Australia </span></li>
+<li><em class="fa fa-phone">&nbsp;</em> <span class="text">Tel. +1 2123431725 </span></li>
+<li><em class="fa fa-envelope-o">&nbsp;</em> <span class="text">Email. info@thememove.com</span></li>
+</ul>
+</div>
+</div>]]></content>
+	</item>
+	<item>
+		<title>Molly Infomation footer</title>
+		<identifier>panel_info</identifier>
+		<content><![CDATA[<div class="info-footer">
+<div class="block-title">
+<span class="h4"><span class="title">INFOMATION</span></span>
+</div>
+<div class="block-content">
+<ul>
+<li><a href="#"><em class="fa fa-angle-right">&nbsp;</em> ABOUT US</a></li>
+<li><a href="#"><em class="fa fa-angle-right">&nbsp;</em> DELIVERY INFOMATION</a></li>
+<li><a href="#"><em class="fa fa-angle-right">&nbsp;</em> PRIVACY &amp; POLICY</a></li>
+<li><a href="#"><em class="fa fa-angle-right">&nbsp;</em> TEMRS &amp; CONDITIONS</a></li>
+<li><a href="#"><em class="fa fa-angle-right">&nbsp;</em> MANUFACTURES</a></li>
+</ul>
+</div>
+</div>]]></content>
+	</item>
+	<item>
+		<title>Molly Instagram</title>
+		<identifier>panel_instagram</identifier>
+		<content><![CDATA[<div class="instagram-footer">
+<div class="block-title">
+<span class="h4"><span class="title">INSTAGRAM FEEDS</span></span>
+</div>
+<div class="block-content">
+{{block type="core/template" name="instagram" as="instagram" template="mgs/mpanel/instagram.phtml"/}}
+</div>
+</div>]]></content>
+	</item>
+	<!-- HEADER -->
+	<item>
+		<title>Molly vertical menu</title>
+		<identifier>molly_vertical_menu</identifier>
+		<content><![CDATA[<div class="vertical-menu-home">
+<div class="vertical-title">
+<h5> Brownse Category</h5>
+<div class="fa-icon">&nbsp;</div>
+</div>
+<div class="vertical-menu-content">
+{{block type="megamenu/vertical" menu_id="2" template="megamenu/vertical.phtml"}}</div>
+</div>]]></content>
+	</item>
+	<item>
+		<title>Molly Contacts</title>
+		<identifier>molly_contacts</identifier>
+		<content><![CDATA[<div class="phone"><em class="fa fa-phone">&nbsp;</em> +001 453 8989</div>
+]]></content>
+	</item>
+	<item>
+		<title>Molly title logo</title>
+		<identifier>molly_titlelogo</identifier>
+		<content><![CDATA[<div class="title-logo">Molly Has So Many <strong>Good Stuffs</strong> For Customers</div>]]></content>
+	</item>
+	<!-- FAQs -->
+	<item>
+		<title>Molly Faq How To Order</title>
+		<identifier>molly_faq_custom_1</identifier>
+		<content><![CDATA[<div class="title-center" style="margin-bottom: 30px;margin-top: 40px;">
+<h3 class="heading"><span>HOW TO ORDER</span></h3>
+</div>
+<div class="accordion_question panel-group" id="accordion_question" role="tablist" aria-multiselectable="true">
+				<div class="panel">
+					<div class="panel-heading" role="tab" id="headingOne">
+						<p class="active"><a role="button" data-toggle="collapse" data-parent="#accordion_question" href="#one" aria-expanded="true" aria-controls="one" class="">Brushstrokes Jersey Tea Dress?</a></p>
+					</div>
+					<div id="one" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" style="">
+						<div class="panel-body">
+							Aliquam erat volutpat. Cras blandit eget ex quis convallis. In faucibus imperdiet est, non ornare velit commodo a...
+						</div>
+					</div> 
+				</div>
+				<div class="panel">
+					<div class="panel-heading" role="tab" id="headingTwo">
+						<p><a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_question" href="#two" aria-expanded="false" aria-controls="two">Ut enim ad minim veniam?</a></p>
+					</div>
+					<div id="two" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+						<div class="panel-body">
+							 Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS...
+						</div> 
+					</div> 
+				</div> 
+				<div class="panel last">
+					<div class="panel-heading" role="tab" id="headingThree">
+						<p><a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_question" href="#three" aria-expanded="false" aria-controls="three">Ullamco laboris nisi ut aliquip ex ea?</a> </p>
+					</div>
+					<div id="three" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+						<div class="panel-body">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. .
+						</div> 
+					</div>
+				</div> 
+			</div>]]></content>
+	</item>
+	<item>
+		<title>Molly Faq Shopping Guides</title>
+		<identifier>molly_faq_custom_2</identifier>
+		<content><![CDATA[<div class="title-center" style="margin-bottom: 30px;margin-top: 40px;">
+<h3 class="heading"><span>SHOPPING GUIDES</span></h3>
+</div>
+<ul class="shopping-guides">
+<li>
+<span class="icon pe-7s-box2">&nbsp;</span>
+STEP 1: CHOOSE YOUR ITEMS &amp; ADD TO YOUR SHOPPING CART.
+</li>
+<li>
+<span class="icon pe-7s-box2">&nbsp;</span>
+STEP 2: APPLY COMBO &amp; PAY.
+</li>
+<li>
+<span class="icon pe-7s-box2">&nbsp;</span>
+STEP 3: CHOOSE YOUR ADDRESS.
+</li>
+<li>
+<span class="icon pe-7s-box2">&nbsp;</span>
+STEP 4: JUST WAIT FOR IT TO COME TO YOUR HOUSE AFTER FEW DAYS!
+</li>
+</ul>]]></content>
+	</item>
+	<!-- Contacts -->
+	<item>
+		<title>Molly Contact Title</title>
+		<identifier>molly_contact_title</identifier>
+		<content><![CDATA[<h3 class="heading"><span>GET IN TOUCH</span></h3>
+<div class="text-desc"> Pellentesque id sem in nisl malesuada rhoncus</div>]]></content>
+	</item>
+	<item>
+		<title>Molly Contact Information</title>
+		<identifier>molly_contact_information</identifier>
+		<content><![CDATA[<div class="row">
+<div class="col-md-4 col-sm-4 col-xs-12 contact-info">
+<div class="text-center">
+<span class="icon pe-7s-call">&nbsp;</span>
+<p class="text-desc">Call Us</p>
+<p>1800 578 90</p>
+</div>
+</div>
+<div class="col-md-4 col-sm-4 col-xs-12 contact-info center">
+<div class="text-center">
+<span class="icon pe-7s-map-2">&nbsp;</span>
+<p class="text-desc">Our Location</p>
+<p>PO Box 16122 Collins Street <br /> West, Australia  </p>
+</div>
+</div>
+<div class="col-md-4 col-sm-4 col-xs-12 contact-info">
+<div class="text-center">
+<span class="icon pe-7s-mail-open-file">&nbsp;</span>
+<p class="text-desc">Our Email</p>
+<p>mollytheme@example.com</p>
+</div>
+</div>
+</div>]]></content>
+	</item>
+	<item>
+		<title>Molly Contact Title Form 2</title>
+		<identifier>molly_contact_title_form2</identifier>
+		<content><![CDATA[<h3><span>OUR SKILL</span></h3>
+<p>Get Free Shipping on all orders over $75 and free returns to our UK returns centre! </p>]]></content>
+	</item>
+	<!-- Lookbook -->
+	<item>
+		<title>Molly Landing Category Grid</title>
+		<identifier>molly_landing_category_grid</identifier>
+		<content><![CDATA[{{block type="catalog/navigation" template="mgs/mpanel/landing-grid.phtml"}}]]></content>
+	</item>
+	<item>
+		<title>Molly Landing Category Lookbook</title>
+		<identifier>molly_landing_category_lookbook</identifier>
+		<content><![CDATA[{{block type="catalog/navigation" template="mgs/mpanel/landing-lookbook.phtml"}}]]></content>
+	</item>
+	<item>
+		<title>Molly Landing Category Mansory</title>
+		<identifier>molly_landing_category_mansory</identifier>
+		<content><![CDATA[{{block type="catalog/navigation" template="mgs/mpanel/landing-mansory.phtml"}}]]></content>
+	</item>
+	<!-- Products Details -->
+	<item>
+		<title>Molly Colright Service Sample</title>
+		<identifier>molly_colright_service_sample</identifier>
+		<content><![CDATA[<div class="block">
+<div class="service-inline">
+	<span class="icon pe-7s-wallet">&nbsp;</span>
+	<h5 class="title">MONEY GUARANTEE</h5>
+	<p class="text-desc">30 days money guarantee!</p>
+</div>
+<div class="service-inline">
+	<span class="icon pe-7s-magic-wand">&nbsp;</span>
+	<h5 class="title">ONLINE SUPPORT</h5>
+	<p class="text-desc">We support online 24/7</p>
+</div>
+<div class="service-inline">
+	<span class="icon pe-7s-rocket">&nbsp;</span>
+	<h5 class="title">PAYMENT SECURE</h5>
+	<p class="text-desc">Secure all your payment</p>
+</div>
+<div class="service-inline">
+	<span class="icon pe-7s-cloud-download">&nbsp;</span>
+	<h5 class="title">UK FREE DELIVERY</h5>
+	<p class="text-desc">Free on all orders over £99.99</p>
+</div>
+</div>]]></content>
+	</item>
+	<item>
+		<title>MGS Panel Product Static Block Top </title>
+		<identifier>mgs_panel_product_static_block_top</identifier>
+		<content><![CDATA[Sed arcu velit, lacinia quis scelerisque sit amet, fringilla eu nibh. In in metus vel lacus fringilla mattis vitae at augue. Nullam malesuada, urna at scelerisque consequat, enim libero commodo enim, in malesuada purus erat ut ipsum.]]></content>
+	</item>
+	<item>
+		<title>MGS Panel Product Static Block Bottom</title>
+		<identifier>mgs_panel_product_static_block_bottom</identifier>
+		<content><![CDATA[Sed arcu velit, lacinia quis scelerisque sit amet, fringilla eu nibh. In in metus vel lacus fringilla mattis vitae at augue. Nullam malesuada, urna at scelerisque consequat, enim libero commodo enim, in malesuada purus erat ut ipsum.]]></content>
+	</item>
+	<!-- Newsletter Popup -->
+	<item>
+		<title>Molly Newsletter Popup</title>
+		<identifier>newsletter_popup</identifier>
+		<content><![CDATA[<p id="img-newsletter"><img src="{{media url="wysiwyg/bg_newsletter_popup_1.jpg"}}" alt="" /></p>
+<div class="newsletter-popup">
+<p><img src="{{media url="wysiwyg/logo.png"}}" alt="" /></p>
+<h3>Join Our Newsletter</h3>
+<p class="desc-popup hidden-xs">Subscribe to the Sku eCommerce newsletter to receive timely updates from your favorite products.</p>
+{{block type="newsletter/subscribe" name="home.newsletter" as="home.newsletter" template="newsletter/subscribe-popup.phtml"/}}
+<div class="checkbox"><label for="dont_show"> <input id="dont_show" onclick="dontShowPopup('dont_show')" type="checkbox" /> Don't show this popup again </label></div>
+</div>]]></content>
+	</item>
+	<!-- Blog Connected -->
+	<item>
+		<title>Molly Connected Blog</title>
+		<identifier>molly_connected_blog</identifier>
+		<content><![CDATA[<div class="block">
+<div class="title-block">
+<h4 class="title"><span>Get Connected</span></h4>
+</div>
+<div class="block-content">
+<ul class="social-connected">
+<li><a href="#"><em class="fa fa-facebook">&nbsp;</em></a></li>
+<li><a href="#"><em class="fa fa-twitter">&nbsp;</em></a></li>
+<li><a href="#"><em class="fa fa-instagram">&nbsp;</em></a></li>
+<li><a href="#"><em class="fa fa-dribbble">&nbsp;</em></a></li>
+<li><a href="#"><em class="fa fa-vine">&nbsp;</em></a></li>
+</ul>
+</div>
+</div>]]></content>
+	</item>
+	<!-- Sticky menu Logo -->
+	<item>
+		<title>Panel Logo Sticky</title>
+		<identifier>panel_logo_sticky</identifier>
+		<content><![CDATA[<img src="{{media url="wysiwyg/logo.png"}}" alt="" />]]></content>
+	</item>
+	
+	<item>
+		<title>Molly Vertical Menu 11</title>
+		<identifier>vertical_menu_11</identifier>
+		<content><![CDATA[<div class="vertical-menu-home">
+<div class="vertical-title">
+<h5> Brownse Categories</h5>
+<div class="fa-icon">&nbsp;</div>
+</div>
+<div class="vertical-menu-content">
+{{block type="megamenu/vertical" menu_id="3" template="megamenu/vertical.phtml"}}</div>
+</div>]]></content>
+	</item>
+</static_block>

@@ -1,0 +1,128 @@
+<?php
+/* * ****************************************************
+ * Package   : Brand
+ * Author    : HIEPNH
+ * Copyright : (c) 2015
+ * ***************************************************** */
+?>
+<?php
+$_productStoreConfig = Mage::getStoreConfig('brand/product');
+$_showRelatedProducts = $_productStoreConfig['show_related_products'];
+?>
+<?php if ($_showRelatedProducts): ?>
+    <?php
+    $_product = Mage::registry('product');
+    $_brand = $this->getBrand($_product->getId());
+
+    $_relatedProductsLimit = intval($_productStoreConfig['related_products_limit']) ? $_productStoreConfig['related_products_limit'] : 8;
+    $_relatedProductsSortBy = $_productStoreConfig['related_products_sort_by'] ? $_productStoreConfig['related_products_sort_by'] : null;
+    $_relatedProductsSortDir = $_productStoreConfig['related_products_sort_dir'] ? $_productStoreConfig['related_products_sort_dir'] : null;
+
+    $_collection = $this->getRelatedProducts($_brand->getId(), $_relatedProductsLimit, 1, $_relatedProductsSortBy, $_relatedProductsSortDir);
+    $_helper = $this->helper('catalog/output');
+
+    $_listLayout = ($this->getData('list_layout')) ? $this->getData('list_layout') : "grid";
+    if ($_listLayout == "grid") {
+        $_columnsCount = ($this->getData('columns_count')) ? $this->getData('columns_count') : 4;
+        $_ulClass = "products-related-grid products-related-grid-" . $_columnsCount . "cols";
+    } else {
+        $_ulClass = "products-list";
+    }
+    $_showProductImage = ($this->getData('show_product_image') == "0") ? $this->getData('show_product_image') : 1;
+    if ($_showProductImage) {
+        $_imgWidth = ($this->getData('image_width')) ? $this->getData('image_width') : 300;
+        $_imgHeight = ($this->getData('image_height')) ? $this->getData('image_height') : 300;
+    }
+    $_showProductTitle = ($this->getData('show_product_title') == "0") ? $this->getData('show_product_title') : 1;
+    $_showProductPrice = ($this->getData('show_product_price') == "0") ? $this->getData('show_product_price') : 1;
+    $_showProductRating = ($this->getData('show_product_rating') == "0") ? $this->getData('show_product_rating') : 1;
+    $_showProductShortDescription = ($this->getData('show_product_short_description') == "0") ? $this->getData('show_product_short_description') : 1;
+    $_showAddToCart = ($this->getData('show_add_to_cart') == "0") ? $this->getData('show_add_to_cart') : 1;
+    $_showAddToWishlist = ($this->getData('show_add_to_wishlist') == "0") ? $this->getData('show_add_to_wishlist') : 1;
+    $_showAddToCompare = ($this->getData('show_add_to_compare') == "0") ? $this->getData('show_add_to_compare') : 1;
+    ?>
+<?php
+	$panelHelper = $this->helper('mpanel');
+	$size = $panelHelper->convertRatioToSize();
+?>
+    <?php if (count($_collection)): ?>
+        <div class="block-brand-related">
+            <div class="title-inline">
+                <h3 class="text-uppercase heading full"><span><?php echo $this->__('Related Products By Brand') ?></span></h3>
+            </div>
+			<div class="row">
+				<div class="products-grid product-for-attribute">
+					<div id="related_brands" class="owl-carousel products-carousel owl-theme">
+						<?php foreach ($_collection as $_item): ?>
+						<?php $cats = $_item->getCategoryIds(); ?>
+							<div class="item">
+								<div class="product-content">
+									<div class="product-top">
+										<?php if ($_showProductImage): ?>
+										<a href="<?php echo $_item->getProductUrl() ?>"
+										   title="<?php echo $this->escapeHtml($_item->getName()) ?>" class="product-image">
+											<img class="img-responsive" src="<?php echo $this->helper('catalog/image')->init($_item, 'small_image')->resize($size['width'], $size['height']) ?>"
+												 alt="<?php echo $this->escapeHtml($_item->getName()) ?>"/>
+										</a>
+										<?php endif; ?>
+										<?php echo $panelHelper->getProductLabel($_item) ?>
+									</div>
+									<div class="product-desc">
+										<div class="top-desc">
+											<?php if(count($cats) > 0): ?>
+												<?php $j=0; foreach ($cats as $category_id): $j++; ?>
+													<?php if($j ==2 ){ break; } ?>
+													<?php $_cat = Mage::getModel('catalog/category')->setStoreId(Mage::app()->getStore()->getId())->load($category_id); ?>
+													<div class="text-desc cate-name">
+														<div class="text">
+															<span><?php echo $_cat->getName(); ?></span>
+														</div>
+													</div>
+												<?php endforeach; ?>
+											<?php else: ?>
+												<div class="text-desc cate-name">
+													<div class="text">
+														<span><?php echo $_brand->getTitle(); ?></span>
+													</div>
+												</div>
+											<?php endif ?>
+											<div class="controls">
+												<ul class="icon-links">
+													<?php if ($this->helper('wishlist')->isAllow() && $panelHelper->isShowWishList()) : ?>
+														<li class="wl-item"><button type="button" title="<?php echo $this->__('Add to Wishlist') ?>" onclick="setLocation('<?php echo $this->helper('wishlist')->getAddUrl($_item) ?>')" <?php if (!$panelHelper->checkInWishilist($_item)) : ?>class="no-active"<?php endif ?>><em class="fa <?php if ($panelHelper->checkInWishilist($_item)) : ?>fa-heart<?php else: ?>fa-heart-o<?php endif ?>"></em></button></li>
+													<?php endif; ?>
+													<?php if ($_compareUrl = $this->getAddToCompareUrl($_item) && $panelHelper->isShowCompare()): ?>
+														<li><button class="btn-compare" type="button" title="<?php echo $this->__('Add to Compare') ?>" onclick="setLocation('<?php echo $_compareUrl ?>')"><em class="fa fa-sliders"></em></button></li>
+													<?php endif; ?>
+												</ul>
+											</div>
+										</div>
+										<p class="product-name"><a href="<?php echo $_item->getProductUrl() ?>" title="<?php echo $this->stripTags($_item->getName(), null, true) ?>)"><?php echo $this->helper('catalog/output')->productAttribute($_item, $_item->getName() , 'name') ?></a></p>
+										<div class="bottom-desc">
+										<?php echo $this->getPriceHtml($_item, true, '-widget-new-grid') ?>
+										<?php echo $this->getLayout()->createBlock('review/helper')->getSummaryHtml($_item, 'short','');?>
+										<?php if($panelHelper->isShowAddtoCart()): ?>
+											<?php if ($_item->isSaleable()): ?>
+												<div class="add-cart-item">
+													<button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_item) ?>')"><em class="fa fa-shopping-cart"></em><?php echo $this->__('Add to Cart'); ?></button>
+												</div>
+											<?php else: ?>
+												<div class="add-cart-item">
+													<span class="text-soul"><?php echo $this->__('Out of Stock'); ?></span>
+												</div>
+											<?php endif; ?>
+										<?php endif; ?>
+										</div>
+									</div>
+								</div>
+							</div>
+						<?php endforeach ?>
+					</div>
+				</div>
+			</div>
+        </div>
+    <?php endif ?>
+<?php endif; ?>
+<script type="text/javascript">
+		initSliderProduct('related_brands', 4, false, false, true, false);
+	</script>

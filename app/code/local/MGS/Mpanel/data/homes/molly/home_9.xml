@@ -1,0 +1,244 @@
+<layout>
+    <name>1_column_full</name>
+	<header>header4</header>
+	<footer>footer3</footer>
+	<sticky_menu>1</sticky_menu>
+	<popup_newsletter>1</popup_newsletter>	
+	<!-- Theme Color -->
+	<!-- Theme Color -->
+ <theme_color_header>
+	<use_custom>1</use_custom>
+	<top_background><![CDATA[transparent]]></top_background>
+	<top_text_color><![CDATA[#ffffff]]></top_text_color>
+	<top_link_color><![CDATA[#999999]]></top_link_color>
+	<top_border_color><![CDATA[#DDDDDD]]></top_border_color>
+	<top_link_hover_color><![CDATA[]]></top_link_hover_color>
+	<top_dropdown_background><![CDATA[]]></top_dropdown_background>
+	<top_dropdown_link><![CDATA[]]></top_dropdown_link>
+	<top_dropdown_link_hover><![CDATA[]]></top_dropdown_link_hover>
+	<top_dropdown_border><![CDATA[]]></top_dropdown_border>
+	
+	<middle_background><![CDATA[]]></middle_background>
+	
+	<search_background><![CDATA[]]></search_background>
+	<search_text_color><![CDATA[]]></search_text_color>
+	<search_link_color><![CDATA[]]></search_link_color>
+	<search_link_hover_color><![CDATA[]]></search_link_hover_color>
+	<search_input_color><![CDATA[]]></search_input_color>
+	<search_icon_color><![CDATA[#ffffff]]></search_icon_color>
+	<search_dropdown_background><![CDATA[]]></search_dropdown_background>
+	<search_dropdown_hover_background><![CDATA[]]></search_dropdown_hover_background>
+	<search_dropdown_text_color><![CDATA[]]></search_dropdown_text_color>
+	<search_dropdown_text_hover_color><![CDATA[]]></search_dropdown_text_hover_color>
+	
+	<cart_text_color><![CDATA[]]></cart_text_color>
+	<cart_price_color><![CDATA[]]></cart_price_color>
+	<cart_icon_background><![CDATA[#ffffff]]></cart_icon_background>
+	<cart_dropdown_background><![CDATA[]]></cart_dropdown_background>
+	<cart_number_background><![CDATA[]]></cart_number_background>
+	<cart_number_text><![CDATA[]]></cart_number_text>
+	
+	<menu_background><![CDATA[]]></menu_background>
+	<menu_link_color><![CDATA[#ffffff]]></menu_link_color>
+	<menu_link_hover_color><![CDATA[]]></menu_link_hover_color>
+	<menu_dropdown_background><![CDATA[]]></menu_dropdown_background>
+	<menu_dropdown_link_color><![CDATA[]]></menu_dropdown_link_color>
+	<menu_dropdown_link_hover_color><![CDATA[]]></menu_dropdown_link_hover_color>
+	<menu_border_color><![CDATA[transparent]]></menu_border_color>
+	
+	<sticky_menu_background><![CDATA[]]></sticky_menu_background>
+	<sticky_menu_link_color><![CDATA[]]></sticky_menu_link_color>
+	<sticky_menu_link_hover_color><![CDATA[]]></sticky_menu_link_hover_color>
+	<sticky_menu_border_color><![CDATA[]]></sticky_menu_border_color>
+ </theme_color_header>
+ <theme_color_main>
+  <use_custom>0</use_custom>
+ </theme_color_main>
+ <theme_color_footer>
+  <use_custom>0</use_custom>
+ </theme_color_footer>
+
+<custom_style>
+	<style><![CDATA[.container-bg > .container > .row  {
+    background-color: #f4f4f4;
+    margin: 0;
+}
+.logo-container .title-logo {
+     color: #fff;
+}
+.header-v4.position-relative,
+.header-v4.header-builder{background: #676665 url('http://mgs.arrowhitech.net/molly/media/wysiwyg/bg-header9.png') scroll no-repeat center center;
+background-size:cover;}
+.breadcrumbs{
+background: none;
+border-bottom: 1px solid #eee;
+padding: 60px 0;
+}
+.breadcrumbs h1,
+.breadcrumbs li a,
+.breadcrumbs ul li{color: #222;}
+.header-v4 .topSearch{border-color: #686a6c;}
+.sticky-element.block-cart-header .fa-shopping-cart{color: #222 !important;}
+.header-v4 .btn-responsive-nav{color: #fff !important;}
+.header-v4 .top-bar-left{border-color: #686a6c;}
+]]></style>
+</custom_style>
+
+    <!--  Blocks  -->
+    <block>
+        <name>block85</name>
+        <block_cols><![CDATA[12]]></block_cols>
+        <block_class><![CDATA[[]]]></block_class>
+        <custom_class><![CDATA[one-page-slider]]></custom_class>
+        <background><![CDATA[]]></background>
+        <background_image><![CDATA[]]></background_image>
+        <background_repeat>0</background_repeat>
+        <background_cover>0</background_cover>
+        <parallax>0</parallax>
+        <fullwidth>1</fullwidth>
+        <padding_top><![CDATA[]]></padding_top>
+        <padding_bottom><![CDATA[]]></padding_bottom>
+        <block_position>1</block_position>
+    </block>
+    <block>
+        <name>block86</name>
+        <block_cols><![CDATA[12]]></block_cols>
+        <block_class><![CDATA[[]]]></block_class>
+        <custom_class><![CDATA[]]></custom_class>
+        <background><![CDATA[]]></background>
+        <background_image><![CDATA[]]></background_image>
+        <background_repeat>0</background_repeat>
+        <background_cover>0</background_cover>
+        <parallax>0</parallax>
+        <fullwidth>0</fullwidth>
+        <padding_top><![CDATA[58]]></padding_top>
+        <padding_bottom><![CDATA[60]]></padding_bottom>
+        <block_position>2</block_position>
+    </block>
+
+    <!--  Childs  -->
+	<!--  Static block  -->
+    <child>
+        <block_name>block85-0</block_name>
+        <block_content><![CDATA[]]></block_content>
+        <static_block_title><![CDATA[Molly Block Full page]]></static_block_title>
+        <static_block_identifier><![CDATA[molly_block_one_page_scroll_1]]></static_block_identifier>
+        <static_block_content><![CDATA[<section class="section" style="background-image: url('{{media url="wysiwyg/bg_one_page_3.jpg"}}'); ">
+<div class="text-container text-center">
+<div class="text-hover">
+<div class="title-small"><span>MOLLY STORE</span></div>
+<div class="title">
+FOR THE ART <br />OF GIVING
+</div>
+<p class="text-desc">The add value of first impresion</p>
+<a href="#" class="btn btn-default btn-lg">Shop Now</a>
+</div>
+</div>
+</section>]]></static_block_content>
+        <type>static</type>
+        <position>6</position>
+        <setting><![CDATA[{"custom_class":"no-padding banner-onepage col-xs-12","animation":"","animation_delay":""}]]></setting>
+        <col>12</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+    <child>
+        <block_name>block85-0</block_name>
+        <block_content><![CDATA[]]></block_content>
+        <static_block_title><![CDATA[Molly Block Full page 02]]></static_block_title>
+        <static_block_identifier><![CDATA[molly_block_one_page_scroll_2]]></static_block_identifier>
+        <static_block_content><![CDATA[<section class="section" style="background-image: url('{{media url="wysiwyg/bg_one_page_4.jpg"}}'); ">
+<div class="text-container text-center">
+		<div class="text-hover">
+        <div class="title-small"><span>MOLLY STORE</span></div>
+<div class="title">
+SHOP <br>INTERIOR
+</div>
+<p class="text-desc">Basic &amp; Modern Chairs For Your Home</p>
+<a class="btn btn-default btn-lg" href="#">View Collection</a>		</div>
+            </div>
+</section>]]></static_block_content>
+        <type>static</type>
+        <position>5</position>
+        <setting><![CDATA[{"custom_class":"no-padding banner-onepage col-xs-12","animation":"","animation_delay":""}]]></setting>
+        <col>12</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+    <child>
+        <block_name>block85-0</block_name>
+        <block_content><![CDATA[]]></block_content>
+        <static_block_title><![CDATA[Molly Block Full page 03]]></static_block_title>
+        <static_block_identifier><![CDATA[molly_block_one_page_scroll_3]]></static_block_identifier>
+        <static_block_content><![CDATA[<section class="section" style="background-image: url('{{media url="wysiwyg/bg_one_page_2.jpg"}}'); ">
+<div class="text-container text-center">
+<div class="title-small"><span>SEE WHAT'S HOT</span></div>
+<div class="title">
+NEXT  <span style="color: #e74c3c">SEASON</span>
+</div>
+<p class="text-desc">Men's Collection 2015</p>
+<a href="#" class="btn btn-default btn-lg">View Collection</a>
+            </div>
+</section>]]></static_block_content>
+        <type>static</type>
+        <position>7</position>
+        <setting><![CDATA[{"custom_class":"no-padding banner-onepage col-xs-12","animation":"","animation_delay":""}]]></setting>
+        <col>12</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+    <child>
+        <block_name>block85-0</block_name>
+        <block_content><![CDATA[]]></block_content>
+        <static_block_title><![CDATA[Molly Block Full page 04]]></static_block_title>
+        <static_block_identifier><![CDATA[molly_block_one_page_scroll_4]]></static_block_identifier>
+        <static_block_content><![CDATA[<section class="section" style="background-image: url('{{media url="wysiwyg/bg_one_page_1.jpg"}}'); ">
+<div class="text-container text-center">
+		<div class="text-hover">
+        <div class="title-small"><span>MOLLY STORE</span></div>
+<div class="title">
+SHOP <br>INTERIOR
+</div>
+<p class="text-desc">Basic &amp; Modern Chairs For Your Home</p>
+<a class="btn btn-default btn-lg" href="#">View Collection</a>		</div>
+            </div>
+</section>]]></static_block_content>
+        <type>static</type>
+        <position>8</position>
+        <setting><![CDATA[{"custom_class":"no-padding banner-onepage col-xs-12","animation":"","animation_delay":""}]]></setting>
+        <col>12</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+    <child>
+        <block_name>block86-0</block_name>
+        <block_content><![CDATA[]]></block_content>
+        <static_block_title><![CDATA[Molly Title New Arrivals Center Sample]]></static_block_title>
+        <static_block_identifier><![CDATA[molly_title_new_arrivals_center_sample]]></static_block_identifier>
+        <static_block_content><![CDATA[<div class="title-center">
+<h3 class="heading"><span>NEW ARRIVALS</span></h3>
+<div class="text-desc"><span>Trending Fashion In This Season</span></div>
+</div>]]></static_block_content>
+        <type>static</type>
+        <position>1</position>
+        <setting><![CDATA[{"custom_class":"col-xs-12","animation":"","animation_delay":""}]]></setting>
+        <col>12</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+    <child>
+        <block_name>block86-0</block_name>
+        <block_content><![CDATA[]]></block_content>
+        <type>separator</type>
+        <position>2</position>
+        <setting><![CDATA[{"custom_class":"col-xs-12","separator_type":"white-space","border_type":"full","border_style":"style1","border_icon":"","text_content":"","margin_top":"14","margin_bottom":"14"}]]></setting>
+        <col>12</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+	
+	<child>
+        <block_name>block86-0</block_name>
+        <block_content><![CDATA[{{block type="mpanel/product_new" display_type="new_products" products_count="6" slider="1" count_per_row="4" title="" product_ratio="" auto_play="false" stop_hover="false" navigation="true" pagination="false" number_row="1" template="mgs/mpanel/products/new_products.phtml"}}]]></block_content>
+        <type>new_products</type>
+        <position>3</position>
+        <setting><![CDATA[{"title":"","custom_class":"col-xs-12","animation":"","animation_delay":"","product_count":"6","view_mode":"grid","count_per_row":"4","product_ratio":"","slider":{"active":"1","number_row":"1","auto":"false","stop_hover":"false","navigation":"true","pagination":"false"},"load_more":"0","text_colour":"","link_colour":"","link_hover_colour":"","button_colour":"","button_hover_colour":"","button_text_colour":"","button_text_hover_colour":"","button_border_colour":"","button_border_hover_colour":"","price_colour":""}]]></setting>
+        <col>12</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+	
+</layout>

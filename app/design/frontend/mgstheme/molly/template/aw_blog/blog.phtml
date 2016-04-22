@@ -1,0 +1,48 @@
+<?php $posts = $this->getPosts(); ?>
+<div id="messages_product_view">
+    <?php Mage::app()->getLayout()->getMessagesBlock()->setMessages(Mage::getSingleton('customer/session')->getMessages(true)); ?>
+    <?php echo Mage::app()->getLayout()->getMessagesBlock()->getGroupedHtml(); ?>
+</div>
+<div class="post-list">
+	<div class="row">
+		<!-- GRID STYLE -->
+		<?php $i = 0; foreach ($posts as $post): $i++; ?>
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="postWrapper <?php if($i==1): ?> first<?php endif ?>">
+					<h2 class="title-blog"><a href="<?php echo $post->getAddress(); ?>" ><?php echo $post->getTitle(); ?></a></h2>
+					<div class="latest-post-decs text-desc">
+						<span class="user-author"><?php echo $post->getUser(); ?></span>
+						<span class="create-time"><?php echo $post->getCreatedTime(); ?></span>
+						<?php if ($this->getCommentsEnabled()): ?>
+							<?php $num = $post->getCommentCount(); ?>
+							<?php 	if($num > 1){ 
+										$many_string = "s";
+									}elseif($num == 1){ 
+										$many_string = "";
+									}else {
+										$many_string = "";
+										$num = 0;
+									} ?>
+							<?php $fomart_string =  "%s Comment%s";?>
+							<span class="comments"><a class="comments" href="<?php echo $post->getAddress(); ?>#commentBox" >&nbsp;<?php echo sprintf($fomart_string, $num, $many_string); ?></a></span>
+						<?php endif; ?>
+					</div>
+
+					<?php if ($post->getFeaturedImage() != ''): ?>
+						<div class="post-img">
+							<a href="<?php echo $post->getAddress(); ?>">
+								<img class="img-responsive" alt="" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'blog/' . $post->getFeaturedImage(); ?>"/>
+							</a>
+						</div>
+					<?php endif ?>
+					<?php if(count($this->getTagsHtml($post)) > 0): ?><div class="post-tags"><?php echo $this->getTagsHtml($post) ?></div><?php endif ?>
+					<?php echo $this->getBookmarkHtml($post) ?>
+					<div class="postContent"><?php echo $post->getPostContent(); ?></div>
+				</div>
+			</div>
+		<?php endforeach; ?>
+	</div>
+	<div class="toolbar-bottom">
+		<?php echo $this->getChildHtml('aw_blog_comments_toolbar'); ?>
+	</div>
+</div>

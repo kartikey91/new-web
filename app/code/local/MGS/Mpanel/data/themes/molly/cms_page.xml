@@ -1,0 +1,560 @@
+<cms_page>
+	<item>
+		<title>About Us - Comapany</title>
+		<identifier>about-us-comapany</identifier>
+		<root_template>one_column</root_template>
+		<content>
+		<![CDATA[<style type="text/css">
+	.breadcrumbs { display: none;}
+	#maincontent > .container { width: 100%; padding: 0;}
+	footer{ margin: 0}
+</style>
+<section>
+	<div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12 personal-banner no-padding text-colour-white">
+					<div class="promo-banner">
+						<a href="#"><img class="img-responsive" src="{{media url="wysiwyg/banner_about_comapany.jpg"}}" alt="" /></a>
+						<div class="text-container text-center" style="width: 100%;">
+							<div class="text-hover">
+								<h4 style="font-weight: 900;">MOLLY SAY HI !</h4>
+								<br />
+								<div class="title">WELCOME TO MOLLY OFFICE</div>
+								<br />
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque elementum <br /> rutrum porta. Duis hendrerit ut lorem.</p>
+                                                                <br />
+								<button class="btn btn-primary btn-lg" onclick="setLocation('#')">READ MORE</button>		
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section style="padding-top: 60px; padding-bottom: 30px;">
+	<div>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="title-center" style="margin-bottom: 30px;">
+						<h3 class="heading"><span>OUR SERVICE</span></h3>
+						<div class="text-desc"><span>Pellentesque id sem in nisl malesuada rhoncus</span></div>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<div class="service-inline" style="margin-bottom: 25px;">
+						<span class="icon pe-7s-box2">&nbsp;</span >
+						<h5 class="title" style="color: #444444; font-weight: 700;">CLEAN DESIGN</h5>
+						<p class="content">Get Free Shipping on all orders over $75 and free returns to our UK returns centre! Items are dispatched from the US and will arrive in 5-8 days.</p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<div class="service-inline" style="margin-bottom: 25px;">
+						<span class="icon pe-7s-wallet">&nbsp;</span >
+						<h5 class="title" style="color: #444444; font-weight: 700;">FREE UPDATE & SUPPORT</h5>
+						<p class="content">Get Free Shipping on all orders over $75 and free returns to our UK returns centre! Items are dispatched from the US and will arrive in 5-8 days.</p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<div class="service-inline" style="margin-bottom: 25px;">
+						<span class="icon pe-7s-delete-user">&nbsp;</span >
+						<h5 class="title" style="color: #444444; font-weight: 700;">LOADED WITH POWER</h5>
+						<p class="content">Get Free Shipping on all orders over $75 and free returns to our UK returns centre! Items are dispatched from the US and will arrive in 5-8 days.</p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<div class="service-inline" style="margin-bottom: 25px;">
+						<span class="icon pe-7s-hourglass">&nbsp;</span >
+						<h5 class="title" style="color: #444444; font-weight: 700;">COMPLETELY CUSTOMIZABLE</h5>
+						<p class="content">Get Free Shipping on all orders over $75 and free returns to our UK returns centre! Items are dispatched from the US and will arrive in 5-8 days.</p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<div class="service-inline" style="margin-bottom: 25px;">
+						<span class="icon pe-7s-cloud-download">&nbsp;</span >
+						<h5 class="title" style="color: #444444; font-weight: 700;">CHOOSE THE PRODUCT YOU LOVE</h5>
+						<p class="content">Get Free Shipping on all orders over $75 and free returns to our UK returns centre! Items are dispatched from the US and will arrive in 5-8 days.</p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<div class="service-inline" style="margin-bottom: 25px;">
+						<span class="icon pe-7s-tools">&nbsp;</span >
+						<h5 class="title" style="color: #444444; font-weight: 700;">STYLE FOR EVERY BUDGET</h5>
+						<p class="content">Get Free Shipping on all orders over $75 and free returns to our UK returns centre! Items are dispatched from the US and will arrive in 5-8 days.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section style="background-color: #f4f4f4;">
+	<div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-6 col-sm-12 col-xs-12 no-padding">
+					<div class="block-to-deals" style="padding-top: 70px;">
+						<div class="title-inline">
+							<h3 class="heading full text-uppercase"><span>OUR SKILL</span></h3>
+						</div>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque elementum rutrum porta. Duis hendrerit ut lorem id hendrerit. Nullam blandit purus et ornare lobortis. 
+						<br /><br />
+						Cras imperdiet, mi quis condimentum egestas, lectus tellus sollicitudin tellus, eget malesuada lorem justo sed magna. Fusce rutrum pellentesque quam, ac dignissim libero suscipit ut.
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-12 col-xs-12 no-padding">
+					<div id="img-about-carousel" class="owl-carousel img-about-carousel">
+						<div class="item"><img class="img-responsive" src="{{media url="wysiwyg/img_slider_1.jpg"}}" alt="" /></div>
+						<div class="item"><img class="img-responsive" src="{{media url="wysiwyg/img_slider_2.jpg"}}" alt="" /></div>
+						<div class="item"><img class="img-responsive" src="{{media url="wysiwyg/img_slider_3.jpg"}}" alt="" /></div>
+						<div class="item"><img class="img-responsive" src="{{media url="wysiwyg/img_slider_4.jpg"}}" alt="" /></div>
+					</div>
+					<script type="text/javascript">
+						initSlider('img-about-carousel', 2, false, true, true, false);
+					</script>
+				</div>
+			</div>
+		<div>
+	</div>
+</section>
+<section style="padding-top: 60px;">
+	<div>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div style="margin-bottom: 30px;" class="title-center">
+						<h3 class="heading"><span>MEET THE TEAM</span></h3>
+						<div class="text-desc"><span>Pellentesque id sem in nisl malesuada rhoncus</span></div>
+					</div>
+					<div class="testimonials-center">
+						{{block type="core/template" number_show='4'  template="mgs/profiles/widget_cms.phtml"}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section style=" padding-bottom:57px;">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 col-sm-6 col-xs-12">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="number-count text-center first">
+							<span class="icon pe-7s-smile">&nbsp;</span>
+							<p class="text-desc">Happy Customers</p>
+							<div class="counter">1503</div>
+						</div>			
+					</div>
+				</div>								
+			</div>
+			<div class="col-md-3 col-sm-6 col-xs-12">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="number-count text-center">
+							<span class="icon pe-7s-diamond">&nbsp;</span>
+							<p class="text-desc">Shoes Sold</p>
+							<div class="counter">1109</div>
+						</div>		
+					</div>
+				</div>								
+			</div>
+			<div class="col-md-3 col-sm-6 col-xs-12">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="number-count text-center">
+							<span class="icon pe-7s-coffee">&nbsp;</span>
+							<p class="text-desc">Coffee Cups</p>
+							<div class="counter">9193</div>
+						</div>			
+					</div>
+				</div>								
+			</div>
+			<div class="col-md-3 col-sm-6 col-xs-12">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="number-count text-center">
+							<span class="icon pe-7s-chat">&nbsp;</span>
+							<p class="text-desc">Facebook Fans</p>
+							<div class="counter">1908</div>
+						</div>			
+					</div>
+				</div>								
+			</div>
+		</div>
+	</div>
+</section>
+<section style="background-image: url('{{media url="wysiwyg/bg_testimonial_home1.jpg"}}');background-repeat:no-repeat;background-size:cover; padding-top:100px; padding-bottom:100px;" class="bg-center">
+	<div class="container">												
+		<div class="row">
+			<div class="col-md-12">
+				{{block type="core/template" number_item='3'  template="mgs/testimonial/view_cms.phtml"}}
+			</div>
+		</div>									
+	</div>
+</section>]]>
+		</content>
+	</item>
+	<item>
+		<title>About Us - Personal</title>
+		<identifier>about-us-personal</identifier>
+		<root_template>one_column</root_template>
+		<content>
+		<![CDATA[<style type="text/css">
+	.breadcrumbs { display: none;}
+	#maincontent > .container { width: 100%; padding: 0;}
+</style>
+<section>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12 personal-banner no-padding text-colour-white button-colour-sienna button-border-colour-sienna">
+					<div class="promo-banner">
+						<a href="#"><img class="img-responsive" src="{{media url="wysiwyg/banner_about-personal.jpg"}}" alt="" /></a>
+						<div class="text-container text-center">
+							<div class="text-hover">
+								<div class="title">
+								JORDAN<br />HENRISON
+								</div>
+								<p>Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit. Quisque elementum rutrum <br /> porta. Duis hendrerit ut lorem.</p>
+								<button class="btn btn-default btn-lg" onclick="setLocation('#')">READ MORE</button>		
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</section>
+<section style="padding-top: 60px; padding-bottom: 56px;">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="title-center" style="margin-bottom: 30px;">
+						<h3 class="heading"><span>ALL ABOUT ME</span></h3>
+						<div class="text-desc"><span>Quisque convallis rhoncus ornare</span></div>
+					</div>
+				</div>
+				<div class="col-sm-4 col-xs-12">
+					Nulla mattis mi quis elit porttitor gravida. Ut ut laoreet justo. Suspendisse nulla ligula, aliquet sed cursus ut, sodales sit amet metus. Proin sollicitudin, urna nec placerat faucibus, ex elit mattis nulla, sed placerat libero dui non sem. Etiam non auctor odio. Cras commodo posuere ante vitae molestie.
+				</div>
+				<div class="col-sm-4 col-xs-12">
+					Vivamus imperdiet aliquam ornare. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc ac elit vel justo ullamcorper porttitor. Suspendisse lobortis risus nec sapien faucibus, et tincidunt elit imperdiet.
+				</div>
+				<div class="col-sm-4 col-xs-12">
+					Praesent cursus condimentum metus, in lacinia nisi sagittis eget. Etiam fermentum commodo nulla, at ullamcorper felis faucibus ut. Duis finibus volutpat dapibus. Maecenas nisi neque, iaculis vitae odio vitae, vestibulum vehicula lectus.
+				</div>
+			</div>
+		</div>
+</section>
+<section style="background-color: #f4f4f4;">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-6 col-sm-12 col-xs-12 no-padding">
+					<img class="img-responsive" src="{{media url="wysiwyg/banner_about-personal_2.jpg"}}" alt="" />
+				</div>
+				<div class="col-md-6 col-sm-12 col-xs-12 no-padding">
+					<div class="block-to-deals">
+						<div class="title-inline">
+							<h3 class="heading full text-uppercase"><span>OUR SKILL</span></h3>
+						</div>
+						<p>Get Free Shipping on all orders over $75 and free returns to our UK returns centre! </p>
+						<table class="table chart-table">
+							<tbody>
+								<tr>
+									<td>Graphic</td>
+									<td>
+										<div class="chart-parent">
+											<div class="chart" style="width: 90%"><span>90%</span></div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>Web Design</td>
+									<td>
+										<div class="chart-parent">
+											<div class="chart" style="width: 80%"><span>80%</span></div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>Photography</td>
+									<td>
+										<div class="chart-parent">
+											<div class="chart" style="width: 85%"><span>85%</span></div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>Html/Css</td>
+									<td>
+										<div class="chart-parent">
+											<div class="chart" style="width: 90%"><span>90%</span></div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>Fashion Design</td>
+									<td>
+										<div class="chart-parent">
+											<div class="chart" style="width: 70%"><span>70%</span></div>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		<div>
+</section>
+<section style="padding-top: 60px; padding-bottom: 38px; border-bottom: 1px solid #eeeeee;">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="title-center" style="margin-bottom: 30px;">
+						<h3 class="heading"><span>WORK PROCESS</span></h3>
+						<div class="text-desc"><span> Pellentesque id sem in nisl malesuada rhoncus</span></div>
+					</div>
+				</div>
+				<div class="col-sm-4 col-xs-12">
+					<div style="margin-bottom: 25px;" class="service-inline">
+						<span class="icon number">1</span>
+						<h5 style="color: #444444; font-weight: 700;" class="title">SKETCH</h5>
+						<p class="content">Fusce ac odio odio. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+					</div>
+				</div>
+				<div class="col-sm-4 col-xs-12">
+					<div style="margin-bottom: 25px;" class="service-inline">
+						<span class="icon number">2</span>
+						<h5 style="color: #444444; font-weight: 700;" class="title">DESIGN</h5>
+						<p class="content">Fusce ac odio odio. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+					</div>
+				</div>
+				<div class="col-sm-4 col-xs-12">
+					<div style="margin-bottom: 25px;" class="service-inline">
+						<span class="icon number">3</span>
+						<h5 style="color: #444444; font-weight: 700;" class="title">RELEASE</h5>
+						<p class="content">Fusce ac odio odio. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+					</div>
+				</div>
+			</div>
+		</div>
+</section>
+<section style="padding-top: 60px;">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4 col-xs-12">
+					<div style="margin-bottom: 30px;" class="title-center">
+						<h3 class="heading"><span>Q&amp;A</span></h3>
+					</div>
+					<div aria-multiselectable="true" role="tablist" id="accordion_question" class="accordion_question panel-group">
+						<div class="panel">
+							<div id="headingOne" role="tab" class="panel-heading">
+								<p class="active"><a class="" aria-controls="one" aria-expanded="true" href="#one" data-parent="#accordion_question" data-toggle="collapse" role="button">Brushstrokes Jersey Tea Dress?</a></p>
+							</div>
+							<div style="" aria-labelledby="headingOne" role="tabpanel" class="panel-collapse collapse in" id="one">
+								<div class="panel-body">
+									Aliquam erat volutpat. Cras blandit eget ex quis convallis. In faucibus imperdiet est, non ornare velit commodo a...
+								</div>
+							</div> 
+						</div>
+						<div class="panel">
+							<div id="headingTwo" role="tab" class="panel-heading">
+								<p><a aria-controls="two" aria-expanded="false" href="#two" data-parent="#accordion_question" data-toggle="collapse" role="button" class="collapsed">Ut enim ad minim veniam?</a></p>
+							</div>
+							<div aria-labelledby="headingTwo" role="tabpanel" class="panel-collapse collapse" id="two">
+								<div class="panel-body">
+									 Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS...
+								</div> 
+							</div> 
+						</div> 
+						<div class="panel last">
+							<div id="headingThree" role="tab" class="panel-heading">
+								<p><a aria-controls="three" aria-expanded="false" href="#three" data-parent="#accordion_question" data-toggle="collapse" role="button" class="collapsed">Ullamco laboris nisi ut aliquip ex ea?</a> </p>
+							</div>
+							<div aria-labelledby="headingThree" role="tabpanel" class="panel-collapse collapse" id="three">
+								<div class="panel-body">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. .
+								</div> 
+							</div>
+						</div> 
+					</div>
+					<br />
+					<div class="text-center">
+						<button type="button" onclick="setLocation('{{store url="faqs"}}')" class="btn-lg btn btn-default">More Question</button>
+					</div>
+				</div>
+				<div class="col-sm-4 col-xs-12">
+					<div style="margin-bottom: 30px;" class="title-center">
+						<h3 class="heading"><span>SHOPPING GUIDES</span></h3>
+					</div>
+					<ul class="shopping-guides">
+						<li>
+							<span class="icon pe-7s-box2">&nbsp;</span>
+							STEP 1: CHOOSE YOUR ITEMS &amp; ADD TO YOUR SHOPPING CART.
+						</li>
+						<li>
+							<span class="icon pe-7s-box2">&nbsp;</span>
+							STEP 2: APPLY COMBO &amp; PAY.
+						</li>
+						<li>
+							<span class="icon pe-7s-box2">&nbsp;</span>
+							STEP 3: CHOOSE YOUR ADDRESS.
+						</li>
+						<li>
+							<span class="icon pe-7s-box2">&nbsp;</span>
+							STEP 4: JUST WAIT FOR IT TO COME TO YOUR HOUSE AFTER FEW DAYS!
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-4 col-xs-12">
+					<div style="margin-bottom: 30px;" class="title-center">
+						<h3 class="heading"><span>TESTIMONIALS</span></h3>
+					</div>
+					<div class="testimonials-center">
+						{{block type="core/template" number_item='3'  template="mgs/testimonial/view_cms.phtml"}}
+					</div>
+				</div>
+			</div>
+		</div>
+</section>]]>
+		</content>
+	</item>
+	<item>
+		<title>Contact</title>
+		<identifier>contacts2</identifier>
+		<root_template>one_column</root_template>
+		<content>
+		<![CDATA[<div class="row contact-style2">
+<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 no-padding">{{block type="core/template" template="contacts/map.phtml"}}</div>
+<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 no-padding contact-form">{{block type="core/template" template="contacts/form2.phtml"}}</div>
+</div>
+<div class="container"><div class="row">
+<div class="row">
+<div class="col-md-10 col-md-push-1 col-sm-push-0 col-xs-push-0 col-sm-12 col-xs-12">
+    {{block type="cms/block" block_id="molly_contact_information"}} 
+</div></div></div></div>]]>
+		</content>
+	</item>
+	<item>
+		<title>404 Not Found</title>
+		<identifier>no-route</identifier>
+		<root_template>one_column</root_template>
+		<content>
+		<![CDATA[<style type="text/css">
+	.breadcrumbs { display: none;}
+        footer { margin: 0;} 
+       #maincontent > .container { width: 100%; padding: 0}
+</style>
+<section class="content-page-404">
+<div class="text-404 text-center" style="background-image: url('{{media url="wysiwyg/bg_404.jpg"}}')">
+<p class="big-404">404 PAGE</p>
+<p class="text">The page you are looking for does not exist. <br />
+Return to the <a href="{{config path="web/unsecure/base_url"}}">home page.</a></p>
+</div>
+</section>]]>
+		</content>
+	</item>
+	<item>
+		<title>Our Services</title>
+		<identifier>our-services</identifier>
+		<root_template>one_column</root_template>
+		<content>
+		<![CDATA[<div class="row">
+
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<div class="service-inline" style="margin-bottom: 25px;">
+						<span class="icon pe-7s-box2">&nbsp;</span >
+						<h5 class="title" style="color: #444444; font-weight: 700;">CLEAN DESIGN</h5>
+						<p class="content">Get Free Shipping on all orders over $75 and free returns to our UK returns centre! Items are dispatched from the US and will arrive in 5-8 days.</p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<div class="service-inline" style="margin-bottom: 25px;">
+						<span class="icon pe-7s-wallet">&nbsp;</span >
+						<h5 class="title" style="color: #444444; font-weight: 700;">FREE UPDATE & SUPPORT</h5>
+						<p class="content">Get Free Shipping on all orders over $75 and free returns to our UK returns centre! Items are dispatched from the US and will arrive in 5-8 days.</p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<div class="service-inline" style="margin-bottom: 25px;">
+						<span class="icon pe-7s-delete-user">&nbsp;</span >
+						<h5 class="title" style="color: #444444; font-weight: 700;">LOADED WITH POWER</h5>
+						<p class="content">Get Free Shipping on all orders over $75 and free returns to our UK returns centre! Items are dispatched from the US and will arrive in 5-8 days.</p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<div class="service-inline" style="margin-bottom: 25px;">
+						<span class="icon pe-7s-hourglass">&nbsp;</span >
+						<h5 class="title" style="color: #444444; font-weight: 700;">COMPLETELY CUSTOMIZABLE</h5>
+						<p class="content">Get Free Shipping on all orders over $75 and free returns to our UK returns centre! Items are dispatched from the US and will arrive in 5-8 days.</p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<div class="service-inline" style="margin-bottom: 25px;">
+						<span class="icon pe-7s-cloud-download">&nbsp;</span >
+						<h5 class="title" style="color: #444444; font-weight: 700;">CHOOSE THE PRODUCT YOU LOVE</h5>
+						<p class="content">Get Free Shipping on all orders over $75 and free returns to our UK returns centre! Items are dispatched from the US and will arrive in 5-8 days.</p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<div class="service-inline" style="margin-bottom: 25px;">
+						<span class="icon pe-7s-tools">&nbsp;</span >
+						<h5 class="title" style="color: #444444; font-weight: 700;">STYLE FOR EVERY BUDGET</h5>
+						<p class="content">Get Free Shipping on all orders over $75 and free returns to our UK returns centre! Items are dispatched from the US and will arrive in 5-8 days.</p>
+					</div>
+				</div>
+</div>
+
+<div class="row">
+<div class="col-md-12 col-sm-12 col-xs-12">
+<div class="separator separator-border style2">
+<div style="margin-top:40px; margin-bottom:50px;" class="separator-margin">
+<div class="full"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="title-center">
+<h3 class="heading"><span>CREATIVE PROGRESS</span></h3>
+<div class="text-desc"><span>Quisque convallis rhoncus ornare</span></div>
+</div>
+<div class="row" style="padding-top: 47px">
+<div class="col-md-3 col-sm-3 col-xs-12 vertical-tabs">  
+   <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#iterate" aria-controls="iterate" role="tab" data-toggle="tab">Iterate</a></li>
+    <li role="presentation"><a href="#bulid" aria-controls="bulid" role="tab" data-toggle="tab">Bulid</a></li>
+    <li role="presentation"><a href="#research" aria-controls="research" role="tab" data-toggle="tab">Research</a></li>
+  </ul>
+
+</div>
+<div class="col-md-9 col-sm-9 col-xs-12">
+ <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="iterate">
+    <p style="font-size: 18px; color: #222222;">Squid synth carles forage tousled terry richardson intelligentsia vice Polaroid scenester</p>
+    <p>In hac habitasse platea dictumst. Donec elementum enim metus, pretium auctor risus malesuada vel. Pellentesque tincidunt, magna sed laoreet facilisis, nulla metus semper lorem, sed lacinia urna sem condimentum nisl. Sed rutrum id tellus non aliquam. Praesent accumsan orci sed facilisis dictum. Nullam efficitur erat a mauris viverra molestie. Proin non nisi sit amet turpis imperdiet pharetra. Quisque dictum turpis ac convallis venenatis.</p>
+<br />
+    <p>In hac habitasse platea dictumst. Donec elementum enim metus, pretium auctor risus malesuada vel. Pellentesque tincidunt, magna sed laoreet facilisis, nulla metus semper lorem, sed lacinia urna sem condimentum nisl. Sed rutrum id tellus non aliquam. Praesent accumsan orci sed facilisis dictum. Nullam efficitur erat a mauris viverra molestie. Proin non nisi sit amet turpis imperdiet pharetra. Quisque dictum turpis ac convallis venenatis.</p>
+</div>
+    <div role="tabpanel" class="tab-pane" id="bulid">
+    <p style="font-size: 18px; color: #222222;">Nullam vulputate risus vel est porttitor eu malesuada neque pulvinar. Nulla sit amet ante velit, vehicula aliquam enim. 
+<p>Etiam eget elit est, in imperdiet massa. Nam vel sapien ac elit ultrices commodo. Duis tellus ligula, aliquam sed euismod id, rhoncus ac lectus. Cras non dui est. Fusce iaculis viverra mauris eget rhoncus. Sed leo leo, ullamcorper ac dictum eget, semper sed elit. Ut nec semper odio. Fusce in turpis lacinia dui venenatis semper. In volutpat mauris non nibh sodales ultrices. Proin semper mattis venenatis.</p>
+<br />
+    <p>Nullam vulputate risus vel est porttitor eu malesuada neque pulvinar. Nulla sit amet ante velit, vehicula aliquam enim. Etiam eget elit est, in imperdiet massa. Nam vel sapien ac elit ultrices commodo. Duis tellus ligula, aliquam sed euismod id, rhoncus ac lectus. Cras non dui est. Fusce iaculis viverra mauris eget rhoncus. Sed leo leo, ullamcorper ac dictum eget, semper sed elit. Ut nec semper odio. Fusce in turpis lacinia dui venenatis semper. In volutpat mauris non nibh sodales ultrices. Proin semper mattis venenatis.</p>
+<br />
+</div>
+    <div role="tabpanel" class="tab-pane" id="research">
+    <p style="font-size: 18px; color: #222222;">Squid synth carles forage tousled terry richardson intelligentsia vice Polaroid scenester</p>
+    <p>In hac habitasse platea dictumst. Donec elementum enim metus, pretium auctor risus malesuada vel. Pellentesque tincidunt, magna sed laoreet facilisis, nulla metus semper lorem, sed lacinia urna sem condimentum nisl. Sed rutrum id tellus non aliquam. Praesent accumsan orci sed facilisis dictum. Nullam efficitur erat a mauris viverra molestie. Proin non nisi sit amet turpis imperdiet pharetra. Quisque dictum turpis ac convallis venenatis.</p>
+<br />
+    <p>Quisque iaculis blandit egestas. Curabitur rutrum mollis massa, eget feugiat sapien pulvinar laoreet. Aenean erat sem, mollis sed sollicitudin at, placerat bibendum leo. Etiam cursus tortor sit amet massa rhoncus vulputate sit amet at ante. Morbi dignissim lacus sit amet turpis convallis et vehicula nisi feugiat. Vestibulum adipiscing ornare felis, nec vestibulum nisi faucibus vitae.</p>
+</div>
+  </div>
+</div>
+</div>]]>
+		</content>
+	</item>
+	
+</cms_page>

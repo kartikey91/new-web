@@ -1,0 +1,455 @@
+<layout>
+    <name>1_column_full</name>
+	<header>header7</header>
+	<footer>footer</footer>
+	<sticky_menu>1</sticky_menu>
+	<popup_newsletter>1</popup_newsletter>	
+	<!-- Theme Color -->
+	<!-- Theme Color -->
+ <theme_color_header>
+  <use_custom>1</use_custom>
+  <top_background><![CDATA[transparent]]></top_background>
+	<top_text_color><![CDATA[]]></top_text_color>
+	<top_link_color><![CDATA[]]></top_link_color>
+	<top_border_color><![CDATA[]]></top_border_color>
+	<top_link_hover_color><![CDATA[#0059b2]]></top_link_hover_color>
+	<top_dropdown_background><![CDATA[]]></top_dropdown_background>
+	<top_dropdown_link><![CDATA[]]></top_dropdown_link>
+	<top_dropdown_link_hover><![CDATA[#0059b2]]></top_dropdown_link_hover>
+	<top_dropdown_border><![CDATA[]]></top_dropdown_border>
+	
+	<middle_background><![CDATA[]]></middle_background>
+	
+	<search_background><![CDATA[]]></search_background>
+	<search_text_color><![CDATA[]]></search_text_color>
+	<search_link_color><![CDATA[]]></search_link_color>
+	<search_link_hover_color><![CDATA[#0059b2]]></search_link_hover_color>
+	<search_input_color><![CDATA[]]></search_input_color>
+	<search_icon_color><![CDATA[]]></search_icon_color>
+	<search_dropdown_background><![CDATA[]]></search_dropdown_background>
+	<search_dropdown_hover_background><![CDATA[]]></search_dropdown_hover_background>
+	<search_dropdown_text_color><![CDATA[]]></search_dropdown_text_color>
+	<search_dropdown_text_hover_color><![CDATA[]]></search_dropdown_text_hover_color>
+	
+	<cart_text_color><![CDATA[]]></cart_text_color>
+	<cart_price_color><![CDATA[]]></cart_price_color>
+	<cart_icon_background><![CDATA[#ffffff]]></cart_icon_background>
+	<cart_dropdown_background><![CDATA[]]></cart_dropdown_background>
+	<cart_number_background><![CDATA[]]></cart_number_background>
+	<cart_number_text><![CDATA[]]></cart_number_text>
+	
+	<menu_background><![CDATA[]]></menu_background>
+	<menu_link_color><![CDATA[#ffffff]]></menu_link_color>
+	<menu_link_hover_color><![CDATA[#0059b2]]></menu_link_hover_color>
+	<menu_dropdown_background><![CDATA[]]></menu_dropdown_background>
+	<menu_dropdown_link_color><![CDATA[]]></menu_dropdown_link_color>
+	<menu_dropdown_link_hover_color><![CDATA[#0059b2]]></menu_dropdown_link_hover_color>
+	<menu_border_color><![CDATA[]]></menu_border_color>
+	
+	<sticky_menu_background><![CDATA[]]></sticky_menu_background>
+	<sticky_menu_link_color><![CDATA[]]></sticky_menu_link_color>
+	<sticky_menu_link_hover_color><![CDATA[]]></sticky_menu_link_hover_color>
+	<sticky_menu_border_color><![CDATA[]]></sticky_menu_border_color>
+ </theme_color_header>
+ <theme_color_main>
+  <use_custom>1</use_custom>
+  <default_color>#0059b2</default_color>
+  <color><![CDATA[]]></color>
+  <price_color><![CDATA[]]></price_color>
+  <link_color><![CDATA[]]></link_color>
+  <link_hover_color><![CDATA[]]></link_hover_color>
+  <button_color><![CDATA[]]></button_color>
+  <button_hover_color><![CDATA[]]></button_hover_color>
+  <button_background><![CDATA[]]></button_background>
+  <button_hover_background>#0059b2</button_hover_background>
+  <button_border_color><![CDATA[]]></button_border_color>
+  <button_border_hover_color>#0059b2</button_border_hover_color>
+  <button_one_color><![CDATA[]]></button_one_color>
+  <button_one_hover_color><![CDATA[]]></button_one_hover_color>
+  <button_one_background><![CDATA[#0059b2]]></button_one_background>
+  <button_one_hover_background>#0059b2</button_one_hover_background>
+  <button_one_border><![CDATA[#0059b2]]></button_one_border>
+  <button_one_border_hover>#0059b2</button_one_border_hover>
+  <button_two_color><![CDATA[]]></button_two_color>
+  <button_two_hover_color><![CDATA[]]></button_two_hover_color>
+  <button_two_background><![CDATA[]]></button_two_background>
+  <button_two_hover_background><![CDATA[]]></button_two_hover_background>
+  <button_two_border><![CDATA[]]></button_two_border>
+  <button_two_border_hover><![CDATA[]]></button_two_border_hover>
+ </theme_color_main>
+ <theme_color_footer>
+  <use_custom>0</use_custom>
+ </theme_color_footer>
+
+<custom_style>
+	
+</custom_style>
+
+    <!--  Blocks  -->
+    <block>
+        <name>block112</name>
+        <block_cols><![CDATA[12]]></block_cols>
+        <block_class><![CDATA[]]></block_class>
+        <custom_class><![CDATA[electronic]]></custom_class>
+        <background><![CDATA[]]></background>
+        <background_image><![CDATA[]]></background_image>
+        <background_repeat>0</background_repeat>
+        <background_cover>0</background_cover>
+        <parallax>0</parallax>
+        <fullwidth>0</fullwidth>
+        <padding_top><![CDATA[20]]></padding_top>
+        <padding_bottom><![CDATA[]]></padding_bottom>
+        <block_position>1</block_position>
+    </block>
+    <block>
+        <name>block113</name>
+        <block_cols><![CDATA[12]]></block_cols>
+        <block_class><![CDATA[]]></block_class>
+        <custom_class><![CDATA[electronic]]></custom_class>
+        <background><![CDATA[]]></background>
+        <background_image><![CDATA[]]></background_image>
+        <background_repeat>0</background_repeat>
+        <background_cover>0</background_cover>
+        <parallax>0</parallax>
+        <fullwidth>0</fullwidth>
+        <padding_top><![CDATA[20]]></padding_top>
+        <padding_bottom><![CDATA[65]]></padding_bottom>
+        <block_position>2</block_position>
+    </block>
+    <block>
+        <name>block114</name>
+        <block_cols><![CDATA[12]]></block_cols>
+        <block_class><![CDATA[]]></block_class>
+        <custom_class><![CDATA[electronic]]></custom_class>
+        <background><![CDATA[]]></background>
+        <background_image><![CDATA[]]></background_image>
+        <background_repeat>0</background_repeat>
+        <background_cover>0</background_cover>
+        <parallax>0</parallax>
+        <fullwidth>0</fullwidth>
+        <padding_top><![CDATA[]]></padding_top>
+        <padding_bottom><![CDATA[]]></padding_bottom>
+        <block_position>3</block_position>
+    </block>
+    <block>
+        <name>block115</name>
+        <block_cols><![CDATA[12]]></block_cols>
+        <block_class><![CDATA[]]></block_class>
+        <custom_class><![CDATA[electronic]]></custom_class>
+        <background><![CDATA[]]></background>
+        <background_image><![CDATA[]]></background_image>
+        <background_repeat>0</background_repeat>
+        <background_cover>0</background_cover>
+        <parallax>0</parallax>
+        <fullwidth>0</fullwidth>
+        <padding_top><![CDATA[60]]></padding_top>
+        <padding_bottom><![CDATA[60]]></padding_bottom>
+        <block_position>4</block_position>
+    </block>
+    <block>
+        <name>block116</name>
+        <block_cols><![CDATA[]]></block_cols>
+        <block_class><![CDATA[]]></block_class>
+        <custom_class><![CDATA[]]></custom_class>
+        <background><![CDATA[]]></background>
+        <background_image><![CDATA[]]></background_image>
+        <background_repeat>0</background_repeat>
+        <background_cover>0</background_cover>
+        <parallax>0</parallax>
+        <fullwidth>0</fullwidth>
+        <padding_top><![CDATA[]]></padding_top>
+        <padding_bottom><![CDATA[]]></padding_bottom>
+        <block_position>5</block_position>
+    </block>
+    <block>
+        <name>block117</name>
+        <block_cols><![CDATA[12]]></block_cols>
+        <block_class><![CDATA[]]></block_class>
+        <custom_class><![CDATA[electronic-brand]]></custom_class>
+        <background><![CDATA[]]></background>
+        <background_image><![CDATA[]]></background_image>
+        <background_repeat>0</background_repeat>
+        <background_cover>0</background_cover>
+        <parallax>0</parallax>
+        <fullwidth>0</fullwidth>
+        <padding_top><![CDATA[60]]></padding_top>
+        <padding_bottom><![CDATA[60]]></padding_bottom>
+        <block_position>6</block_position>
+    </block>
+
+    <!--  Childs  -->
+	<!--  Static block  -->
+    <child>
+        <block_name>block112-0</block_name>
+        <block_content><![CDATA[]]></block_content>
+        <static_block_title><![CDATA[Molly Left Home 11]]></static_block_title>
+        <static_block_identifier><![CDATA[molly_left_home_11]]></static_block_identifier>
+        <static_block_content><![CDATA[&nbsp;]]></static_block_content>
+        <type>static</type>
+        <position>1</position>
+        <setting><![CDATA[{"custom_class":"","animation":"","animation_delay":""}]]></setting>
+        <col>3</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+    <child>
+        <block_name>block70-0</block_name>
+        <block_content><![CDATA[]]></block_content>
+        <static_block_title><![CDATA[Molly Title New Lookbook Center Sample]]></static_block_title>
+        <static_block_identifier><![CDATA[molly_title_new_lookbook_center_sample]]></static_block_identifier>
+        <static_block_content><![CDATA[<div class="title-center">
+<h3 class="heading"><span>NEW LOOKBOOK</span></h3>
+<div class="text-desc"><span>Trending Fashion In This Season</span></div>
+</div>]]></static_block_content>
+        <type>static</type>
+        <position>1</position>
+        <setting><![CDATA[{"custom_class":"col-xs-12","animation":"","animation_delay":""}]]></setting>
+        <col>12</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+    <child>
+        <block_name>block113-0</block_name>
+        <block_content><![CDATA[]]></block_content>
+        <static_block_title><![CDATA[Molly Home11 Title Smartphone]]></static_block_title>
+        <static_block_identifier><![CDATA[home11_title_smartphone]]></static_block_identifier>
+        <static_block_content><![CDATA[<div class="title-inline">
+<h3 class="heading"><span>SMARTPHONE</span></h3>
+</div>]]></static_block_content>
+        <type>static</type>
+        <position>4</position>
+        <setting><![CDATA[{"custom_class":"custom-electronic","animation":"","animation_delay":""}]]></setting>
+        <col>9</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+    <child>
+        <block_name>block115-0</block_name>
+        <block_content><![CDATA[]]></block_content>
+        <static_block_title><![CDATA[Molly Home11 Title Laptop]]></static_block_title>
+        <static_block_identifier><![CDATA[molly_home11_title_laptop]]></static_block_identifier>
+        <static_block_content><![CDATA[<div class="title-inline">
+<h3 class="heading"><span>LAPTOP</span></h3>
+<div class="text-desc"><span>Trending Fashion In This Season</span></div>
+</div>]]></static_block_content>
+        <type>static</type>
+        <position>1</position>
+        <setting><![CDATA[{"custom_class":"","animation":"","animation_delay":""}]]></setting>
+        <col>12</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+	<child>
+        <block_name>block116-0</block_name>
+        <block_content><![CDATA[]]></block_content>
+        <static_block_title><![CDATA[Molly Home11 Title Best Selling]]></static_block_title>
+        <static_block_identifier><![CDATA[Molly_home11_title_best_selling]]></static_block_identifier>
+        <static_block_content><![CDATA[<div class="title-inline">
+<h3 class="heading"><span>TOP SELLING</span></h3>
+<div class="text-desc"><span>Trending Fashion In This Season</span></div>
+</div>]]></static_block_content>
+        <type>static</type>
+        <position>1</position>
+        <setting><![CDATA[{"custom_class":"","animation":"","animation_delay":""}]]></setting>
+        <col>12</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+	
+	<child>
+        <block_name>block116-0</block_name>
+        <block_content><![CDATA[]]></block_content>
+        <static_block_title><![CDATA[Molly Home11 Category Products]]></static_block_title>
+        <static_block_identifier><![CDATA[molly_home1_category_products]]></static_block_identifier>
+        <static_block_content><![CDATA[<div class="cate-best">
+<div class="tab-pane1" data-number="1">
+<span class="pe-7s-monitor">&nbsp;</span>
+<span>Computer</span>
+</div>
+<div class="tab-pane2" data-number="2">
+<span class="pe-7s-phone">&nbsp;</span>
+<span>Mobiles</span>
+</div>
+<div class="tab-pane3" data-number="3">
+<span class="pe-7s-camera">&nbsp;</span>
+<span>Camera</span>
+</div>
+<div class="tab-pane4" data-number="4">
+<span class="pe-7s-browser">&nbsp;</span>
+<span>Tablet</span>
+</div>
+<div class="tab-pane5" data-number="6">
+<span class="pe-7s-airplay">&nbsp;</span>
+<span>Aircon</span>
+</div>
+<div class="tab-pane6" data-number="6">
+<span class="pe-7s-plug">&nbsp;</span>
+<span>Home</span>
+</div>
+<div class="tab-pane7" data-number="6">
+<span class="pe-7s-lintern">&nbsp;</span>
+<span>Cameras</span>
+</div>
+<div class="tab-pane8" data-number="7">
+<span class="pe-7s-wristwatch">&nbsp;</span>
+<span>Watch</span>
+</div>
+<div class="tab-pane9" data-number="8">
+<span class="pe-7s-headphones">&nbsp;</span>
+<span>Headphone</span>
+</div>
+<div class="tab-pane10" data-number="9">
+<span class="pe-7s-album">&nbsp;</span>
+<span>Album</span>
+</div>
+</div>]]></static_block_content>
+        <type>static</type>
+        <position>3</position>
+        <setting><![CDATA[{"custom_class":"","animation":"","animation_delay":""}]]></setting>
+        <col>12</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+	<!--  Promo Banner  -->
+	<child>
+        <block_name>block112-0</block_name>
+        <block_content><![CDATA[{{block type="promobanners/promobanners" banner_id="%s" template="mgs/promobanners/banner.phtml"}}]]></block_content>
+        <type>promo_banner</type>
+        <banner_title><![CDATA[Molly Home11 Promo1]]></banner_title>
+        <banner_filename><![CDATA[promo1.jpg]]></banner_filename>
+        <banner_url>#</banner_url>
+        <banner_content><![CDATA[<p class="h2">Best Product</p>
+<p class="h2">in month</p>]]></banner_content>
+        <banner_button><![CDATA[]]></banner_button>
+        <banner_text_align><![CDATA[bottom-center]]></banner_text_align>
+        <position>3</position>
+        <setting><![CDATA[{"custom_class":"hidden-sm hidden-xs","animation":"","animation_delay":"","text_colour":"text-colour-black","link_colour":"","link_hover_colour":"","button_colour":"","button_hover_colour":"","button_text_colour":"","button_text_hover_colour":"","button_border_colour":"","button_border_hover_colour":"","banner_id":"%s"}]]></setting>
+        <col>3</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+	<child>
+        <block_name>block113-0</block_name>
+        <block_content><![CDATA[{{block type="promobanners/promobanners" banner_id="%s" template="mgs/promobanners/banner.phtml"}}]]></block_content>
+        <type>promo_banner</type>
+        <banner_title><![CDATA[Molly Home11 Promo2]]></banner_title>
+        <banner_filename><![CDATA[promo2.jpg]]></banner_filename>
+        <banner_url>#</banner_url>
+        <banner_content><![CDATA[<span class="h2">FINAL <span style="color: #00ffff;">SALE OFF</span> UP TO 50%</span>]]></banner_content>
+        <banner_button><![CDATA[]]></banner_button>
+        <banner_text_align><![CDATA[center]]></banner_text_align>
+        <position>2</position>
+        <setting><![CDATA[{"custom_class":"hidden-xs","animation":"","animation_delay":"","text_colour":"text-colour-white","link_colour":"","link_hover_colour":"","button_colour":"","button_hover_colour":"","button_text_colour":"","button_text_hover_colour":"","button_border_colour":"","button_border_hover_colour":"","banner_id":"%s"}]]></setting>
+        <col>9</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+	<child>
+        <block_name>block114-0</block_name>
+        <block_content><![CDATA[{{block type="promobanners/promobanners" banner_id="%s" template="mgs/promobanners/banner.phtml"}}]]></block_content>
+        <type>promo_banner</type>
+        <banner_title><![CDATA[Molly Home11 Promo3]]></banner_title>
+        <banner_filename><![CDATA[promo3.jpg]]></banner_filename>
+        <banner_url>#</banner_url>
+        <banner_content><![CDATA[<p class="h1">SMARTPHONE</h1>
+<p class="h2">GENERATION</h1>
+<p>Buy 1 get 1 at Molly Store</p>]]></banner_content>
+        <banner_button><![CDATA[]]></banner_button>
+        <banner_text_align><![CDATA[left]]></banner_text_align>
+        <position>1</position>
+        <setting><![CDATA[{"custom_class":"col-sm-6 col-xs-12","animation":"","animation_delay":"","text_colour":"text-colour-black","link_colour":"","link_hover_colour":"","button_colour":"","button_hover_colour":"","button_text_colour":"","button_text_hover_colour":"","button_border_colour":"","button_border_hover_colour":"","banner_id":"%s"}]]></setting>
+        <col>6</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+	<child>
+        <block_name>block114-0</block_name>
+        <block_content><![CDATA[{{block type="promobanners/promobanners" banner_id="%s" template="mgs/promobanners/banner.phtml"}}]]></block_content>
+        <type>promo_banner</type>
+        <banner_title><![CDATA[Molly Home11 Promo4]]></banner_title>
+        <banner_filename><![CDATA[promo4.jpg]]></banner_filename>
+        <banner_url>#</banner_url>
+        <banner_content><![CDATA[<p>What the </p>
+<p class="h1">BEST CAMERA </p>
+<p class="h2">FOR YOU?</p>]]></banner_content>
+        <banner_button><![CDATA[]]></banner_button>
+        <banner_text_align><![CDATA[left]]></banner_text_align>
+        <position>2</position>
+        <setting><![CDATA[{"custom_class":"col-sm-6 col-xs-12","animation":"","animation_delay":"","text_colour":"text-colour-black","link_colour":"","link_hover_colour":"","button_colour":"","button_hover_colour":"","button_text_colour":"","button_text_hover_colour":"","button_border_colour":"","button_border_hover_colour":"","banner_id":"%s"}]]></setting>
+        <col>6</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+    <child>
+        <block_name>block113-0</block_name>
+        <block_content><![CDATA[]]></block_content>
+        <type>separator</type>
+        <position>3</position>
+        <setting><![CDATA[{"custom_class":"col-md-9 col-sm-9 col-xs-12","separator_type":"white-space","border_type":"full","border_style":"style1","border_icon":"","text_content":"","margin_top":"25","margin_bottom":"25"}]]></setting>
+        <col>12</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+    <child>
+        <block_name>block115-0</block_name>
+        <block_content><![CDATA[]]></block_content>
+        <type>separator</type>
+        <position>2</position>
+        <setting><![CDATA[{"custom_class":"col-md-12 col-sm-12 col-xs-12","separator_type":"white-space","border_type":"full","border_style":"style1","border_icon":"","text_content":"","margin_top":"11","margin_bottom":"11"}]]></setting>
+        <col>12</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+    <child>
+        <block_name>block116-0</block_name>
+        <block_content><![CDATA[]]></block_content>
+        <type>separator</type>
+        <position>2</position>
+        <setting><![CDATA[{"custom_class":"col-md-12 col-sm-12 col-xs-12","separator_type":"white-space","border_type":"full","border_style":"style1","border_icon":"","text_content":"","margin_top":"9","margin_bottom":"9"}]]></setting>
+        <col>12</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+    <child>
+        <block_name>block116-0</block_name>
+        <block_content><![CDATA[]]></block_content>
+        <type>separator</type>
+        <position>4</position>
+        <setting><![CDATA[{"custom_class":"col-md-12 col-sm-12 col-xs-12","separator_type":"white-space","border_type":"full","border_style":"style1","border_icon":"","text_content":"","margin_top":"7.5","margin_bottom":"7.5"}]]></setting>
+        <col>12</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+    <child>
+        <block_name>block113-0</block_name>
+        <block_content><![CDATA[{{widget type="deals/widget" template="mgs/deals/widget/slide.phtml" column="1" real_deal="10,9" title="Hot Deal Every Day" auto_play="false" stop_hover="false" navigation="false" pagination="false" product_ratio="" number_row="1"}}]]></block_content>
+        <type>deals</type>
+        <position>1</position>
+        <setting><![CDATA[{"title":"Hot Deal Every Day","custom_class":"sidebar_deal","animation":"","animation_delay":"","deal":["10","9"],"count_per_row":"1","product_ratio":"","slider":{"active":"1","number_row":"1","auto":"false","stop_hover":"false","navigation":"false","pagination":"false"},"text_colour":"","link_colour":"","link_hover_colour":"","button_colour":"","button_hover_colour":"","button_text_colour":"","button_text_hover_colour":"","button_border_colour":"","button_border_hover_colour":"","price_colour":""}]]></setting>
+        <col>3</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+    <child>
+        <block_name>block113-0</block_name>
+        <block_content><![CDATA[{{block type="mpanel/products" template="mgs/mpanel/products/category_products/category_products_tabs_slider.phtml" title="" products_count="8" column="4" category_ids="140" product_ratio="" show_type="position"}}]]></block_content>
+        <type>category_products</type>
+        <position>5</position>
+        <setting><![CDATA[{"title":"","custom_class":"non-title custom-electronic","animation":"","animation_delay":"","show_type":"position","products_count":"8","count_per_row":"4","view_mode":"category_products_tabs_slider.phtml","category_id":["140"],"text_colour":"","link_colour":"","link_hover_colour":"","button_colour":"","button_hover_colour":"","button_text_colour":"","button_text_hover_colour":"","button_border_colour":"","button_border_hover_colour":"","price_colour":""}]]></setting>
+        <col>9</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+    <child>
+        <block_name>block115-0</block_name>
+        <block_content><![CDATA[{{block type="mpanel/products" template="mgs/mpanel/products/category_products/category_products_tabs_slider.phtml" title="" products_count="10" column="5" category_ids="141" product_ratio="" show_type="position"}}]]></block_content>
+        <type>category_products</type>
+        <position>3</position>
+        <setting><![CDATA[{"title":"","custom_class":"non-title","animation":"","animation_delay":"","show_type":"position","products_count":"10","count_per_row":"5","view_mode":"category_products_tabs_slider.phtml","category_id":["141"],"text_colour":"","link_colour":"","link_hover_colour":"","button_colour":"","button_hover_colour":"","button_text_colour":"","button_text_hover_colour":"","button_border_colour":"","button_border_hover_colour":"","price_colour":""}]]></setting>
+        <col>12</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+	
+	<child>
+        <block_name>block116-0</block_name>
+        <block_content><![CDATA[{{block type="mpanel/products" template="mgs/mpanel/products/category_products/category_products_tabs_slider.phtml" title="" products_count="10" column="5" category_ids="143,144,142" product_ratio="" show_type="featured"}}]]></block_content>
+        <type>category_products</type>
+        <position>5</position>
+        <setting><![CDATA[{"title":"","custom_class":" cate-tabs non-title","animation":"","animation_delay":"","show_type":"featured","products_count":"10","count_per_row":"5","view_mode":"category_products_tabs_slider.phtml","category_id":["143","144","142"],"text_colour":"","link_colour":"","link_hover_colour":"","button_colour":"","button_hover_colour":"","button_text_colour":"","button_text_hover_colour":"","button_border_colour":"","button_border_hover_colour":"","price_colour":""}]]></setting>
+        <col>12</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+	<child>
+        <block_name>block117-0</block_name>
+        <block_content><![CDATA[{{block type="brand/homeblock" brand_ids="1,2,3,4,5,6" slider="1" title="" count_per_row="5" number_row="1" auto_play="false" stop_hover="false" navigation="true" pagination="false" template="mgs/brand/home-featured-brands.phtml"}}]]></block_content>
+        <type>brands</type>
+        <position>1</position>
+        <setting><![CDATA[{"title":"","custom_class":"","animation":"","animation_delay":"","brand":["1","2","3","4","5","6"],"count_per_row":"5","slider":{"active":"1","auto":"false","stop_hover":"false","navigation":"true","pagination":"false"},"number_row":"1"}]]></setting>
+        <col>12</col>
+        <custom_class><![CDATA[]]></custom_class>
+    </child>
+</layout>

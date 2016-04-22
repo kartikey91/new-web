@@ -1,0 +1,26 @@
+<?php
+/* * ****************************************************
+ * Package   : ProductQuestions
+ * Author    : http://www.arrowhitech.com
+ * Copyright : (c) 2013 - ArrowHiTech.Com
+ * ***************************************************** */
+?>
+<?php  $helper = Mage::helper('mpanel'); ?>
+<div class="faq"> 
+	<div class="faq-content">
+		<div class="search">
+			<?php echo $this->getChildHtml('productquestions.faq.search') ?>
+		</div>
+		<div class="content">
+			<?php echo $this->getChildHtml('productquestions.faq.topic') ?>
+		</div>
+		<div class="row">
+			<div class="col-md-6 col-sm-6 col-xs-12">
+				<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('molly_faq_custom_1')->setCanEdit(1)->toHtml(); ?>
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-12">
+				<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('molly_faq_custom_2')->setCanEdit(1)->toHtml(); ?>
+			</div>
+		</div>
+	</div>
+</div>

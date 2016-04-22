@@ -1,0 +1,35 @@
+<?php 
+$collection = Mage::getModel('testimonial/testimonial')
+	->getCollection()
+	->addFieldToFilter('status', 1);
+	if($this->getData('number_item')){
+		$collection->setPageSize($this->getData('number_item'));
+	}
+?>
+<?php $viewMode = 'grid'; ?>
+<div class="testimonial-container testimonial-abouts">
+		<div class="owl-carousel testimonials-carousel" data-plugin-options="{'items': 1, 'autoHeight': true, 'controlNav': true }" id="testimonials-carousel">
+			<?php foreach($collection as $_item): ?>
+				<div class="row">
+					<div class="tt-pr col-md-6 col-md-push-3 col-sm-10 col-sm-push-1 col-xs-12 col-xs-push-0">
+						<div class="testimonial-item">
+							<div class="testimonial-author">
+								<?php if($_item->getAvatar()): ?>
+									<div class="img-thumbnail img-thumbnail-small">							
+										<img class="img-responsive" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA); ?>testimonial/<?php echo $_item->getAvatar() ?>" alt="">							
+									</div>
+								<?php endif;?>
+							</div>
+							<div class="testimonial-content">
+								<p class="content"><?php echo '"'.$_item->getContent().'"' ?></p>
+								<p><span class="name-author"><?php echo $_item->getName().'.' ?></span><span class="text-desc"><?php echo $_item->getInformation() ?></span></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			<?php endforeach ?>
+	</div>
+	<script type="text/javascript">
+		initSliderTestimonials('testimonials-carousel', 1, false, false, false, true);
+	</script>
+</div>

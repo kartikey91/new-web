@@ -1,0 +1,169 @@
+<?php
+/* * ****************************************************
+ * Package   : Brand
+ * Author    : HIEPNH
+ * Copyright : (c) 2015
+ * ***************************************************** */
+?>
+<?php
+$_productCollection = $this->getLoadedProductCollection();
+$_helper = $this->helper('catalog/output');
+$model = $this->getBrand();
+$helper = Mage::helper('brand');
+?>
+<?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+<div class="brand-detail">
+<?php if ($model->getImage() != ''): ?>
+    <p class="category-image">
+        <img class="img-responsive" title="<?php echo $model->getTitle(); ?>" alt="<?php echo $model->getTitle(); ?>"
+             src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB) . 'media/' . $model->getImage(); ?>">
+    </p>
+<?php endif; ?>
+<?php
+	$panelHelper = $this->helper('mpanel');
+	$size = $panelHelper->convertRatioToSize();
+?>
+<?php if ($model->getDescription() != ''): ?>
+    <div class="category-description std">
+        <p><?php echo $model->getDescription(); ?></p>
+    </div>
+<?php endif; ?>
+
+<?php if (!$_productCollection->count()): ?>
+	<div class="alert alert-danger">
+		<p class="note-msg"><?php echo $this->__('There are no products matching the selection.') ?></p>
+	</div>
+<?php else: ?>
+    <div class="category-products">
+		<div class="top-toolbar">
+			<?php echo $this->getToolbarHtml() ?>
+		</div>
+        <?php // List mode ?>
+        <?php if ($this->getMode() != 'grid'): ?>
+            <?php $_iterator = 0; ?>
+            <ol class="products-list category-products-list" id="products-list">
+                <?php foreach ($_productCollection as $_product): ?>
+                    <li class="item<?php if (++$_iterator == sizeof($_productCollection)): ?> last<?php endif; ?>">
+                        <div class="row">
+							<div class="col-md-3 col-sm-6 col-xs-12">
+								<div class="product-images-box">
+									<a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" class="product-image"><img class="img-responsive" src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image'); ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" /></a>
+									<?php echo $panelHelper->getProductLabel($_product) ?>
+									<?php if ($this->helper('core')->isModuleEnabled('MGS_QuickView') && Mage::getStoreConfig('quickview/general/active')): ?>
+										<div class="action-quickview">
+											<button type="button" title="<?php echo $this->__('Quickview') ?>" class="btn-quickview quick-view btn-full" 
+											onclick="quickView('<?php echo $_product->getProductUrl() ?>'); return false;"><em class="fa fa-search"></em><?php echo $this->__('Quick view'); ?></button>
+										</div>
+									<?php endif ?>
+								</div>
+							</div>
+							<div class="col-md-9 col-sm-6 col-xs-12">
+								<?php $_productNameStripped = $this->stripTags($_product->getName(), null, true); ?>
+								<p class="product-name"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $_productNameStripped; ?>"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name'); ?></a></p>
+								<?php echo $this->getPriceHtml($_product, true) ?>
+								<?php echo $this->getLayout()->createBlock('review/helper')->getSummaryHtml($_product, 'short');?>
+								<p class="short-description"><?php echo $_helper->productAttribute($_product, $_product->getShortDescription(), 'short_description') ?></p>
+								
+								<div class="controls">
+									<ul class="icon-links">
+										<?php if($panelHelper->isShowAddtoCart()): ?>
+											<?php if ($_product->isSaleable()): ?>
+												<li class="add-cart-item">
+													<button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><em class="fa fa-shopping-cart"></em><?php echo $this->__('Add to Cart'); ?></button>
+												</li>
+											<?php else: ?>
+												<li class="add-cart-item">
+													<span class="text-soul"><?php echo $this->__('Out of Stock'); ?></span>
+												</li>
+											<?php endif; ?>
+										<?php endif; ?>
+										<?php if ($this->helper('wishlist')->isAllow() && $panelHelper->isShowWishList()) : ?>
+											<li class="wl-item"><button type="button" title="<?php echo $this->__('Add to Wishlist') ?>" onclick="setLocation('<?php echo $this->helper('wishlist')->getAddUrl($_product) ?>')" <?php if (!$panelHelper->checkInWishilist($_product)) : ?>class="no-active"<?php endif ?>><em class="fa <?php if ($panelHelper->checkInWishilist($_product)) : ?>fa-heart<?php else: ?>fa-heart-o<?php endif ?>"></em><?php echo $this->__('Add to Wishlist'); ?></button></li>
+										<?php endif; ?>
+										<?php if ($_compareUrl = $this->getAddToCompareUrl($_product) && $panelHelper->isShowCompare()): ?>
+											<li><button class="btn-compare" type="button" title="<?php echo $this->__('Add to Compare') ?>" onclick="setLocation('<?php echo $_compareUrl ?>')"><em class="fa fa-sliders"></em><?php echo $this->__('Add to Compare'); ?></button></li>
+										<?php endif; ?>
+									</ul>
+								</div>
+							</div>
+						</div>
+                    </li>
+                <?php endforeach; ?>
+            </ol>
+            <script type="text/javascript">decorateList('products-list', 'none-recursive')</script>
+
+        <?php else: ?>
+
+            <?php // Grid Mode ?>
+
+            <?php $_collectionSize = $_productCollection->count() ?>
+            <?php $_columnCount = $this->getColumnCount(); ?>
+				<div class="products-grid row">
+					<?php $i = 0; foreach ($_productCollection as $_product): $i++ ; ?>
+						<div class="item col-md-4 col-sm-6 col-xs-12 <?php if ($i % 3 == 1): ?>first-row-item <?php endif; ?><?php if ($i % 2 == 1): ?>row-2sm-first<?php endif; ?>">
+						<div class="product-content">
+							<div class="product-top">
+								<a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>" class="product-image">
+									<img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize($size['width'], $size['height']) ?>" alt="<?php echo $this->stripTags($_product->getName(), null, true) ?>" class="img-responsive"/>
+									<?php if(basename($_product->getData('image')) != basename($_product->getData('small_image'))): ?>
+										<img src="<?php echo $this->helper('catalog/image')->init($_product, 'image')->resize($size['width'], $size['height']) ?>" 
+										alt="<?php echo $this->stripTags($_product->getName(), null, true) ?>" class="img-responsive img-two"/>
+									<?php endif ?>
+								</a>
+								<?php echo $panelHelper->getProductLabel($_product) ?>
+								<?php if ($this->helper('core')->isModuleEnabled('MGS_QuickView') && Mage::getStoreConfig('quickview/general/active')): ?>
+									<div class="action-quickview">
+										<button type="button" title="<?php echo $this->__('Quickview') ?>" class="btn-quickview quick-view btn-full" 
+										onclick="quickView('<?php echo $_product->getProductUrl() ?>'); return false;"><em class="fa fa-search"></em><?php echo $this->__('Quick view'); ?></button>
+									</div>
+								<?php endif ?>
+							</div>
+							<div class="product-desc">
+								<div class="top-desc">
+									<div class="text-desc cate-name">
+										<div class="text">
+											<span><?php echo $cate_name; ?></span>
+										</div>
+									</div>
+									<div class="controls">
+										<ul class="icon-links">
+											<?php if ($this->helper('wishlist')->isAllow() && $panelHelper->isShowWishList()) : ?>
+												<li class="wl-item"><button type="button" title="<?php echo $this->__('Add to Wishlist') ?>" onclick="setLocation('<?php echo $this->helper('wishlist')->getAddUrl($_product) ?>')" <?php if (!$panelHelper->checkInWishilist($_product)) : ?>class="no-active"<?php endif ?>><em class="fa <?php if ($panelHelper->checkInWishilist($_product)) : ?>fa-heart<?php else: ?>fa-heart-o<?php endif ?>"></em></button></li>
+											<?php endif; ?>
+											<?php if ($_compareUrl = $this->getAddToCompareUrl($_product) && $panelHelper->isShowCompare()): ?>
+												<li><button class="btn-compare" type="button" title="<?php echo $this->__('Add to Compare') ?>" onclick="setLocation('<?php echo $_compareUrl ?>')"><em class="fa fa-sliders"></em></button></li>
+											<?php endif; ?>
+										</ul>
+									</div>
+								</div>
+								<p class="product-name"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>)"><?php echo $this->helper('catalog/output')->productAttribute($_product, $_product->getName() , 'name') ?></a></p>
+								<div class="bottom-desc">
+								<?php echo $this->getPriceHtml($_product, true, '-widget-new-grid') ?>
+								<?php echo $this->getLayout()->createBlock('review/helper')->getSummaryHtml($_product, 'short');?>
+								<?php if($panelHelper->isShowAddtoCart()): ?>
+									<?php if ($_product->isSaleable()): ?>
+										<div class="add-cart-item">
+											<button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><em class="fa fa-shopping-cart"></em><?php echo $this->__('Add to Cart'); ?></button>
+										</div>
+									<?php else: ?>
+										<div class="add-cart-item">
+											<span class="text-soul"><?php echo $this->__('Out of Stock'); ?></span>
+										</div>
+									<?php endif; ?>
+								<?php endif; ?>
+								</div>
+							</div>
+						</div>
+						</div>
+					<?php endforeach ?>
+                </div>
+            <script
+            type="text/javascript">decorateGeneric($$('ul.products-grid'), ['odd', 'even', 'first', 'last'])</script>
+        <?php endif; ?>
+
+        <div class="toolbar-bottom  <?php if ($this->getMode() != 'grid'): ?>list-mode<?php endif ?>">
+            <?php echo $this->getToolbarHtml() ?>
+        </div>
+    </div>
+<?php endif; ?>
+</div>

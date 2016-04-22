@@ -1,0 +1,59 @@
+<?php $profile = $this->getProfile(); ?>
+<div class="detail-profile">
+	<div class="row">
+		<div class="col-md-4 col-sm-4 col-xs-12">
+			<div class="user-wrapper">
+				<div class="profile-image">
+					<img alt="<?php echo $profile->getName(); ?>" class="img-responsive" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).$profile->getPhoto() ?>">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-8 col-sm-8 col-xs-12">
+			<div class="description">
+				<h2><?php echo $profile->getName(); ?></h2>
+				<p><?php echo $profile->getDetail(); ?></p>
+				<table class="table profile-table">
+					<tbody>
+						<?php if($profile->getPosition()): ?>
+							<tr>
+								<td><?php echo $this->__('Position'); ?></td>
+								<td class="text-desc"><?php echo $profile->getPosition(); ?></td>
+							</tr>
+						<?php endif ?>
+						<?php if($profile->getEmail()): ?>
+							<tr>
+								<td><?php echo $this->__('Email'); ?></td>
+								<td class="text-desc"><?php echo $profile->getEmail(); ?></td>
+							</tr>
+						<?php endif ?>
+						<?php if($profile->getAddress()): ?>
+							<tr>
+								<td><?php echo $this->__('Address'); ?></td>
+								<td class="text-desc"><?php echo $profile->getAddress(); ?></td>
+							</tr>
+						<?php endif ?>
+					</tbody>
+				</table>
+				<div class="f-social">
+					<ul class="social-connected">
+					<?php if($profile->getFacebook()): ?>
+						<li><a href="<?php echo $profile->getFacebook(); ?>"><em class="fa fa-facebook">&nbsp;</em></a></li>
+					<?php endif ?>
+					<?php if($profile->getTwitter()): ?>
+						<li><a href="<?php echo $profile->getTwitter(); ?>"><em class="fa fa-twitter">&nbsp;</em></a></li>
+					<?php endif ?>
+					<?php if($profile->getGooglePlus()): ?>
+						<li><a href="<?php echo $profile->getGooglePlus(); ?>"><em class="fa fa-google-plus">&nbsp;</em></a></li>
+					<?php endif ?>
+					<?php if($profile->getLinkedin()): ?>
+						<li><a href="<?php echo $profile->getLinkedin(); ?>"><em class="fa fa-linkedin">&nbsp;</em></a></li>
+					<?php endif ?>
+					<?php if($profile->getInstagram()): ?>
+						<li><a href="<?php echo $profile->getInstagram(); ?>"><em class="fa fa-instagram">&nbsp;</em></a></li>
+					<?php endif ?>
+					</ul>				
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
