@@ -21,7 +21,6 @@ class MGS_Mpanel_Block_Catalog_Layer_Filter_Price extends Mage_Catalog_Block_Lay
 	* 
 	*/
 	public function __construct(){
-	
 		if($this->getSliderStatus()){
 			$this->_currentCategory = Mage::registry('current_category');
 			$this->_searchSession = Mage::getSingleton('catalogsearch/session');
@@ -77,76 +76,73 @@ class MGS_Mpanel_Block_Catalog_Layer_Filter_Price extends Mage_Catalog_Block_Lay
 	}
 	
 	public function setNewPrices(){
-		$this->setInSession('_newCurrMinPrice', $this->_currMinPrice);	
-		$this->setInSession('_newCurrMaxPrice', $this->_currMaxPrice);	
-		if(!is_numeric($this->_currMinPrice)){
-			$this->_currMinPrice = 0;
-			$this->setInSession('_currMinPrice', 0);
-		}
-		
-		if(!is_numeric($this->_currMaxPrice)){
-			$this->_currMaxPrice = 0;
-			$this->setInSession('_currMaxPrice', 0);
-		}
-		
-		$sMin = $this->getFromSession('_minPrice');
-		$sMax = $this->getFromSession('_maxPrice');
-		$csMin = $this->getFromSession('_currMinPrice');
-		$csMax = $this->getFromSession('_currMaxPrice');
-		$ncsMin = $this->getFromSession('_newCurrMinPrice');
-		$ncsMax = $this->getFromSession('_newCurrMaxPrice');
-		
-		
-		// if Filters are called
+		if(Mage::app()->getRequest()->getParam('max') && Mage::app()->getRequest()->getParam('min')){
+			$this->setInSession('_newCurrMinPrice', $this->_currMinPrice);	
+			$this->setInSession('_newCurrMaxPrice', $this->_currMaxPrice);	
+			if(!is_numeric($this->_currMinPrice)){
+				$this->_currMinPrice = 0;
+				$this->setInSession('_currMinPrice', 0);
+			}
 			
-		$a[0][] = 'price_index.min_price';
-		$a[0][] = 'ASC';
-		$loadedCollection = $this->getLayout()->getBlockSingleton('catalog/product_list')->getLoadedProductCollection()->setOrder('min_price','DESC')->getSelect()->setPart('order',$a)->query()->fetchAll();
-		//print_r(get_class_methods($loadedCollection));exit;
-		//echo '<pre>';
-		$tot = count($loadedCollection);
-		
-		//echo $loadedCollection;exit;
-		
-		if(count($loadedCollection) > 0){
-			$loadedMin = $loadedCollection[0]['min_price'];
-			$loadedMax = $loadedCollection[$tot-1]['min_price'];	
-		}	
-		
-		
-		
+			if(!is_numeric($this->_currMaxPrice)){
+				$this->_currMaxPrice = 0;
+				$this->setInSession('_currMaxPrice', 0);
+			}
+			$sMin = $this->getFromSession('_minPrice');
+			$sMax = $this->getFromSession('_maxPrice');
+			$csMin = $this->getFromSession('_currMinPrice');
+			$csMax = $this->getFromSession('_currMaxPrice');
+			$ncsMin = $this->getFromSession('_newCurrMinPrice');
+			$ncsMax = $this->getFromSession('_newCurrMaxPrice');
+			
+			
+			// if Filters are called
 				
-		if($this->_currMinPrice == $csMin && $this->_currMaxPrice == $csMax){
+			$a[0][] = 'price_index.min_price';
+			$a[0][] = 'ASC';
+			$loadedCollection = $this->getProductCollection();
+			//print_r(get_class_methods($loadedCollection));exit;
+			//echo '<pre>';	
+			$tot = count($loadedCollection);
 			
-			if($this->_minPrice != $ncsMin){
-				$this->setInSession('_minPrice', $loadedMin);
-				$this->_minPrice = $loadedMin;
-			}
-			if($loadedMin >= $csMin){
-				$this->_currMinPrice = $loadedMin;
-				$this->setInSession('_currMinPrice', $loadedMin);
-			}
-			if($this->_maxPrice != $ncsMax){
-				$this->setInSession('_maxPrice', $loadedMin);
-				$this->_maxPrice = $loadedMax;
-			}
-			if($loadedMax <= $csMax){
-				$this->_currMaxPrice = $loadedMax;
-				$this->setInSession('_currMaxPrice', $loadedMax);
-			}
-		}else{
-			if($ncsMin == $loadedMin){
-				$this->setInSession('_minPrice', $loadedMin);
-				$this->_minPrice = $loadedMin;
-			}
-			if($ncsMax == $loadedMax){
-				$this->setInSession('_maxPrice', $loadedMin);
-				$this->_maxPrice = $loadedMax;
-			}
+			//echo $loadedCollection;exit;
+			
+			if(count($loadedCollection) > 0){
+				$loadedMin = $loadedCollection[0]['min_price'];
+				$loadedMax = $loadedCollection[$tot-1]['min_price'];	
+			}	
 			
 			
+			if($this->_currMinPrice == $csMin && $this->_currMaxPrice == $csMax){
 				
+				if($this->_minPrice != $ncsMin){
+					$this->setInSession('_minPrice', $loadedMin);
+					$this->_minPrice = $loadedMin;
+				}
+				if($loadedMin >= $csMin){
+					$this->_currMinPrice = $loadedMin;
+					$this->setInSession('_currMinPrice', $loadedMin);
+				}
+				if($this->_maxPrice != $ncsMax){
+					$this->setInSession('_maxPrice', $loadedMin);
+					$this->_maxPrice = $loadedMax;
+				}
+				if($loadedMax <= $csMax){
+					$this->_currMaxPrice = $loadedMax;
+					$this->setInSession('_currMaxPrice', $loadedMax);
+				}
+			}else{
+				if($ncsMin == $loadedMin){
+					$this->setInSession('_minPrice', $loadedMin);
+					$this->_minPrice = $loadedMin;
+				}
+				if($ncsMax == $loadedMax){
+					$this->setInSession('_maxPrice', $loadedMin);
+					$this->_maxPrice = $loadedMax;
+				}	
+			}
 		}
+		//echo $this->_currMinPrice;
 	}
 	
 	public function getPriceDisplayType(){
@@ -492,7 +488,7 @@ class MGS_Mpanel_Block_Catalog_Layer_Filter_Price extends Mage_Catalog_Block_Lay
 	
 	public function setInSession($var, $value){
 		$set = "set".$var;
-		Mage::getSingleton('catalog/session')->$set($value);	
+		Mage::getSingleton('catalog/session')->$set($value);
 	}
 	
 	public function getFromSession($var){

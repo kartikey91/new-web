@@ -2,7 +2,7 @@
 <config>
     <sections>
         <mgs_theme translate="label">
-            <label>Theme Settings</label>
+            <label>Theme Settings (v2.1)</label>
             <tab>mgscore</tab>
             <frontend_type>text</frontend_type>
             <sort_order>2</sort_order>
@@ -187,15 +187,6 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </popup_newsletter>
-                        <breadcrumbs translate="label">
-                            <label>Enable Breadcrumbs</label>
-                            <frontend_type>select</frontend_type>
-                            <source_model>adminhtml/system_config_source_yesno</source_model>
-                            <sort_order>800</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website></show_in_website>
-                            <show_in_store>1</show_in_store>                            
-                        </breadcrumbs>
                     </fields>
                 </general>
 				
@@ -736,6 +727,28 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </hot>
+						
+						<max_width_image translate="label">
+                            <label>Max Width of Product Images (Default)</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <validate>validate-number</validate>
+                            <comment>px</comment>
+                        </max_width_image>
+						
+						<max_width_image_detail translate="label">
+                            <label>Max Width of Product Images (Product View Page)</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>35</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<validate>validate-number</validate>
+                            <comment>px</comment>
+                        </max_width_image_detail>
 
                         <picture_ratio translate="label">
                             <label>Product Picture ratio</label>
@@ -767,16 +780,6 @@
                             <show_in_store>1</show_in_store>
                         </sale_label>
 						
-						<sold_label translate="label">
-                            <label>Sold Label</label>
-                            <frontend_type>text</frontend_type>
-                            <comment>Empty to disable</comment>
-                            <sort_order>61</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </sold_label>
-
                         <price_slider translate="label">
                             <label>Active Price Slider</label>
                             <frontend_type>select</frontend_type>
@@ -1664,19 +1667,6 @@
                             </depends>
                         </top_link_color>
 						
-						<top_border_color translate="label">
-                            <label>Top border color</label>
-                            <frontend_type>text</frontend_type>
-                            <frontend_model>mpanel/adminhtml_fields_color</frontend_model>
-                            <sort_order>51</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-							<depends>
-                                <use_custom>1</use_custom>
-                            </depends>
-                        </top_border_color>
-						
 						<top_link_hover_color translate="label">
                             <label>Link hover color</label>
                             <frontend_type>text</frontend_type>
@@ -1948,7 +1938,7 @@
                         </cart_price_color>
 						
 						<cart_icon_background translate="label">
-                            <label>Icon color</label>
+                            <label>Icon background color</label>
                             <frontend_type>text</frontend_type>
                             <frontend_model>mpanel/adminhtml_fields_color</frontend_model>
                             <sort_order>220</sort_order>
@@ -1959,19 +1949,6 @@
                                 <use_custom>1</use_custom>
                             </depends>
                         </cart_icon_background>
-						
-						<cart_dropdown_background translate="label">
-                            <label>Icon background color</label>
-                            <frontend_type>text</frontend_type>
-                            <frontend_model>mpanel/adminhtml_fields_color</frontend_model>
-                            <sort_order>222</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-							<depends>
-                                <use_custom>1</use_custom>
-                            </depends>
-                        </cart_dropdown_background>
 						
 						<cart_number_background translate="label">
                             <label>Number background color</label>
@@ -2042,45 +2019,6 @@
                             <label>Link hover color</label>
                             <frontend_type>text</frontend_type>
                             <frontend_model>mpanel/adminhtml_fields_color</frontend_model>
-                            <sort_order>272</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-							<depends>
-                                <use_custom>1</use_custom>
-                            </depends>
-                        </menu_link_hover_color>
-						
-						<menu_dropdown_background translate="label">
-                            <label>Background color dropdown</label>
-                            <frontend_type>text</frontend_type>
-                            <frontend_model>mpanel/adminhtml_fields_color</frontend_model>
-                            <sort_order>274</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-							<depends>
-                                <use_custom>1</use_custom>
-                            </depends>
-                        </menu_dropdown_background>
-						
-						<menu_dropdown_link_color translate="label">
-                            <label>Link dropdown color</label>
-                            <frontend_type>text</frontend_type>
-                            <frontend_model>mpanel/adminhtml_fields_color</frontend_model>
-                            <sort_order>276</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-							<depends>
-                                <use_custom>1</use_custom>
-                            </depends>
-                        </menu_dropdown_link_color>
-						
-						<menu_dropdown_link_hover_color translate="label">
-                            <label>Link dropdown hover color</label>
-                            <frontend_type>text</frontend_type>
-                            <frontend_model>mpanel/adminhtml_fields_color</frontend_model>
                             <sort_order>280</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -2088,7 +2026,7 @@
 							<depends>
                                 <use_custom>1</use_custom>
                             </depends>
-                        </menu_dropdown_link_hover_color>
+                        </menu_link_hover_color>
 						
 						<menu_border_color translate="label">
                             <label>Border color</label>
@@ -2102,70 +2040,6 @@
                                 <use_custom>1</use_custom>
                             </depends>
                         </menu_border_color>
-						
-						<sticky_menu_heading>
-							<label>Sticky Menu</label>
-                            <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
-                            <sort_order>300</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                            <depends>
-                                <use_custom>1</use_custom>
-                            </depends>
-                        </sticky_menu_heading>
-						
-						<sticky_menu_background translate="label">
-                            <label>Background color</label>
-                            <frontend_type>text</frontend_type>
-                            <frontend_model>mpanel/adminhtml_fields_color</frontend_model>
-                            <sort_order>310</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-							<depends>
-                                <use_custom>1</use_custom>
-                            </depends>
-                        </sticky_menu_background>
-						
-						<sticky_menu_link_color translate="label">
-                            <label>Link color</label>
-                            <frontend_type>text</frontend_type>
-                            <frontend_model>mpanel/adminhtml_fields_color</frontend_model>
-                            <sort_order>320</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-							<depends>
-                                <use_custom>1</use_custom>
-                            </depends>
-                        </sticky_menu_link_color>
-						
-						<sticky_menu_link_hover_color translate="label">
-                            <label>Link hover color</label>
-                            <frontend_type>text</frontend_type>
-                            <frontend_model>mpanel/adminhtml_fields_color</frontend_model>
-                            <sort_order>330</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-							<depends>
-                                <use_custom>1</use_custom>
-                            </depends>
-                        </sticky_menu_link_hover_color>
-						
-						<sticky_menu_border_color translate="label">
-                            <label>Border color</label>
-                            <frontend_type>text</frontend_type>
-                            <frontend_model>mpanel/adminhtml_fields_color</frontend_model>
-                            <sort_order>340</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-							<depends>
-                                <use_custom>1</use_custom>
-                            </depends>
-                        </sticky_menu_border_color>
                     </fields>
                 </header>
 				
@@ -2866,5 +2740,36 @@
 				</footer>
             </groups>
         </theme_color>
+		
+		<defer_js>
+			<label>Defer Javascript</label>
+            <tab>mgscore</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>9999</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <general translate="label" >
+                    <label>General</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>100</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                    </fields>
+                </general>
+			</groups>
+		</defer_js>
     </sections>
 </config>

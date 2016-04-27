@@ -33,21 +33,27 @@
 <?php
     $_product = $this->getProduct();
     $_helper = $this->helper('catalog/output');
-	
 	$panelHelper = $this->helper('mpanel');
 	$size = $panelHelper->convertRatioToSize();
+	$minSize = $panelHelper->convertRatioToMinSize();
 ?>
 <div class="entry hidden-sm hidden-xs">
-	<div class="image-media" id="main-images">
-		<?php
-			$_img = '<img src="'.$this->helper('catalog/image')->init($_product, 'image')->resize($size['width'], $size['height']).'" alt="'.$this->escapeHtml($this->getImageLabel()).'" title="'.$this->escapeHtml($this->getImageLabel()).'" class="img-responsive"/>';
-		?>
-		<?php echo $_helper->productAttribute($_product, $_img, 'image'); ?>
-	
-		<div class="magnifier">
-			<div class="buttons tooltips">
-				<a href="<?php echo $this->helper('catalog/image')->init($_product, 'image')->resize($size['width'], $size['height']) ?>" class="sf" title="" data-gal="prettyPhoto[product-gallery]"><span class="fa fa-search"></span></a>
-			</div>
+	<div class="product-image product-image-zoom image-media" id="main-images">
+		<div class="product-image-gallery">
+			<img id="image-main"
+				 class="gallery-image visible img-responsive"
+				 src="<?php echo $this->helper('catalog/image')->init($_product, 'image')->resize($size['width'], $size['height']) ?>"
+				 alt="<?php echo $this->escapeHtml($this->getImageLabel()) ?>"
+				 title="<?php echo $this->escapeHtml($this->getImageLabel()); ?>" />
+
+			<?php $i=0; foreach ($this->getGalleryImages() as $_image): ?>
+				<?php if ($this->isGalleryImageVisible($_image)): ?>
+				<img id="image-<?php echo $i; ?>"
+					 class="gallery-image img-responsive"
+					 src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize($size['width'], $size['height']); ?>"
+					 data-zoom-image="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize($size['width'], $size['height']); ?>" />
+				<?php endif; ?>
+			<?php $i++; endforeach; ?>
 		</div>
 	</div>
 </div>
@@ -89,26 +95,25 @@
 	<div class="carousel-container">
 		<div class="thubmbnail" style="padding: 0 50px;">
 			<div class="row thubmbnail-row">
-				<div id="services" class="services owl-carousel thumbnails-carousel">
-					<?php $i=0; foreach ($this->getGalleryImages() as $_image): $i++; ?>
+				<div id="services" class="owl-carousel thumbnails-carousel product-image-thumbs">
+					<?php $i=0; foreach ($this->getGalleryImages() as $_image): ?>
 						<div class="item">
 							<div class="entry<?php if($i==1): ?> first<?php endif ?><?php if($i%3==0): ?> last<?php endif ?>">
 								<div class="image-media">
-									<img data-main-image-src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize($size['width'], $size['height']); ?>" alt="" class="img-responsive" src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize($size['width'], $size['height']); ?>">
-								</div>
-							</div>
-							<div class="magnifier">
-								<div class="buttons">
-									<a href="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize($size['width'], $size['height']); ?>" class="sf" title="" data-gal="prettyPhoto[product-gallery]"></a>
+									<a class="thumb-link" href="#" title="<?php echo $this->escapeHtml($_image->getLabel()) ?>" data-image-index="<?php echo $i; ?>">
+										<img src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize($minSize['width'], $minSize['height']); ?>"
+											 width="<?php echo $minSize['width'] ?>" height="<?php echo $minSize['height'] ?>" alt="<?php echo $this->escapeHtml($_image->getLabel()) ?>" class="img-responsive"/>
+									</a>
 								</div>
 							</div>
 						</div>
-					<?php endforeach; ?>
+					<?php $i++; endforeach; ?>
 				</div>
 			</div>
 		</div>
 	</div>
 	<script type="text/javascript">    
+		/*initSlider('services', 4, false,false, true, false);*/
 		jQuery("#services").owlCarousel ({
 			items : 5,
 			lazyLoad : true,
@@ -131,7 +136,7 @@
 	</script>
 	<script type="text/javascript">
 		jQuery(document).ready(function(){
-			jQuery(".services .item .image-media img").click(function(){
+			jQuery("#services .item .image-media img").click(function(){
 				jQuery("#main-images img").attr("src", jQuery(this).attr("data-main-image-src"));
 				jQuery("#main-images .magnifier a").attr("href", jQuery(this).attr("data-main-image-src"));
 			});

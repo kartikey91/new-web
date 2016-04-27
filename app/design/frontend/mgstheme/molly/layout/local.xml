@@ -128,6 +128,10 @@
 				<type>skin_css</type>
 				<stylesheet>css/responsive.css</stylesheet>
 			</action>
+			
+			<!-- For 1.9.1 -->
+			<action method="addItem"><type>skin_js</type><name>js/app.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>js/lib/imagesloaded.js</name></action>
 
 		</reference>
 		
@@ -491,9 +495,9 @@
         </reference>
 		<reference name="customer_form_login">     
 			<block type="social/login" name="social_login" template="mgs/social/login.phtml">
-				<block type="social/facebook" name="social_facebook" template="mgs/social/facebook-login.phtml" />
-				<block type="social/google" name="social_google" template="mgs/social/google-login.phtml" />
-				<block type="social/twitter" name="social_twitter" template="mgs/social/twitter-login.phtml"  />                
+				<block type="social/facebook" name="social_facebook" />
+				<block type="social/google" name="social_google" />
+				<block type="social/twitter" name="social_twitter" />                
 			</block> 
         </reference>
 	</customer_account_login>

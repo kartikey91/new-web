@@ -52,21 +52,22 @@
         </events>
     </frontend>
     <admin>
-
-		<routers>
-			<adminhtml>
-				<args>
-					<modules>
-						<MGS_Mpanel after="Mage_Adminhtml">MGS_Mpanel_Adminhtml</MGS_Mpanel>
-					</modules> 
-				</args>
-			</adminhtml>
+        <routers>
+            <mpanel_admin>
+                <use>admin</use>
+                <args>
+                    <module>MGS_Mpanel</module>
+                    <frontName>mpanel_admin</frontName>
+                </args>
+            </mpanel_admin>
         </routers>
     </admin>
     <adminhtml>
         <menu>
             <mgscore module="mgscore"> 
                 <children>
+                    
+                    
                     <theme_color module="mpanel">
                         <title>Theme Color</title>
                         <sort_order>1</sort_order>               
