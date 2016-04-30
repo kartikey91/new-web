@@ -10,7 +10,7 @@
 <script type="text/javascript">
     var optionsPrice = new Product.OptionsPrice(<?php echo $this->getJsonConfig() ?>);
 </script>
-<div class="product-view" style="width: 380px;">
+<div class="product-view" style="width: 100%;">
     <?php /* if ($_product->getTypeId() == 'grouped'): ?>
       <ul class="messages"><li class="notice-msg"><ul><li><span><?php echo $this->__('Please specify the quantity of product(s).') ?></span></li></ul></li></ul>
       <?php endif; */ ?>
@@ -21,6 +21,7 @@
                 <input type="hidden" name="related_product" id="related-products-field" value="" />
             </div>
             <div class="product-shop">
+				<div class="text-center margin-bottom20"><img style="margin: 0 auto; max-height: 200px;" class="img-responsive" src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image'); ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>"/></div>
                 <div class="product-name">
                     <h1><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
                 </div>
@@ -78,6 +79,17 @@
                                     if (parent.mgsjQuery('.top-bar .links')) {
                                         parent.mgsjQuery('.top-bar .links').replaceWith(data.toplink);
                                     }
+									if (parent.mgsjQuery('#top-cart-dropdown')) {
+										parent.mgsjQuery('#top-cart-dropdown').replaceWith(data.top_sider_bar);
+										if (parent.mgsjQuery('.btn-remove').length > 0)
+										{
+											for (var i = 0; i < parent.mgsjQuery('.btn-remove').length; i++) {
+												var str_sidebar = 'javascript:if(confirm(\'Are you sure you would like to remove this item from the shopping cart?\')) { ajaxCartProductDelete(\'' + parent.mgsjQuery('.btn-remove')[i].attributes.href.nodeValue + '\'); }';
+												parent.mgsjQuery('#cart-sidebar').find(parent.mgsjQuery('.btn-remove')[i]).attr('onclick', str_sidebar);
+												parent.mgsjQuery('#cart-sidebar').find(parent.mgsjQuery('.btn-remove')[i]).attr('href', 'javascript:void(0);');
+											}
+										}
+									}
                                     if (parent.mgsjQuery('.block-wishlist')) {
                                         parent.mgsjQuery('.block-wishlist').replaceWith(data.mini_wishlist);
                                     } else {
