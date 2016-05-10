@@ -4091,9 +4091,9 @@ footer .instagram-footer a:hover  img{
     margin-left: 6px;
 }
 .sidebar .block, .sidebar .block.block-layered-nav .vertical-menu, .sidebar .block.block-layered-nav.vertical-menu {
-    margin-bottom: 60px;
+    margin-bottom: 10px;
     /*hack*/
-    display:none;
+   /* display:none;*/
 }
 .sidebar .block.block-layered-nav {
     margin-bottom : 0px;
@@ -6939,4 +6939,8 @@ body.no-slider header > div {
 	float:left;
 	width: 100%;
 	clear: both;
+}
+/*hack*/
+#maincontent aside.col-right.sidebar.col-md-3{
+	display:none
 }
