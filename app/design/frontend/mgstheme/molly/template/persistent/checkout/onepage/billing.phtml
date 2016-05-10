@@ -40,7 +40,7 @@
         <fieldset>
             <input type="hidden" name="billing[address_id]" value="<?php echo $this->getAddress()->getId() ?>" id="billing:address_id" />
             <ul>
-                <li class="fields row"><?php echo $this->getLayout()->createBlock('customer/widget_name')->setObject($this->getAddress()->getFirstname() ? $this->getAddress() : $this->getQuote()->getCustomer())->setForceUseCustomerRequiredAttributes(!$this->isCustomerLoggedIn())->setFieldIdFormat('billing:%s')->setFieldNameFormat('billing[%s]')->toHtml() ?></li>
+                <li class="fields"><?php echo $this->getLayout()->createBlock('customer/widget_name')->setObject($this->getAddress()->getFirstname() ? $this->getAddress() : $this->getQuote()->getCustomer())->setForceUseCustomerRequiredAttributes(!$this->isCustomerLoggedIn())->setFieldIdFormat('billing:%s')->setFieldNameFormat('billing[%s]')->toHtml() ?></li>
                 <li class="fields">
                     <div class="field form-group">
                      
@@ -98,7 +98,7 @@
                                 $('billing:region_id').setAttribute('defaultValue',  "<?php echo $this->getAddress()->getRegionId() ?>");
                             //]]>
                             </script>
-                            <input type="text" id="billing:region" name="billing[region]" value="<?php echo $this->escapeHtml($this->getAddress()->getRegion()) ?>"  title="<?php echo $this->__('State/Province') ?>" class="input-text form-control <?php echo $this->helper('customer/address')->getAttributeValidationClass('region') ?>" style="display:none;" />
+                            <input type="text" id="billing:region" name="billing[region]" value="<?php echo $this->escapeHtml($this->getAddress()->getRegion()) ?>"  title="<?php echo $this->__('State/Province') ?>" placeholder='State' class="input-text form-control <?php echo $this->helper('customer/address')->getAttributeValidationClass('region') ?>" style="display:none;" />
                         </div>
                     </div>
                 </li>
@@ -112,7 +112,9 @@
                     <div class="field form-group">
                         
                         <div class="input-box">
-                            <?php echo $this->getCountryHtmlSelect('billing') ?>
+                            <select name="billing[country_id]" id="billing:country_id" class="validate-select form-control" title="Country">
+        <option value="IN" selected="selected">India</option>
+        </select>
                         </div>
                     </div>
                 </li>
@@ -120,15 +122,17 @@
                     <div class="field form-group">
                      
                         <div class="input-box">
-                            <input type="text" name="billing[telephone]" value="<?php echo $this->escapeHtml($this->getAddress()->getTelephone()) ?>" title="<?php echo $this->__('Telephone') ?>" class="input-text form-control <?php echo $this->helper('customer/address')->getAttributeValidationClass('telephone') ?>" id="billing:telephone" placeholder="<?php echo $this->__('Telephone') ?>" />
+                            <input type="text" name="billing[telephone]" value="<?php echo $this->escapeHtml($this->getAddress()->getTelephone()) ?>" title="<?php echo $this->__('Telephone') ?>" class="input-text form-control required-entry validate-length maximum-length-10 minimum-length-10 validate-digits <?php echo $this->helper('customer/address')->getAttributeValidationClass('telephone') ?>" id="billing:telephone" placeholder="<?php echo $this->__('Telephone') ?>" />
                         </div>
                     </div>
+<!--
                     <div class="field form-group">
                      
                         <div class="input-box">
-                            <input type="text" name="billing[fax]" value="<?php echo $this->escapeHtml($this->getAddress()->getFax()) ?>" title="<?php echo $this->__('Fax') ?>" class="input-text form-control <?php echo $this->helper('customer/address')->getAttributeValidationClass('fax') ?>" id="billing:fax" placeholder="<?php echo $this->__('Fax') ?>" />
+                            <input type="text" name="billing[fax]" value="<?php //echo $this->escapeHtml($this->getAddress()->getFax()) ?>" title="<?php //echo $this->__('Fax') ?>" class="input-text form-control <?php //echo $this->helper('customer/address')->getAttributeValidationClass('fax') ?>" id="billing:fax" placeholder="<?php //echo $this->__('Fax') ?>" />
                         </div>
                     </div>
+-->
                 </li>
                 <?php if(!$this->isCustomerLoggedIn()): ?>
 
@@ -224,3 +228,37 @@
     }
 //]]>
 </script>
+<script type="text/javascript">
+    //<![CDATA[
+
+if(Validation) {
+        Validation.addAllThese([
+        ['validate-custommobile','Enter correct mobile number',
+        function(v){
+        var timePat ="^((\+){0,1}91(\s){0,1}(\-){0,1}(\s){0,1}){0,1}9[0-9](\s){0,1}(\-){0,1}(\s){0,1}[1-9]{1}[0-9]{7}$";
+        // var matchArray = v.match(timePat);
+        if(v.length > 0){
+        if(v.length !=10){
+            return false;
+           }else if(v[0] != 9 || v[1] != 1 ){
+
+            //return false;
+           }else if(v[2]!=9 && v[2]!=8 && v[2]!=7){
+
+            return false;
+           }
+
+
+        return true;
+
+        }else {
+        return false;
+        }
+
+        }
+        ]])};
+        var dataForm = new VarienForm('form-id', true);
+
+//]]>
+
+</script>  

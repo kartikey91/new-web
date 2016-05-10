@@ -26,7 +26,7 @@
 ?>
 <section class="breadcrumbs" style="padding:10px 0px;">
     <?php if($crumbs && is_array($crumbs)): ?>
-    <?php foreach($crumbs as $_crumbName=>$_crumbInfo): ?>
+<!--    <?php foreach($crumbs as $_crumbName=>$_crumbInfo): ?>
             <?php if($_crumbInfo['last']): ?>
                     
                     <div class="container">
@@ -35,6 +35,7 @@
             
             <?php endif; ?>
     <?php endforeach; ?>
+-->
 <?php if(Mage::getStoreConfig('mgs_theme/general/breadcrumbs')):?>
     <div class="link-breadcrumbs container">
         <ul>

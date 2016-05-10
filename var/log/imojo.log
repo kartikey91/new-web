@@ -1,0 +1,7 @@
+2016-05-07T05:11:22+00:00 DEBUG (7): Step 0 Process: Authorize
+2016-05-07T05:11:22+00:00 DEBUG (7): Step 2 Process: Getting the redirect URL: http://ec2-54-254-224-184.ap-southeast-1.compute.amazonaws.com/new-web/index.php/imojo/payment/redirect/
+2016-05-07T05:11:22+00:00 DEBUG (7): Step 5 Process: Loading the redirect.html page
+2016-05-07T05:11:22+00:00 DEBUG (7): Store ID and Code: 1 | default
+2016-05-07T05:11:22+00:00 DEBUG (7): Data from Backend: http://imojo.in/7cgesw | e5d82c8819f8cd161aaf8b88b11420c9 | 299ecdacad464c22a9e9271eac3a80ea | 7029e9f2d75d4644aa5f2272020a93be | Field_36716 | 
+2016-05-07T05:11:22+00:00 DEBUG (7): Transaction-order ID: 1462597882-100000013
+2016-05-07T05:11:22+00:00 DEBUG (7): Signature is: d15d309827a64a22d086a7f7efd6912203d25e09

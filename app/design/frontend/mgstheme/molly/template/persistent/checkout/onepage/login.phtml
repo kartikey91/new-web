@@ -93,6 +93,11 @@
             </ul>
             <input name="context" type="hidden" value="checkout" />
         </fieldset>
+        <div class="buttons-set">
+            <p class="required"><?php echo $this->__('* Required Fields') ?></p>
+            <a href="<?php echo $this->getUrl('customer/account/forgotpassword') ?>" class="f-left"><?php echo $this->__('Forgot your password?') ?></a>
+            <button type="submit" class="button btn-primary btn-default btn" onclick="onepageLogin(this)"><span><span><?php echo $this->__('Login') ?></span></span></button>
+        </div>
         </form>
     </div>
 </div>
@@ -111,13 +116,9 @@
             <?php endif; ?>
         </div>
     </div>
-    <div class="col-2">
-        <div class="buttons-set">
-            <p class="required"><?php echo $this->__('* Required Fields') ?></p>
-            <a href="<?php echo $this->getUrl('customer/account/forgotpassword') ?>" class="f-left"><?php echo $this->__('Forgot your password?') ?></a>
-            <button type="submit" class="button" onclick="onepageLogin(this)"><span><span><?php echo $this->__('Login') ?></span></span></button>
-        </div>
-    </div>
+    <!-- <div class="col-2">
+        
+    </div> -->
 </div>
 <script type="text/javascript">
 //<![CDATA[
@@ -153,3 +154,4 @@
     //]]>
     </script>
 <?php endif; ?>
+

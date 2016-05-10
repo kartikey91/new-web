@@ -402,9 +402,13 @@ var ProductMediaManager = {
         ProductMediaManager.wireThumbnails();
 
         mgsjQuery(document).trigger('product-media-loaded', ProductMediaManager);
+	mgsjQuery('#mainMenu .nav-tabs > li > a').hover(function() {
+  		mgsjQuery(this).tab('show');
+	});
     }
 };
 
 mgsjQuery(document).ready(function() {
     ProductMediaManager.init();
 });
+

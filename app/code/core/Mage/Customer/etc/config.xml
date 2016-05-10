@@ -101,7 +101,7 @@
                     <required>1</required>
                     <mapped>1</mapped>
                 </firstname>
-                <middlename>
+		<middlename>
                     <billing>1</billing>
                     <shipping>1</shipping>
                     <mapped>1</mapped>

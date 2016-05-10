@@ -33,26 +33,27 @@
 <?php
     $_product = $this->getProduct();
     $_helper = $this->helper('catalog/output');
+	
 	$panelHelper = $this->helper('mpanel');
-	$size = $panelHelper->convertRatioToSize();
+	$size = $panelHelper->convertRatioToDetailSize();
 	$minSize = $panelHelper->convertRatioToMinSize();
 ?>
 <div class="entry hidden-sm hidden-xs">
 	<div class="product-image product-image-zoom image-media" id="main-images">
 		<div class="product-image-gallery">
 			<img id="image-main"
-				 class="gallery-image visible img-responsive"
+				 class="gallery-image visible"
 				 src="<?php echo $this->helper('catalog/image')->init($_product, 'image')->resize($size['width'], $size['height']) ?>"
 				 alt="<?php echo $this->escapeHtml($this->getImageLabel()) ?>"
 				 title="<?php echo $this->escapeHtml($this->getImageLabel()); ?>" />
 
 			<?php $i=0; foreach ($this->getGalleryImages() as $_image): ?>
-				<?php if ($this->isGalleryImageVisible($_image)): ?>
+				<?php //if ($this->isGalleryImageVisible($_image)): ?>
 				<img id="image-<?php echo $i; ?>"
-					 class="gallery-image img-responsive"
+					 class="gallery-image"
 					 src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize($size['width'], $size['height']); ?>"
 					 data-zoom-image="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize($size['width'], $size['height']); ?>" />
-				<?php endif; ?>
+				<?php// endif; ?>
 			<?php $i++; endforeach; ?>
 		</div>
 	</div>
@@ -144,3 +145,4 @@
 	</script>
 </div>
 <?php endif; ?>
+<?php echo $this->getChildHtml('after'); ?> 

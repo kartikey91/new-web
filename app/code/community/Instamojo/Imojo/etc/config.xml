@@ -43,7 +43,7 @@
                 <active>1</active>
                 <model>imojo/PaymentMethod</model>
                 <order_status>pending</order_status>
-                <title>Pay Using Instamojo</title>
+                <title>Pay using Netbanking/DebitCard/CreditCard</title>
             </imojo>
         </payment>
     </default>

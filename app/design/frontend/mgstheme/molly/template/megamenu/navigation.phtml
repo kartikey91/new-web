@@ -1,7 +1,7 @@
 <?php $megaMenu = $this->getMegamenuItems(); ?>
 <?php if(count($megaMenu)>0 || Mage::getStoreConfig('megamenu/general/home')==1):?>
 	
-	<ul id="mainMenu" class="nav nav-pills nav-main">
+	<ul id="mainMenu" class="nav nav-pills nav-main pull-right" style="padding-right: 25px">
 		<?php if(Mage::getStoreConfig('megamenu/general/home')==1): ?>
 			<li class="level0 <?php if($this->getUrl('') == $this->getUrl('*/*/*', array('_current'=>true, '_use_rewrite'=>true))):?> active<?php endif ?>">
 				<a href="<?php echo $this->getBaseUrl() ?>" class="level0">
