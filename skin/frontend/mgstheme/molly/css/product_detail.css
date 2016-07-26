@@ -1,0 +1,158 @@
+/* monrow custom css*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+.product-detail-bg{
+  background: #ffffff;
+}
+
+.tabs-left > .nav-tabs {
+  border-bottom: 0;
+}
+
+.tab-content > .tab-pane,
+.pill-content > .pill-pane {
+  display: none;
+}
+
+.tab-content > .active,
+.pill-content > .active {
+  display: block;
+}
+
+.tabs-left > .nav-tabs > li {
+  float: none;
+}
+
+.tabs-left > .nav-tabs > li > a{
+  min-width: 74px;
+  margin-right: 0;
+  margin-bottom: 3px;
+}
+
+.tabs-left > .nav-tabs {
+  float: left;
+  /*margin-right: 19px;
+  border-right: 1px solid #ddd;*/
+}
+
+.tabs-left > .nav-tabs > li > a {
+  margin-right: -1px;
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
+          border-color: #ddd #ddd #ddd #ddd;
+}
+
+
+.tabs-left > .nav-tabs > li > a:hover,
+.tabs-left > .nav-tabs > li > a:focus {
+  border-color: #999 #999 #999 #999;
+  background-color:#ffffff;
+}
+
+.tabs-left > .nav-tabs .active > a,
+.tabs-left > .nav-tabs .active > a:hover,
+.tabs-left > .nav-tabs .active > a:focus {
+  border-color: #999 #999 #999 #999;
+}
+
+
+
+.nav>li>a>img {
+    max-width: 100%;
+}
+.product-detail{
+  /*border-left: 1px solid #888;*/
+  padding: 2px;
+}
+.product-detail h1{
+  font-size: 22px;
+  color: #333;
+  font-weight: bold;
+}
+.product-detail p{
+  color: #555;
+  font-size: 12px;
+}
+.product-detail a{
+  color: #555;
+  font-size: 12px;
+}
+.product-detail i{
+  padding: 0 10px;
+  color: #555;
+}
+.img-circlee span{
+  border-radius: 5%;
+  border: 1px solid #ddd;
+  padding: 2px 3px;
+  font-size: 10px;
+  color: #555;
+}
+.img-circlee img{
+  border-radius: 5%;
+  border: 1px solid #ddd;
+  padding: 1px;
+}
+.text-18{
+  font-size: 18px;
+}
+.line{
+  /*border-bottom:1px solid #f8f8f8;*/
+  clear: both; 
+  margin: 12px 0;
+}
+.text-danger{
+  color: #d2153b;
+}
+.btn-default:hover {
+    color: #000;
+    background-color: #fff;
+    border-color: #adadad;
+}
+#about-product h1{
+  font-size: 22px;
+  color: #333;
+  font-weight: bold; 
+}
+#about-product p{
+  color: #555;
+}
+#about-product .text{
+  margin-top: 50px;
+}
+.jzoom{
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* css for responsive */
+@media screen and (max-width: 320px),(max-width: 420px),(max-width: 680px){
+      .tabs-left > .nav-tabs > li {
+          float: left;
+      }
+      .jzoom{
+        display: block;
+      }
+}
+
+@media screen and (max-width: 980px){
+      .jzoom {
+          width: 100%;
+          height: auto;
+      }
+}
+@media screen and (max-width: 1120px){}

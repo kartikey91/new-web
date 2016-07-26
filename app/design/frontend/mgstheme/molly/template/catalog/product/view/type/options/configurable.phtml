@@ -1,6 +1,5 @@
 <?php
-/**
- * Magento
+/*gento
  *
  * NOTICE OF LICENSE
  *
@@ -33,7 +32,9 @@ $_renderers = $this->getChild('attr_renderers')->getSortedChildren();
 ?>
 <?php if ($_product->isSaleable() && count($_attributes)):?>
     <dl>
+    <div class="row">
     <?php foreach($_attributes as $_attribute): ?>
+        <div class="col-md-6">
         <?php
         $_rendered = false;
         foreach ($_renderers as $_rendererName):
@@ -45,6 +46,7 @@ $_renderers = $this->getChild('attr_renderers')->getSortedChildren();
                 $_rendered = true;
                 break;
             endif;
+
         endforeach;
 
         if (!$_rendered):
@@ -58,10 +60,13 @@ $_renderers = $this->getChild('attr_renderers')->getSortedChildren();
               </div>
         </dd>
         <?php endif; ?>
+        </div>
     <?php endforeach; ?>
+    </div
     </dl>
     <script type="text/javascript">
         var spConfig = new Product.Config(<?php echo $_jsonConfig ?>);
     </script>
     <?php echo $this->getChildHtml('after') ?>
 <?php endif;?>
+

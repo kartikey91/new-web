@@ -1928,8 +1928,8 @@ Element.Methods = {
 
   hide: function(element) {
     element = $(element);
-    element.style.display = 'none';
-    return element;
+	if(!element.parentElement.parentElement.classList.contains('nav-tabs')) { element.style.display = 'none';}
+return element;
   },
 
   show: function(element) {

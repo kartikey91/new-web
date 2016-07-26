@@ -1,0 +1,239 @@
+/* monrow custom css*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+  background: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
+}
+
+header{
+  margin-top: 10px;
+}
+.m-t-30{
+  margin-top: 30px;
+}
+.m-t-60{
+  margin-top: 60px;
+}
+.p-l-10{
+  padding-left: 10px;
+}
+.navbar{
+  margin-bottom: 10px;
+}
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 0;
+    font-size: 18px;
+    line-height: 20px;
+}
+.navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+}
+.navbar-default .navbar-nav>li>a {
+    font-size: 14px;
+    font-weight: 500;
+}
+.navbar-default .navbar-nav>li>a:hover {
+    color: #D2153B;
+    font-size: 14px;
+    font-weight: 500;
+}
+.navbar-default{
+  border: 1px solid #dbdbdb;;
+  padding: 15px 0;
+}
+.navbar-nav.navbar-right .btn {
+  position: relative;
+  z-index: 2; 
+  padding: 4px 8px; 
+  margin: 10px auto; }
+.navbar .navbar-collapse { position: relative; }
+.navbar .navbar-collapse .navbar-right > li .icon { margin-left: 10px; }
+.navbar .navbar-collapse .navbar-right > li .icon:hover { 
+  color:#D2153B;
+  border-color:#D2153B;
+  transform: scale(1.2);
+  transition: all .2s ease-in-out;
+}
+
+.navbar .nav-collapse { position: absolute; 
+  z-index: 1; top: 0; right: 0; bottom: 0; 
+  margin: 0; padding-right: 120px; padding-left: 80px; width: 80%; }
+.navbar.navbar-default .nav-collapse { background-color: #fff; }
+.navbar.navbar-inverse .nav-collapse { background-color: #222; }
+.navbar .nav-collapse .navbar-form { border-width: 0; box-shadow: none; }
+.nav-collapse>li { float: right; }
+.btn.btn-circle { border-radius: 50px; }
+.btn.btn-outline { background-color: transparent; }
+
+#wrapper1{
+  margin-top: 60px;
+  position: relative;
+}
+.imgup{
+    margin-left: 10%;
+    margin-top: -30%;
+    z-index: 2;
+}
+.imgdown{
+    margin-top: -20%;
+    z-index: 1;
+
+}
+
+
+.alpha {
+  position: absolute;
+  top: 440px;
+  left: 0;
+  z-index: 20;
+  color: #ffffff;
+  font-size: 300px;
+  line-height: 265px;
+  font-family: 'Frontage Bold';
+  z-index: 7;
+}
+.alpha span {
+  display: block;
+  position: relative;
+  left: 0px;
+}
+.alpha b {
+  font-weight: normal;
+  display: block;
+  text-shadow: 3px 3px 1px rgba(150, 150, 150, 1);
+}
+.alpha .a1 {  
+  left: 100px;
+}
+.alpha .a2 {
+  left: 450px;
+  top: 150px;
+}
+.alpha .a3 {
+  left: 800px;
+  top: 250px;
+}
+.alpha .a4 {
+  left: 800px;
+  top: 450px;
+}
+.alpha .a5 {
+  left: 450px;
+  top: 550px;
+}
+.alpha .a6 {
+  left: 100px;
+  top: 700px;
+}
+
+.alpha .a7 {
+  left: 650px;
+  top: 950px;
+}
+.alpha .a8 {
+  left: 400px;
+  top: 1150px;
+}
+.alpha .a9 {
+  left: 650px;
+  top: 1350px;
+}
+.alpha .a10 {
+  left: 400px;
+  top: 1550px;
+}
+.alpha .a11 {
+  left: 650px;
+  top: 1750px;
+}
+
+
+.p-40 {
+    padding: 40px 0;
+}
+.p-0 {
+    padding: 0;
+}
+.bg-subfooter{
+  background: #fff;
+  color: #000;
+  /*border-top: 1px solid #999;*/
+}
+.bg-subfooter a{
+  color: #000;
+}
+.bg-subfooter .subscribe{
+  border-radius: 3px;
+    border: 1px solid #fff;
+    padding: 5px;
+}
+.bg-footer{
+  background: #555;
+  color: #fff;
+  padding: 20px 0;
+  /*border-top: 1px solid #999;
+  border-bottom: 3px solid #999;*/
+}
+.bg-footer a{
+  color: #fff;
+}
+.sticky-bg{
+  background: url(../img/sticky.png);
+  background-repeat: no-repeat;
+  height: 330px;
+  background-position: center;
+  padding-top: 80px;
+}
+.block{
+  transition: all 1s ease, opacity 1.5s ease; opacity: 1;
+}
+.with-border{
+  border: 1px solid #e7e7e7;
+}
+.border-l{
+  border-left: 1px solid #e7e7e7;
+}
+.affix {
+      top: 0;
+      width: 100%;
+      background-color: #fff;
+      z-index: 999;
+      padding: 2px 0;
+  }
+
+
+
+
+
+
+
+
+
+
+/* css for responsive */
+@media screen and (max-width: 320px),(max-width: 480px),(max-width: 640px){
+  .navbar-default .navbar-collapse, .navbar-default .navbar-form {border-color: #fff;}
+.navbar .navbar-collapse .navbar-right > li .icon:hover {transform: none}
+.navbar .nav-collapse{width: 100%}
+.navbar .navbar-collapse .navbar-right > li .icon{margin-left: 0;}
+  #wrapper1{margin-top:5px;}
+  .d-0{padding:0;}
+  .nav > li{text-align: center;}
+  .imgup{width:100%;margin-left:0;border:1px solid #999}
+  .navbar-default .navbar-toggle{border-color: #888;}
+  .alpha b{display: none;}
+
+}
+
+
+
+@media screen and (max-width: 767px) {
+    
+    .navbar .nav-collapse { margin: 7.5px auto; padding: 0; }
+    .navbar .nav-collapse .navbar-form { margin: 0; }
+    .nav-collapse>li { float: none; }
+}
