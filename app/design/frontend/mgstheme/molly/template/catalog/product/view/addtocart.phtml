@@ -29,15 +29,15 @@
 <?php if($_product->isSaleable()): ?>
 <div class="row">
 	<div class="col-xs-12 box-add-to-cart">
-		<div class="shop_meta pull-left">
+		<div class="shop_meta col-xs-6">
 			<div class="btn-shop qty-product-buy">
 				<span class="edit-qty minus" onclick="minusQty('qty')"><i class="fa fa-minus"></i></span>
 				<input type="text" class="form-control input-qty-product" title="Qty" value="<?php echo $this->getProductDefaultQty() * 1 ?>" name="qty" id="qty"/>
 				<span class="edit-qty plus" onclick="plusQty('qty')"><i class="fa fa-plus"></i></span>
 			</div>
 		</div>
-		<div class="btn-shop pull-left">
-			<button type="button" title="<?php echo $buttonTitle ?>" id="product-addtocart-button" class="btn btn-danger btn-block btn-cart btn-lg btn btn-primary" onclick="productAddToCartForm.submit(this)"><?php echo $buttonTitle ?></button>
+		<div class="btn-shop col-xs-6 ">
+			<button type="button" title="<?php echo $buttonTitle ?>" id="product-addtocart-button" class="btn btn-danger btn-cart btn-lg btn btn-primary" onclick="productAddToCartForm.submit(this)"><?php echo $buttonTitle ?></button>
 		</div>
 	
 	</div>

@@ -45,7 +45,7 @@
                 <input type="hidden" name="product" value="<?php echo $_product->getId() ?>" />
                 <input type="hidden" name="related_product" id="related-products-field" value="" />
             </div>
-			<div class="row">
+			<div class="row with-border">
             <div class="product-img-box col-md-6 col-sm-12 col-xs-12">
                 <?php echo $this->getChildHtml('media') ?>
             </div>
@@ -111,7 +111,7 @@
                 <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
 				<?php endif; ?>
 				<div class="col-md-12 line"></div>
-                  <p class=""><a href="#product-video">Product Video <br><i class="fa fa-angle-double-down fa-2x" aria-hidden="true"></i></a></p>
+                  <p class="text-center"><a href="#product-video">Product Video <br><i class="fa fa-angle-double-down fa-2x" aria-hidden="true"></i></a></p>
                </div>
 				<!-- <div class="clearer"></div> -->
 				<!-- share this box -->
@@ -207,7 +207,7 @@
          <div class="row" style="margin-top:15px;background:#fff">
             <div class="col-md-12 with-border">
                <div class="row">
-                  <div class="col-md-5 row"><img src="<?php echo $this->helper('catalog/image')->init($_product,'small_image')->resize(300); ?>" class="img-responsive"></div>
+                  <div class="col-md-5 row"><img src="<?php echo $this->helper('catalog/image')->init($_product,'small_image')->resize(); ?>" class="img-responsive"></div>
                   <div class="col-md-7 text-center text">
                      <h1>About - <?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
                      <p><?php echo $_helper->productAttribute($_product, $_product->getDescription(), 'name') ?> </p>
@@ -215,115 +215,14 @@
                </div>
                <div class="row">                  
                   <div class="col-md-7 text-center text">
-                     <h1>About - <?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
-                     <p><?php echo $_helper->productAttribute($_product, $_product->getDescription(), 'name') ?></p>
-                  </div>
+                     <h1>Additional Information - <?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
+			<p><?php echo $this->getChildHtml('additional') ?></p>                  
+</div>
                   <div class="col-md-5 row">
-                  <img src="<?php echo $this->helper('catalog/image')->init($_product,'small_image')->resize(300); ?>" class="img-responsive"></div>
+                  <img src="<?php echo $this->helper('catalog/image')->init($_product,'small_image')->resize(); ?>" class="img-responsive"></div>
                </div>
             </div>
          </div>
-      </section>
- <section class="container">
-         <div class="row with-border" style="margin-top:15px;background:#fff">
-            <div class="col-md-12 text-center">
- <form action="<?php echo $this->getSubmitUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if ($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
-            <?php echo $this->getBlockHtml('formkey') ?>
-            <div class="no-display">
-                <input type="hidden" name="product" value="<?php echo $_product->getId() ?>" />
-                <input type="hidden" name="related_product" id="related-products-field" value="" />
-            </div>
-      <div class="row">
-            
-            <div class="product-shop product-detail col-md-12 col-sm-12 col-xs-12">
-                
-                <div class="product-name row product-detail ">
-                    <h1><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
-                   
-                <?php if (Mage::getStoreConfig('mpanel/product_details/reviews_summary')): ?>
-                    <?php echo $this->getReviewsSummaryHtml($_product, false, true) ?>
-                <?php endif; ?>
-                <?php if (Mage::getStoreConfig('mpanel/product_details/alert_urls')): ?>
-                    <?php echo $this->getChildHtml('alert_urls') ?>
-                <?php endif; ?>
-
-                <?php echo $this->getChildHtml('product_type_data') ?>
-
-                <?php echo $this->getTierPriceHtml() ?>
-
-        <!-- <?php if (Mage::getStoreConfig('mpanel/product_details/short_description')): ?>
-                    <?php if ($_product->getShortDescription()): ?>
-                        <div class="short-description">
-                            <div class="std"><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
-                        </div>
-                    <?php endif; ?>
-                <?php endif; ?> -->
-        
-               <!--  <?php echo $this->getChildHtml('extrahint') ?> -->
-
-                <?php if (!$this->hasOptions()): ?>
-                    <div class="add-to-box">
-                        <?php if ($_product->isSaleable()): ?>
-                            <?php echo $this->getChildHtml('addtocart') ?>
-                        <?php endif; ?>
-                        <?php if (Mage::getStoreConfig('mpanel/product_details/wishlist_compare')): ?>
-                            <?php echo $this->getChildHtml('addto') ?>
-                        <?php endif; ?>
-                    </div>
-
-                    <?php echo $this->getChildHtml('extra_buttons') ?>
-
-                <?php elseif (!$_product->isSaleable()): ?>
-                    <div class="add-to-box">
-                        <?php echo $this->getChildHtml('addto') ?>
-                    </div>
-                <?php endif; ?>
-        
-        <?php if (Mage::getStoreConfig('mpanel/product_details/brand_image')): ?>
-          <?php echo $this->getLayout()->createBlock('brand/product_brand')->setTemplate('mgs/brand/product_brand.phtml')->toHtml() ?>
-        <?php endif; ?>
-        <!-- <?php $cats = $_product->getCategoryIds(); ?>
-        <?php  $_tags = new Mage_Tag_Block_Product_List(); ?> -->
-        <!-- <?php $countTags = count($_tags->getTags()); ?> -->
-        
-               <!--  <?php echo $this->getChildHtml('other'); ?> -->
-
-                <?php if ($_product->isSaleable() && $this->hasOptions()): ?>
-                    <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
-                <?php endif; ?>
-        <?php if ($_product->isSaleable() && $this->hasOptions()): ?>
-                <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
-        <?php endif; ?>
-        <div class="col-md-12 line"></div>
-                  <p class=""><a href="#product-video">Product Video <br><i class="fa fa-angle-double-down fa-2x" aria-hidden="true"></i></a></p>
-               </div>
-        <!-- <div class="clearer"></div> -->
-        <!-- share this box -->
-        <!-- <div class="box-social">
-          <?php if (Mage::getStoreConfig('mpanel/product_details/email_friend')): ?>
-            <?php if ($this->canEmailToFriend()): ?>
-              <p class="email-friend"><a href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>"><span><em class="fa fa-envelope-o"></em></span><?php echo $this->__('Email to a Friend') ?></a></p>
-            <?php endif; ?>
-          <?php endif; ?>
-          <?php if(Mage::getStoreConfig('mpanel/share_this/product')): ?>
-            <div class="social-icons">
-              <span class="label-share" class="text-uppercase"><?php echo $this->__('Share This:') ?></span>
-              <?php echo Mage::getStoreConfig('mpanel/share_this/span_tags') ?>
-            </div>
-          <?php endif; ?> 
-        </div> -->
-        <!-- <div class="clearer"></div>
-        <!-- custom statick block 1 -->
-        <!-- <div class="static-block-top">
-          <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('mgs_panel_product_static_block_top')->setCanEdit(1)->toHtml() ?>
-        </div>  -->
-            </div>
-      </div>
-
-            <!-- <div class="clearer"></div> -->
-        </form>
-</div>        
- </div>
       </section>
       <section class="container" id="about-product">
          <div class="row" style="margin-top:15px;background:#fff">

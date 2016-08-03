@@ -165,6 +165,11 @@ body {
     line-height: 1.7;
     overflow-x: hidden;
     position: relative;
+background: #f2f2f2 !important;
+}
+.header-content
+{
+background:#fff;
 }
 footer  {
     margin-top: 60px;
@@ -2193,7 +2198,7 @@ header nav ul.nav-main .dropdown-submenu:hover > .dropdown-menu {
 }
 header nav ul.nav-main li > a {
     font-size: 13px;
-    font-weight: 900;
+    font-weight: 500;
     color: #212121;
     text-transform: uppercase;
     padding: 13px 20px;
@@ -4458,6 +4463,10 @@ footer .instagram-footer a:hover  img{
     font-weight: 900;
     line-height: 1;
 }
+.with-border {
+border: 1px solid #e7e7e7;
+background: #fff;
+}
 /* -------------- Product Details ----------- */
 .product-detail .product-name .h1,
 .quickview-index-show .product-detail .product-name h1 {
@@ -4472,10 +4481,20 @@ footer .instagram-footer a:hover  img{
 .product-detail .product-name {
     margin-bottom: 20px;
 }
+
+/*-----custom --------*/
+.product-detail h1{
+   font-size: 28px;
+   color: #333;
+   font-weight: bold;
+   font-family: 'Libre Baskerville', serif;
+}
 .product-detail .price-box .regular-price .price,
 .product-detail .price-box .special-price .price {
-    font-size: 28px;
+    font-size: 20px;
 }
+.price-box { text-align:center}
+
 .product-detail .price-box .old-price .price,
 .product-detail .price-box-bundle .price {
     font-size: 24px;
@@ -4534,6 +4553,7 @@ footer .instagram-footer a:hover  img{
 .product-detail .add-to-box .add-to-links {
     border-bottom: 1px solid #eeeeee;
     padding-bottom: 34px;
+	text-align:center;
 }
 .product-detail .add-to-box .add-to-links li:first-child {
     padding-right: 27px;
@@ -4609,7 +4629,7 @@ footer .instagram-footer a:hover  img{
 }
 .product-view .product-essential {
     border-bottom: 1px solid #eeeeee;
-    padding-bottom: 53px;
+/*    padding-bottom: 53px;*/
     margin-bottom: 18px;
 }
 .product-view .product-essential .product-img-box .thumbnails {
@@ -6176,7 +6196,7 @@ body.no-slider header > div {
 .opc .active .step-title h3{
     margin-bottom: 50px;
 }
-.required {color: red;}
+/*.required {color: red;}*/
 .no-width .col-md-6{
     padding: 0 12px !important;
 }
