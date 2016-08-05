@@ -206,19 +206,19 @@ $size = $panelHelper->convertRatioToSize();
                     </li> -->
                     <?php if($i% 2 != 0):?>
                     	
-    <div class="row block-bg with-border text-center">
+    <div class="row block-bg text-center">
             <div class="col-md-12">   
             <div clss="row">           
-                <div class="col-md-4  p-20">
+                <div class="col-md-6  p-20">
                     <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>" class="product-image">
-									<img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize($size['width'], $size['height']) ?>" alt="<?php echo $this->stripTags($_product->getName(), null, true) ?>" class="img-responsive"/>
+									<img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(800,533) ?>" alt="<?php echo $this->stripTags($_product->getName(), null, true) ?>" class="img-responsive"/>
 									<!-- <?php if(basename($_product->getData('image')) != basename($_product->getData('small_image'))): ?>
 										<img src="<?php echo $this->helper('catalog/image')->init($_product, 'image')->resize($size['width'], $size['height']) ?>" 
 										alt="<?php echo $this->stripTags($_product->getName(), null, true) ?>" class="img-responsive img-two"/>
 									<?php endif ?> -->
 								</a>                   
                </div>
-               <div class="col-md-4">
+               <div class="col-md-4" style="padding-top:80px;">
                   <h2>
                                            <p class="product-name"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>)"><?php echo $this->helper('catalog/output')->productAttribute($_product, $_product->getName() , 'name') ?></a></p>
                                            </h2>
@@ -228,19 +228,21 @@ $size = $panelHelper->convertRatioToSize();
 									<?php echo $this->getLayout()->createBlock('review/helper')->getSummaryHtml($_product, 'short');?>
 									
 								</div>
+<br>
+<a href="<?php echo $_product->getProductUrl() ?>" >
 								<button class="btn btn-default">
                       <span class="ti-shopping-cart"></span> View Product</button>
-
+</a>
                 </div>
             </div>
             </div>
           </div> 
-          
+         <hr> 
       <?php else : ?>
-      	<div class="row block-bg with-border text-center">
+      	<div class="row block-bg text-center">
              <div class="col-md-12">              
                 <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 col-md-offset-1" style="padding-top:80px">
                   <h2>
                                            <p class="product-name"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>)"><?php echo $this->helper('catalog/output')->productAttribute($_product, $_product->getName() , 'name') ?></a></p>
                                            </h2>
@@ -250,13 +252,14 @@ $size = $panelHelper->convertRatioToSize();
 									<?php echo $this->getLayout()->createBlock('review/helper')->getSummaryHtml($_product, 'short');?>
 									
 								</div>
+		<a href="<?php echo $_product->getProductUrl() ?>" >
 								<button class="btn btn-default">
-                      <span class="ti-shopping-cart"></span> View Product</button>
+                      <span class="ti-shopping-cart"></span> View Product</button> </a>
 
                 </div>
                 <div class="col-md-6 p-20">
                     <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>" class="product-image">
-									<img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(250,250) ?>" alt="<?php echo $this->stripTags($_product->getName(), null, true) ?>" class="img-responsive"/>
+									<img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(800,533) ?>" alt="<?php echo $this->stripTags($_product->getName(), null, true) ?>" class="img-responsive"/>
 									<!-- <?php if(basename($_product->getData('image')) != basename($_product->getData('small_image'))): ?>
 										<img src="<?php echo $this->helper('catalog/image')->init($_product, 'image')->resize($size['width'], $size['height']) ?>" 
 										alt="<?php echo $this->stripTags($_product->getName(), null, true) ?>" class="img-responsive img-two"/>
@@ -266,6 +269,7 @@ $size = $panelHelper->convertRatioToSize();
             </div> 
           </div>
           </div>
+<hr>
           		<?php  endif; ?>
 
                 <?php endforeach ?>

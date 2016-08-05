@@ -96,9 +96,9 @@ if($setting){
 	<?php // description position above product list ?>
 	<?php if($settingDescPosition==1): ?>
 		<?php if ($_description = $this->getCurrentCategory()->getDescription()): ?>
-			<div class="category-description std">
+		<!--	<div class="category-description std">
 				<?php echo $_helper->categoryAttribute($_category, $_description, 'description') ?>
-			</div>
+			</div> -->
 		<?php endif; ?>
 	<?php endif ?>
 <?php endif; ?>
