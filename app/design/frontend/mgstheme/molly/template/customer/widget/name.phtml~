@@ -61,7 +61,7 @@ if ($this->showPrefix() && $this->showMiddlename() && $this->showSuffix()) {
     $col = 12 / $num;
 }
 ?>
-<div class="">
+<div class="row">
 
 <?php if ($this->showPrefix()): ?>
     <div class="col-md-<?php echo $col ?>">
@@ -105,4 +105,3 @@ if ($this->showPrefix() && $this->showMiddlename() && $this->showSuffix()) {
     </div>
     <?php endif; ?>
 </div>
-

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Nakoda_Layout>
+            <version>0.1.0</version>
+        </Nakoda_Layout>
+    </modules>
+    <global>
+        <page>
+            <layouts>
+				<two_columns_left_product module="page" translate="label">
+                    <label>2 columns with left bar for Product</label>
+                    <template>page/2columns-left-product.phtml</template>
+                    <layout_handle>page_two_columns_left_product</layout_handle>
+                </two_columns_left_product>
+            </layouts>
+        </page>
+    </global>
+</config>

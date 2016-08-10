@@ -57,7 +57,7 @@
                     <?php echo $this->getChildHtml('breadcrumbs') ?> 
                     <div class="container">
                         <div class="row">
-                            <aside class="col-left sidebar col-md-3">
+                            <aside class="col-left sidebar col-md-1">
                                 <div class="leftcate">                                    
                                     <?php // New code ?>
                                     <?php if ($helper->checkCategoryPage()): ?>
@@ -96,7 +96,7 @@
                                     <?php endif; ?>
                                 </div>					
                             </aside>
-                            <div class="col-main col-md-9 with-border">
+                            <div class="col-main col-md-12 with-border" style="padding:15px">
                                 <?php echo $this->getChildHtml('global_messages') ?>
                                 <?php echo $this->getChildHtml('content') ?>
                             </div>
@@ -117,3 +117,4 @@
         <?php echo $this->getChildHtml('theme_popup') ?>
     </body>
 </html>
+

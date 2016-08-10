@@ -56,15 +56,11 @@ if ($this->getTitle() != '') {
                     <?php foreach ($_filters as $_filter): ?>						
                         <?php if ($_filter->getItemsCount()): ?>
                             <div class="dropdown">
-  <button type="button" class="btn btn-default dropdown-toggle"  data-toggle="dropdown" style=" width: 42px;
-    text-align: center;
-    padding: 0;
-    background: #fff;
-    border: 1px solid #999;"title="<?php echo $this->__($_filter->getName()) ?>">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="width:115px; text-align: center;"title="<?php echo $this->__($_filter->getName()) ?>">
  <img src="<?php echo $this->getSkinUrl('images/icon0'.$j.'.jpg') ?>">
  <?php $j++; ?> 
   </button>
-       <ul class="dropdown-menu drop-right list-inline" style="margin-left:42px;
+       <ul class="dropdown-menu drop-right list-inline" style="margin-left:115px;
     top: 0px;padding: 5px;">
        <p class="text-center"><strong><?php echo $_filter->getName() ?></strong></p>
                <?php echo $_filter->getHtml() ?>

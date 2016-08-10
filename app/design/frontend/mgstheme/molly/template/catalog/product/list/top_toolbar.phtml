@@ -32,8 +32,8 @@
  */
 ?>
 <?php if($this->getCollection()->getSize()): ?>
-<div class="toolbar top-toolbar">
-    <div class="pager">
+<div class="toolbar top-toolbar" style="border-bottom: 1px solid #eee;padding-bottom: 42px;">
+    <div class="pager pull-right">
 		<div class="limiter pull-left">
 			<?php echo $this->__('Show') ?>
 			<select onchange="setLocation(this.value)">
@@ -62,7 +62,7 @@
 			</div>
 		 <?php endif; ?>
 		<?php if( $this->isEnabledViewSwitcher() ): ?>
-				<div class="view-mode pull-right">
+				<div class="view-mode pull-right" style="display: none">
 					<?php $_modes = $this->getModes(); ?>
 					<?php if($_modes && count($_modes)>1): ?>
 					<?php foreach ($this->getModes() as $_code=>$_label): ?>
